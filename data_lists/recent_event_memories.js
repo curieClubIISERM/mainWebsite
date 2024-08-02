@@ -20,7 +20,7 @@ export const images = [
         alt: "Green Talk"
     },
     {
-        src: "assests/events_images/chembio-talk-poster.webp",
+        src: "assests/events_images/chembio_talk.webp",
         alt: "Chembio Talk Poster"
     },
     
