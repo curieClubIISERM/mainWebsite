@@ -1,0 +1,841 @@
+:root {
+    --background-color: #e0e0e0;
+    --text-color1: white;
+    --text-color2: black;
+
+    --color1: #fff;
+    --color2: #000;
+    --color3: #ffffff91;
+    --color4: #9e9e9e;
+    --color5: #a4a4a4;
+    --color6: rgb(56, 56, 56);
+    --color7: rgba(246, 245, 245, 0.872);
+
+    --pagination-btn-color1: rgba(244, 238, 255, 0.804);
+    --pagination-btn-color2: rgb(244, 238, 255, 1);
+
+    --font-size-19: 0.7vw;
+    --font-size-17: 0.8vw;
+    --font-size-16: 0.9vw;
+    --font-size-13: 1vw;
+    --font-size-3: 1.1vw;
+    --font-size-11: 1.2vw;
+    --font-size-12: 1.26vw;
+    --font-size-10: 1.3vw;
+    --font-size-7: 1.5vw;
+    --font-size-14: 1.55vw;
+    --font-size-18: 1.7vw;
+    --font-size-15: 1.8vw;
+    --font-size-6: 1.9vw;
+    --font-size-1: 2vw;
+    --font-size-5: 2.2vw;
+    --font-size-8: 2.5vw;
+    --font-size-9: 4vw;
+    --font-size-2: 5vw;
+    --font-size-4: 6vw;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    scrollbar-width: none;
+    user-select: none;
+}
+
+a,
+li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.filter-svg {
+    display: none;
+}
+
+.main {
+    position: relative;
+    top: 5vw;
+    display: flex;
+    gap: 5vw;
+}
+
+.moleculeContainer {
+    position: relative;
+    top: 0vw;
+    left: 2vw;
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
+    border-radius: 2vw;
+    background: var(--background-color);
+    box-shadow: inset -0.6vw 0.6vw 1.1vw var(--color5),
+        inset 0.6vw -0.6vw 1.1vw var(--color1);
+    transition: top 0.5s linear, left 0.5s linear, width 0.5s linear, height 0.5s linear;
+}
+
+.moleculeContainer.open {
+    top: 0vw;
+    left: 2vw;
+    width: 50vw;
+    height: 25vw;
+}
+
+.moleculeWrapper {
+    padding-inline: 2vw;
+    display: flex;
+    justify-content: space-around;
+    gap: 2vw;
+}
+
+.moleculelogoContainer img {
+    position: relative;
+    top: 10vw;
+    left: 0;
+    width: 17vw;
+    transform: translateY(-50%);
+    padding: 1vw;
+    object-fit: cover;
+    transition: top 0.5s ease, left 0.5s ease;
+}
+
+.moleculelogoContainer img.open {
+    top: 13vw;
+    left: 2vw;
+}
+
+.moleculeNameWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.moleculeNameWrapper::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0%;
+    width: 70%;
+    height: 0.1vw;
+    background-color: var(--color2);
+}
+
+.moleculeNameWrapper h2 {
+    font-family: "Prompt";
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: var(--font-size-1);
+    padding: 3vw 4vw 0vw;
+    letter-spacing: 0.1vw;
+}
+
+.moleculeNameWrapper h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1vw;
+    background-color: var(--color2);
+    margin-top: 0.5vw;
+}
+
+.moleculeNameWrapper h2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.1vw;
+    background-color: var(--color2);
+    margin-bottom: 0.5vw;
+}
+
+.moleculeName {
+    position: relative;
+    display: block;
+    padding-block: 1vw;
+    height: 13vw;
+    font-size: var(--font-size-15);
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+.moleculeName li {
+    color: var(--color2);
+    padding: 0.5vw 0vw;
+    width: 15vw;
+    cursor: pointer;
+    opacity: 0;
+    transition: font-weight 0.4s cubic-bezier(.21, -0.99, .7, 1.76), font-size 0.2s cubic-bezier(0, 1.86, .96, -0.55);
+}
+
+.moleculeName li:hover {
+    font-size: 1.82vw;
+    font-weight: 800;
+}
+
+#mouse-scroller-symbol {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 7vw;
+    height: 7vw;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+}
+
+#mouse-scroller-symbol.open {
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+#mouse-body,
+#mouse-scroller {
+    stroke: #000000;
+    stroke-miterlimit: 10;
+}
+
+#mouse-body {
+    fill: none;
+    stroke-width: 1.9695;
+}
+
+.contentContainer {
+    position: relative;
+    top: 0vw;
+    left: 0;
+    height: 22vw;
+    width: 29vw;
+    opacity: 1;
+    overflow: hidden;
+    border-radius: 2vw;
+    background: var(--background-color);
+    box-shadow: inset -0.6vw 0.6vw 1.1vw var(--color5),
+        inset 0.6vw -0.6vw 1.1vw var(--color1);
+    transition: height 0.2s ease, opacity 0.2s ease;
+}
+
+.main:not(:has(.swiper-slide)) .contentContainer {
+    opacity: 0;
+}
+
+.contentContainer.open {
+    height: 29vw;
+}
+
+.min-molecule-swiper {
+    margin: 1vw;
+    border-radius: 2vw;
+    overflow: hidden;
+    height: 20vw;
+    width: calc(100% - 2vw);
+    transition: opacity 0.4s ease;
+}
+
+.contentContainer:has(.swiper-slide) .min-molecule-swiper {
+    opacity: 1;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.contentContainer .credits {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 3.5vw;
+    font-size: var(--font-size-12);
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+
+.contentContainer .credits h4 {
+    position: relative;
+    padding: 0.4vw 0vw;
+    font-weight: 600;
+    display: grid;
+    gap: 0.5vw;
+    grid-template-columns: 1fr 2fr;
+}
+
+.contentContainer .credits h4 strong {
+    text-align: left;
+    font-weight: 650;
+}
+
+
+.min-molecule-swiper::after,
+.contentContainer .credits::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: linear-gradient(110deg, rgba(227, 227, 227, 0) 0%, rgba(227, 227, 227, 0) 40%, rgba(227, 227, 227, 0.5) 50%, rgba(227, 227, 227, 0) 60%, rgba(227, 227, 227, 0) 100%);
+    animation: gradient-animation_2 1.2s linear infinite;
+}
+
+@keyframes gradient-animation_2 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes loader-background {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.min-molecule-swiper::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1vw;
+    display: block;
+    width: 90%;
+    height: 90%;
+    pointer-events: none;
+    background-color: #cacaca;
+    transition: opacity 0.2s ease;
+    animation: loader-background 1.2s linear infinite alternate;
+}
+
+
+.contentContainer .credits h4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1vw;
+    width: 95%;
+    height: 90%;
+    border-radius: 0.8vw;
+    background: #cacaca;
+    pointer-events: none;
+    transition: opacity 2.5s ease;
+}
+
+.contentContainer:has(.swiper-slide) .swiper-wrapper::after,
+.contentContainer:has(.swiper-slide) .credits::after,
+.contentContainer:has(.swiper-slide) .credits h4::after {
+    opacity: 0;
+}
+
+
+
+.min-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.min-buttons a {
+    width: 6vw;
+    height: 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    border-radius: 2vw;
+    background: var(--background-color);
+    box-shadow: inset -0.3vw 0.3vw 0.6vw var(--color5),
+        inset 0.3vw -0.3vw 0.6vw var(--color1);
+}
+
+.min-buttons a svg {
+    width: 5vw;
+    height: 5vw;
+    padding: 0.9vw;
+    transition: padding 0.4s ease, stroke-width 0.4s ease;
+}
+
+.min-buttons a:hover svg {
+    padding: 0.7vw;
+}
+
+.min-buttons a svg .stokesvg {
+    stroke: var(--color2);
+}
+
+.min-button.zoombtn svg {
+    stroke: #000000;
+    fill: var(--color2);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    padding: 0.9vw;
+}
+
+.min-button.zoombtn:hover svg {
+    padding: 0.5vw;
+    stroke-width: 3;
+}
+
+.min-button.referencebtn svg {
+    fill: var(--color2);
+}
+
+.max-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    font-family: "Prompt";
+    font-optical-sizing: auto;
+    background-color: #2829368a;
+    backdrop-filter: blur(17px);
+}
+
+.upperbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    z-index: 10;
+}
+
+.upparbackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #0011ff00, #28293651);
+    mask-image: linear-gradient(to top, transparent, rgba(255, 255, 255));
+    backdrop-filter: blur(5px);
+}
+
+.maxbuttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.max-button {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.zoombtn,
+.referencebtn {
+    fill: white;
+}
+
+.referencebtn {
+    stroke: white;
+    stroke-width: 0;
+    transition: stroke-width 0.4s ease;
+}
+
+.referencebtn:hover {
+    stroke-width: 0.1vw;
+}
+
+#maxdownload {
+    fill: none;
+    stroke: #ffffff00;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 0;
+}
+
+.max-button svg {
+    width: 3vw;
+    height: 3vw;
+}
+
+.stokesvg {
+    --stokesize: 5;
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.moleculeName-display {
+    color: rgb(255, 255, 255);
+    font-size: var(--font-size-1);
+    height: fit-content;
+    z-index: 0;
+}
+
+
+.max-molecule-swiper {
+    --swiper-pagination-bullet-inactive-opacity: 0.6;
+    --swiper-pagination-bullet-inactive-color: rgba(208, 208, 208, 1);
+    --swiper-navigation-size: 2vw;
+    --swiper-navigation-top-offset: 50%;
+    --swiper-navigation-sides-offset: 10vw;
+    --swiper-navigation-color: rgba(0, 0, 0, 1);
+    position: relative;
+    top: 0%;
+    left: 0;
+    width: 100vw;
+    height: 80%;
+}
+
+.max-molecule-swiper .swiper-slide img {
+    position: relative;
+    width: fit-content;
+    height: 95%;
+    object-fit: cover;
+}
+
+.max-molecule-swiper .swiper-pagination {
+    height: 2vw;
+    opacity: 1;
+}
+
+.max-molecule-swiper span {
+    position: relative;
+    transform: translateY(5vw);
+    width: 1.5vw;
+    height: 1.5vw;
+    align-content: center;
+    text-align: center;
+    font-weight: 300;
+    font-size: var(--font-size-13);
+    color: var(--color2);
+    box-shadow: 0px 0px 0vw white;
+    transition: transform 0.2s ease, color 0.1s ease, opacity 0.3s ease, box-shadow 0.4s ease;
+}
+
+.max-molecule-swiper span:hover {
+    transform: scale(0.8);
+    color: var(--color6);
+    background-color: var(--color7);
+    opacity: 0.8;
+    box-shadow: 0px 0px 1vw white;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(240, 240, 240);
+}
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active:hover {
+    transform: scale(1);
+    color: var(--color2);
+    background-color: rgb(240, 240, 240);
+    opacity: 1;
+    box-shadow: 0px 0px 0vw white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 2vw;
+    background-color: var(--pagination-btn-color1);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: var(--pagination-btn-color2);
+}
+
+.swiper-button-disabled {
+    background-color: transparent;
+    color: transparent;
+}
+
+.hide-before::before {
+    display: none;
+}
+
+.show-before::before {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --font-size-19: 1.7vw;
+        --font-size-17: 2vw;
+        --font-size-16: 1.7vw;
+        --font-size-13: 3vw;
+        --font-size-3: 2vw;
+        --font-size-11: 2.5vw;
+        --font-size-12: 3.3vw;
+        --font-size-10: 3vw;
+        --font-size-7: 4vw;
+        --font-size-14: 4vw;
+        --font-size-18: 4vw;
+        --font-size-15: 5vw;
+        --font-size-6: 3.5vw;
+        --font-size-1: 4vw;
+        --font-size-5: 6vw;
+        --font-size-8: 5vw;
+        --font-size-9: 7vw;
+        --font-size-2: 10vw;
+        --font-size-4: 12vw;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .nav2 {
+        height: 12vw;
+    }
+
+    .nav-left {
+        gap: 2vw;
+    }
+
+    .nav-left svg {
+        width: 10vw;
+        height: 8vw;
+    }
+
+    .nav2-links a,
+    .nav2-links a:hover {
+        font-size: 2vw;
+        padding: 2vw 3vw;
+    }
+
+    .main {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20vw;
+    }
+
+    .moleculeContainer {
+        top: 15vw;
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .moleculeContainer svg {
+        display: none;
+    }
+
+    .moleculeContainer.open {
+        width: 70vw;
+        height: 103vw;
+    }
+
+    .moleculeWrapper {
+        flex-direction: column;
+        gap: 12vw;
+        padding-block: 5vw;
+    }
+
+    .moleculelogoContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .moleculelogoContainer img {
+        top: 20vw;
+        left: 0;
+        width: 31vw;
+    }
+
+    .moleculelogoContainer img.open {
+        top: 20vw;
+        left: 0;
+    }
+
+    .moleculeName {
+        height: 39vw;
+    }
+
+    .moleculeName li {
+        text-align: center;
+        padding-block: 1.5vw;
+        width: 50vw;
+    }
+
+    .moleculeName li:hover {
+        font-size: var(--font-size-15);
+    }
+
+    .contentContainer,
+    .contentContainer.open {
+        width: 75vw;
+        height: fit-content;
+        min-height: 70vw;
+        padding: 3vw 5.75vw;
+        transition: padding 0.5s ease, height 0.5s ease;
+    }
+
+    .contentContainer.open {
+        padding-bottom: 18vw;
+    }
+
+    .min-molecule-swiper {
+        height: auto;
+        width: 63.5vw;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contentContainer .credits {
+        position: absolute;
+        top: auto;
+        width: 65vw;
+        left: 53%;
+        transform: translate(-50%);
+        margin: 0;
+        padding: 0;
+        bottom: 3vw;
+        z-index: 0;
+    }
+
+    .contentContainer .credits h4 {
+        gap: 3vw;
+        grid-template-columns: 1.1fr 2fr;
+    }
+
+    .min-buttons {
+        position: relative;
+        top: -15vw;
+        flex-direction: row;
+        gap: 5vw;
+    }
+
+    .min-buttons a {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .min-buttons a svg {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .footer2 {
+        position: relative;
+        bottom: 4vw;
+        justify-content: center;
+        margin-top: 20vw;
+        gap: 8vw;
+        overflow: visible;
+    }
+
+    .footer2 h3 {
+        margin: 3vw;
+    }
+
+    .footer2-sociallinks ul {
+        padding: 0.6vw 2vw;
+        padding-right: 4vw;
+        gap: 2vw;
+    }
+
+    .footer2-sociallinks svg {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .max-molecule-swiper {
+        --swiper-navigation-top-offset: 85%;
+        --swiper-navigation-size: 4vw;
+        --swiper-pagination-top: 85%;
+    }
+
+    .max-molecule-swiper .swiper-slide img {
+        height: 60%;
+    }
+
+    .max-molecule-swiper span {
+        position: relative;
+        transform: translateY(5vw);
+        width: 4vw;
+        height: 4vw;
+        align-content: center;
+        text-align: center;
+        font-weight: 300;
+        font-size: var(--font-size-13);
+        color: var(--color2);
+        box-shadow: 0px 0px 0vw white;
+        transition: transform 0.2s ease, color 0.1s ease, opacity 0.3s ease, box-shadow 0.4s ease;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 10vw;
+        height: 8vw;
+        border-radius: 2vw;
+    }
+
+    .max-molecule-swiper .swiper-pagination {
+        height: 5vw;
+        opacity: 1;
+    }
+
+    .maxbuttonContainer {
+        display: none;
+    }
+
+    .max-button.zoombtn {
+        width: 10vw;
+        height: 14vw;
+    }
+
+    .max-button svg {
+        width: 7vw;
+        height: 7vw;
+    }
+
+}
