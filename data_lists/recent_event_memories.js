@@ -8,10 +8,6 @@ export const images = [
         alt: "Curie Quiz Poster"
     },
     {
-        src: "assests/events_images/nmr_labtour.webp",
-        alt: "NMR Lab Tour Poster"
-    },
-    {
         src: "assests/events_images/curie_quiz_1.webp",
         alt: "Curie Quiz"
     },
