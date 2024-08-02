@@ -1,14 +1,14 @@
 export const images = [
     {
-        src: "assests/events_images/guess the element poster.webp",
+        src: "assests/events_images/guess_the_element.webp",
         alt: "Guess the Element Poster"
     },
     {
-        src: "assests/events_images/curie-quiz-poster.webp",
+        src: "assests/events_images/curie_quiz.webp",
         alt: "Curie Quiz Poster"
     },
     {
-        src: "assests/events_images/nmr-labtour-poster.webp",
+        src: "assests/events_images/nmr_labtour.webp",
         alt: "NMR Lab Tour Poster"
     },
     {
