@@ -26,7 +26,6 @@ function addingConvenersinfo() {
     const container = document.querySelector('.coordinatorinfo-container');
 
     coordinators.forEach(coordinator => {
-        console.log(coordinator.name,coordinator.image)
         const card = document.createElement('div');
         card.className = 'coordinfo-cards';
 
