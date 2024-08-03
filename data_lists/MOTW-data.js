@@ -88,13 +88,13 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "assets/IMAGES/Mustard_Gas/1.webp",
-            slide2: "assets/IMAGES/Mustard_Gas/2.webp",
-            slide3: "assets/IMAGES/Mustard_Gas/3.webp",
-            slide4: "assets/IMAGES/Mustard_Gas/4.webp",
-            slide5: "assets/IMAGES/Mustard_Gas/5.webp",
-            slide6: "assets/IMAGES/Mustard_Gas/6.webp",
-            slide7: "assets/IMAGES/Mustard_Gas/7.webp",
+            slide1: "../assests/IMAGES/Mustard_Gas/1.webp",
+            slide2: "../assests/IMAGES/Mustard_Gas/2.webp",
+            slide3: "../assests/IMAGES/Mustard_Gas/3.webp",
+            slide4: "../assests/IMAGES/Mustard_Gas/4.webp",
+            slide5: "../assests/IMAGES/Mustard_Gas/5.webp",
+            slide6: "../assests/IMAGES/Mustard_Gas/6.webp",
+            slide7: "../assests/IMAGES/Mustard_Gas/7.webp",
         }
         ,
         pdflink: "https://drive.google.com/uc?export=download&id=13QEdF6wUL8w-mIV1SwSOFQm1cMsIu-RD",
@@ -120,14 +120,14 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "assets/IMAGES/Luciferin/1.webp",
-            slide2: "assets/IMAGES/Luciferin/2.webp",
-            slide3: "assets/IMAGES/Luciferin/3.webp",
-            slide4: "assets/IMAGES/Luciferin/4.webp",
-            slide5: "assets/IMAGES/Luciferin/5.webp",
-            slide6: "assets/IMAGES/Luciferin/6.webp",
-            slide7: "assets/IMAGES/Luciferin/7.webp",
-            slide8: "assets/IMAGES/Luciferin/8.webp"
+            slide1: "../assests/IMAGES/Luciferin/1.webp",
+            slide2: "../assests/IMAGES/Luciferin/2.webp",
+            slide3: "../assests/IMAGES/Luciferin/3.webp",
+            slide4: "../assests/IMAGES/Luciferin/4.webp",
+            slide5: "../assests/IMAGES/Luciferin/5.webp",
+            slide6: "../assests/IMAGES/Luciferin/6.webp",
+            slide7: "../assests/IMAGES/Luciferin/7.webp",
+            slide8: "../assests/IMAGES/Luciferin/8.webp"
         }
         ,
         pdflink: "https://drive.google.com/uc?export=download&id=13Q_h1-O1PIGagUFmZQvs-EDjU60f6Eud",
@@ -147,11 +147,11 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "assets/IMAGES/Tetranitratoxycarbon/1.webp",
-            slide2: "assets/IMAGES/Tetranitratoxycarbon/2.webp",
-            slide3: "assets/IMAGES/Tetranitratoxycarbon/3.webp",
-            slide4: "assets/IMAGES/Tetranitratoxycarbon/4.webp",
-            slide5: "assets/IMAGES/Tetranitratoxycarbon/5.webp"
+            slide1: "../assests/IMAGES/Tetranitratoxycarbon/1.webp",
+            slide2: "../assests/IMAGES/Tetranitratoxycarbon/2.webp",
+            slide3: "../assests/IMAGES/Tetranitratoxycarbon/3.webp",
+            slide4: "../assests/IMAGES/Tetranitratoxycarbon/4.webp",
+            slide5: "../assests/IMAGES/Tetranitratoxycarbon/5.webp"
         },
         pdflink: "https://drive.google.com/uc?export=download&id=13TZTqnRr5lWkNKALq8qdmuaKmaOYW47t",
         references: [
@@ -170,12 +170,12 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "assets/IMAGES/PROZAC/1.webp",
-            slide2: "assets/IMAGES/PROZAC/2.webp",
-            slide3: "assets/IMAGES/PROZAC/3.webp",
-            slide4: "assets/IMAGES/PROZAC/4.webp",
-            slide5: "assets/IMAGES/PROZAC/5.webp",
-            slide6: "assets/IMAGES/PROZAC/6.webp"
+            slide1: "../assests/IMAGES/PROZAC/1.webp",
+            slide2: "../assests/IMAGES/PROZAC/2.webp",
+            slide3: "../assests/IMAGES/PROZAC/3.webp",
+            slide4: "../assests/IMAGES/PROZAC/4.webp",
+            slide5: "../assests/IMAGES/PROZAC/5.webp",
+            slide6: "../assests/IMAGES/PROZAC/6.webp"
         },
         pdflink: "https://drive.google.com/uc?export=download&id=13T5WY3IypygquGQ6sYwyNMSiB1jKQ21p",
         references: [
@@ -198,12 +198,12 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "assets/IMAGES/DFNS/1.webp",
-            slide2: "assets/IMAGES/DFNS/2.webp",
-            slide3: "assets/IMAGES/DFNS/3.webp",
-            slide4: "assets/IMAGES/DFNS/4.webp",
-            slide5: "assets/IMAGES/DFNS/5.webp",
-            slide6: "assets/IMAGES/DFNS/6.webp"
+            slide1: "../assests/IMAGES/DFNS/1.webp",
+            slide2: "../assests/IMAGES/DFNS/2.webp",
+            slide3: "../assests/IMAGES/DFNS/3.webp",
+            slide4: "../assests/IMAGES/DFNS/4.webp",
+            slide5: "../assests/IMAGES/DFNS/5.webp",
+            slide6: "../assests/IMAGES/DFNS/6.webp"
         },
         pdflink: "https://drive.google.com/uc?export=download&id=1h5q0k56SN2OY0Sjzz23aHf4zibE8Qcum",        
         references: [
@@ -224,14 +224,14 @@ export const molecules = {
             Editor: "Srushti Ragade	(MS22)"
         },
         slides: {
-            slide1: "assets/IMAGES/Artemisinin/PG1.webp",
-            slide2: "assets/IMAGES/Artemisinin/PG2.webp",
-            slide3: "assets/IMAGES/Artemisinin/PG3.webp",
-            slide4: "assets/IMAGES/Artemisinin/PG4.webp",
-            slide5: "assets/IMAGES/Artemisinin/PG5.webp",
-            slide6: "assets/IMAGES/Artemisinin/PG6.webp",
-            slide7: "assets/IMAGES/Artemisinin/PG7.webp",
-            slide8: "assets/IMAGES/Artemisinin/PG8.webp"
+            slide1: "../assests/IMAGES/Artemisinin/PG1.webp",
+            slide2: "../assests/IMAGES/Artemisinin/PG2.webp",
+            slide3: "../assests/IMAGES/Artemisinin/PG3.webp",
+            slide4: "../assests/IMAGES/Artemisinin/PG4.webp",
+            slide5: "../assests/IMAGES/Artemisinin/PG5.webp",
+            slide6: "../assests/IMAGES/Artemisinin/PG6.webp",
+            slide7: "../assests/IMAGES/Artemisinin/PG7.webp",
+            slide8: "../assests/IMAGES/Artemisinin/PG8.webp"
         },
         pdflink: "https://drive.google.com/uc?export=download&id=13IPNOPsX63CxC8keRRgtLJ5BefQXxV0n",
         references: [
