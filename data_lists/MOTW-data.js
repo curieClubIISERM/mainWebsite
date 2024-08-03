@@ -197,12 +197,12 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "../assests/IMAGES/DFNS/1.webp",
-            slide2: "../assests/IMAGES/DFNS/2.webp",
-            slide3: "../assests/IMAGES/DFNS/3.webp",
-            slide4: "../assests/IMAGES/DFNS/4.webp",
-            slide5: "../assests/IMAGES/DFNS/5.webp",
-            slide6: "../assests/IMAGES/DFNS/6.webp"
+            slide1: "../assests/IMAGES/DFNS/PG1.webp",
+            slide2: "../assests/IMAGES/DFNS/PG2.webp",
+            slide3: "../assests/IMAGES/DFNS/PG3.webp",
+            slide4: "../assests/IMAGES/DFNS/PG4.webp",
+            slide5: "../assests/IMAGES/DFNS/PG5.webp",
+            slide6: "../assests/IMAGES/DFNS/PG6.webp"
         },
         pdflink: "https://drive.google.com/uc?export=download&id=1h5q0k56SN2OY0Sjzz23aHf4zibE8Qcum",        
         references: [
