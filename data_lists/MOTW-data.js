@@ -1,4 +1,4 @@
-import { drive } from "../assests/assest.js";
+import { drive } from "..../assests/assest.js";
 
 export const molecules = {
     geosmin: {
@@ -34,14 +34,14 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "/assests/IMG/Artemisinin/PG1.jpg",
-            slide2: "/assests/IMG/Artemisinin/PG2.jpg",
-            slide3: "/assests/IMG/Artemisinin/PG3.jpg",
-            slide4: "/assests/IMG/Artemisinin/PG4.jpg",
-            slide5: "/assests/IMG/Artemisinin/PG5.jpg",
-            slide6: "/assests/IMG/Artemisinin/PG6.jpg",
-            slide7: "/assests/IMG/Artemisinin/PG7.jpg",
-            slide8: "/assests/IMG/Artemisinin/PG8.jpg"
+            slide1: "../assests/IMG/Artemisinin/PG1.jpg",
+            slide2: "../assests/IMG/Artemisinin/PG2.jpg",
+            slide3: "../assests/IMG/Artemisinin/PG3.jpg",
+            slide4: "../assests/IMG/Artemisinin/PG4.jpg",
+            slide5: "../assests/IMG/Artemisinin/PG5.jpg",
+            slide6: "../assests/IMG/Artemisinin/PG6.jpg",
+            slide7: "../assests/IMG/Artemisinin/PG7.jpg",
+            slide8: "../assests/IMG/Artemisinin/PG8.jpg"
         },
         pdflink: "https://drive.google.com/uc?export=download&id=1tPCib9J4kTz5c5NS9FyTRULWCXI_m9gq",
         references: [
@@ -60,14 +60,14 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "/assests/IMG/Artemisinin/PG1.jpg",
-            slide2: "/assests/IMG/Artemisinin/PG2.jpg",
-            slide3: "/assests/IMG/Artemisinin/PG3.jpg",
-            slide4: "/assests/IMG/Artemisinin/PG4.jpg",
-            slide5: "/assests/IMG/Artemisinin/PG5.jpg",
-            slide6: "/assests/IMG/Artemisinin/PG6.jpg",
-            slide7: "/assests/IMG/Artemisinin/PG7.jpg",
-            slide8: "/assests/IMG/Artemisinin/PG8.jpg"
+            slide1: "../assests/IMG/Artemisinin/PG1.jpg",
+            slide2: "../assests/IMG/Artemisinin/PG2.jpg",
+            slide3: "../assests/IMG/Artemisinin/PG3.jpg",
+            slide4: "../assests/IMG/Artemisinin/PG4.jpg",
+            slide5: "../assests/IMG/Artemisinin/PG5.jpg",
+            slide6: "../assests/IMG/Artemisinin/PG6.jpg",
+            slide7: "../assests/IMG/Artemisinin/PG7.jpg",
+            slide8: "../assests/IMG/Artemisinin/PG8.jpg"
         },
         pdflink: "https://drive.google.com/uc?export=download&id=13Q35fKLlMs9gGZOdveIZPpUlHEJbwuvw",
         references: [
