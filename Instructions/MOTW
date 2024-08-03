@@ -1,0 +1,43 @@
+
+/* 
+How to Add a New Molecule
+
+Follow the steps below to add a new molecule entry to the JavaScript object. Replace placeholders with actual values.
+*/
+
+/* MOLECULE NAME IN CAMEL CASE */: {
+    // Name of the molecule in normal case (e.g., 'Artemisinin')
+    moleculeName: /* 'MOLECULE NAME IN NORMAL CASE' */,
+    
+    // Publishing date of the molecule (format: 'YYYY-MM-DD')
+    publishDate: /* 'PUBLISHING DATE' */,
+    
+    // Publishing time of the molecule (format: 'HH:MM')
+    publishTime: /* 'PUBLISHING TIME' */,
+    
+    // Credits for the molecule (names of the writer, designer, and editor)
+    credits: {
+        Writer: /* 'WRITER NAME' */,
+        Designer: /* 'DESIGNER NAME' */,
+        Editor: /* 'EDITOR NAME' */ // Leave empty if no editor
+    },
+    
+    // Links to slides related to the molecule (minimum one slide, add more as needed)
+    slides: {
+        slide1: /* 'SLIDE 1 LINK' */,
+        slide2: /* 'SLIDE 2 LINK' */, // Optional: Add slide links sequentially (slide3, slide4, etc.)
+        slide3: /* 'SLIDE 3 LINK' */, // Example
+        // Add additional slides as needed
+    },
+    
+    // Link to the PDF document related to the molecule
+    pdflink: /* 'PDF LINK' */,
+    
+    // References for the molecule (each reference should have a title and link)
+    references: [
+        { linkTitle: /* 'REFERENCE 1 TITLE' */, link: /* 'REFERENCE 1 LINK' */ },
+        { linkTitle: /* 'REFERENCE 2 TITLE' */, link: /* 'REFERENCE 2 LINK' */ }, // Add additional references as needed
+        // Example:
+        // { linkTitle: 'Wikipedia - Artemisinin', link: 'https://en.wikipedia.org/wiki/Artemisinin' },
+    ]
+}
