@@ -11,12 +11,12 @@ export const molecules = {
             Editor: ""
         },
         slides: {
-            slide1: "assets/IMAGES/Geosmin/1.webp",
-            slide2: "assets/IMAGES/Geosmin/2.webp",
-            slide3: "assets/IMAGES/Geosmin/3.webp",
-            slide4: "assets/IMAGES/Geosmin/4.webp",
-            slide5: "assets/IMAGES/Geosmin/5.webp",
-            slide6: "assets/IMAGES/Geosmin/6.webp",
+            slide1: "/assets/IMAGES/Geosmin/1.webp",
+            slide2: "/assets/IMAGES/Geosmin/2.webp",
+            slide3: "/assets/IMAGES/Geosmin/3.webp",
+            slide4: "/assets/IMAGES/Geosmin/4.webp",
+            slide5: "/assets/IMAGES/Geosmin/5.webp",
+            slide6: "/assets/IMAGES/Geosmin/6.webp",
         },        
         pdflink: "https://drive.google.com/uc?export=download&id=13Vd5BlfiRxo2YTLm1N5Wjer_BxFieDih",
         references: [
