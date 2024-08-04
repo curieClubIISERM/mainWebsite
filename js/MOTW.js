@@ -187,6 +187,12 @@ function updateContent(moleculeKey) {
     const designer = document.getElementById("designer");
     const editor = document.getElementById("editor");
     const tl = gsap.timeline();
+    if (!contentContainer.classList.contains("open")) {
+        tl.set(".credits h4 strong, .credits h4 em", {
+            opacity: 0,
+            ease: "expo.inOut"
+        });
+    }
     tl.to("#writer, #designer, #editor", {
         opacity: 0,
         xPercent: 100,
@@ -197,8 +203,20 @@ function updateContent(moleculeKey) {
             designer.querySelector("em").innerHTML = `${molecule.credits.Designer}`
             if (molecule.credits.Editor) {
                 editor.querySelector("em").innerHTML = `${molecule.credits.Editor}`;
+                if (!contentContainer.classList.contains("open")) {
+                    gsap.set(".credits h4 strong, .credits h4 em", {
+                        opacity: 0,
+                        ease: "expo.inOut"
+                    });
+                }
                 tl.to("#writer, #designer, #editor, #writer em, #designer em, #editor em", { opacity: 1, xPercent: 0, stagger: 0.1 });
             } else {
+                if (!contentContainer.classList.contains("open")) {
+                    gsap.set(".credits h4 strong, .credits h4 em", {
+                        opacity: 0,
+                        ease: "expo.inOut"
+                    });
+                }
                 tl.to("#writer, #designer, #writer em, #designer em", { opacity: 1, xPercent: 0, stagger: 0.1 });
             }
         }
