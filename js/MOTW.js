@@ -217,9 +217,9 @@ function updateContent(moleculeKey) {
     // Setup reference buttons
     const referencesButtons = document.querySelectorAll(".referencebtn");
     const basePath = 'www.google.com';
-    referencesButtons.forEach((referenceButton) => {
-        referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
-    });
+    // referencesButtons.forEach((referenceButton) => {
+    //     referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
+    // });
 }
 
 function buttonAction() {
