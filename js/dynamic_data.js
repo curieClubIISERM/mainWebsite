@@ -269,7 +269,7 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     //     noNewEventDiv.appendChild(noNewEvent);
     //     swiperSlide.appendChild(noNewEventDiv);
     //     swiperWrapper.appendChild(swiperSlide);
-    // }
+    // } 
     var fillerSlide = document.createElement("div");
     fillerSlide.className = "swiper-slide filler-slide main-slide";
     swiperContainer.querySelector(".swiper-wrapper").appendChild(fillerSlide);
