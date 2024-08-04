@@ -1,44 +1,44 @@
 export const upcomingEventList = [
-    // {
-    //     eventName: "Tresure Hunt",
-    //     eventDate: "2022-05-15",
-    //     eventTime: "6:00 PM",
-    //     eventVenue: "Curie Museum",
-    //     eventDescription: "Find hidden treasures in the Curie Museum",
-    //     eventImage: "",
-    // },
-    // {
-    //     eventName: "Tresure Hunt",
-    //     eventDate: "2022-05-15",
-    //     eventTime: "6:00 PM",
-    //     eventVenue: "Curie Museum",
-    //     eventDescription: "Find hidden treasures in the Curie Museum",
-    //     eventImage: "",
-    // },
-    // {
-    //     eventName: "Tresure Hunt",
-    //     eventDate: "2022-05-15",
-    //     eventTime: "6:00 PM",
-    //     eventVenue: "Curie Museum",
-    //     eventDescription: "Find hidden treasures in the Curie Museum",
-    //     eventImage: "",
-    // },
-    // {
-    //     eventName: "Tresure Hunt",
-    //     eventDate: "2022-05-15",
-    //     eventTime: "6:00 PM",
-    //     eventVenue: "Curie Museum",
-    //     eventDescription: "Find hidden treasures in the Curie Museum",
-    //     eventImage: "",
-    // },
-    // {
-    //     eventName: "Tresure Hunt",
-    //     eventDate: "2022-05-15",
-    //     eventTime: "6:00 PM",
-    //     eventVenue: "Curie Museum",
-    //     eventDescription: "Find hidden treasures in the Curie Museum",
-    //     eventImage: "",
-    // }
+    {
+        eventName: "Tresure Hunt",
+        eventDate: "2022-05-15",
+        eventTime: "6:00 PM",
+        eventVenue: "Curie Museum",
+        eventDescription: "Find hidden treasures in the Curie Museum",
+        eventImage: "",
+    },
+    {
+        eventName: "Tresure Hunt",
+        eventDate: "2022-05-15",
+        eventTime: "6:00 PM",
+        eventVenue: "Curie Museum",
+        eventDescription: "Find hidden treasures in the Curie Museum",
+        eventImage: "",
+    },
+    {
+        eventName: "Tresure Hunt",
+        eventDate: "2022-05-15",
+        eventTime: "6:00 PM",
+        eventVenue: "Curie Museum",
+        eventDescription: "Find hidden treasures in the Curie Museum",
+        eventImage: "",
+    },
+    {
+        eventName: "Tresure Hunt",
+        eventDate: "2022-05-15",
+        eventTime: "6:00 PM",
+        eventVenue: "Curie Museum",
+        eventDescription: "Find hidden treasures in the Curie Museum",
+        eventImage: "",
+    },
+    {
+        eventName: "Tresure Hunt",
+        eventDate: "2022-05-15",
+        eventTime: "6:00 PM",
+        eventVenue: "Curie Museum",
+        eventDescription: "Find hidden treasures in the Curie Museum",
+        eventImage: "",
+    }
 ]
 
 export const recentEventList = [
