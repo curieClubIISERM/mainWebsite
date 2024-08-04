@@ -92,7 +92,6 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     const swiperDiv = swiperContainer.querySelector(".swiper")
     const swiperWrapper = swiperContainer.querySelector(".swiper-wrapper");
     const noEventDiv = document.querySelector(".no-new-event-div");
-    console.log(noEventDiv);
 
     //Removing old Slides
     swiperWrapper.querySelectorAll(".main-slide").forEach(card => {
@@ -411,7 +410,7 @@ document.querySelectorAll(".container-top-left").forEach(function (containerbtn)
                 yPercent: 1,
                 opacity: 0
             });
-            stl.to(".no-new-event-div, .main-slide", {
+            stl.to(".main-slide", {
                 opacity: 0,
                 onEnter: () => {
                     if (e.target.innerHTML == "Upcoming Events") {
