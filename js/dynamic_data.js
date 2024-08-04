@@ -96,6 +96,10 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     swiperWrapper.querySelectorAll(".main-slide").forEach(card => {
         swiperWrapper.removeChild(card);
     })
+    noEventDiv = document.querySelector(".no-new-event-div");
+    if (noEventDiv) {
+        swiperWrapper.removeChild(noEventDiv)
+    }
 
     //Creating Swiper 
     const swiper = new Swiper(swiperDiv, {
@@ -404,7 +408,7 @@ document.querySelectorAll(".container-top-left").forEach(function (containerbtn)
                 yPercent: 1,
                 opacity: 0
             });
-            stl.to(".main-slide", {
+            stl.to(".no-new-event-div, .main-slide", {
                 opacity: 0,
                 onEnter: () => {
                     if (e.target.innerHTML == "Upcoming Events") {
