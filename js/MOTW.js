@@ -216,7 +216,7 @@ function updateContent(moleculeKey) {
 
     // Setup reference buttons
     const referencesButtons = document.querySelectorAll(".referencebtn");
-    const basePath = '../htmls/MOTW-reference.html';
+    const basePath = '#';
     referencesButtons.forEach((referenceButton) => {
         referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
     });
