@@ -70,11 +70,11 @@ export const onGoingSeriesList = [
         seriesDescription: "Join us every week as we explore a new molecule and its significance in chemistry. If you're interested in contributing and suggesting a molecule",
         link: "htmls/molecule-of-the-week.html",
         lineClamp: 3
+    },
+    {
+        seriesName: "Curieosity",
+        seriesDescription: "Check out our monthly article series where we delve into intriguing topics in chemistry. Want to write for Curiosity or suggest a topic? Get involved here",
+        link: "#",
+        lineClamp: 5
     }
-    // {
-    //     seriesName: "Curieosity",
-    //     seriesDescription: "Check out our monthly article series where we delve into intriguing topics in chemistry. Want to write for Curiosity or suggest a topic? Get involved here",
-    //     link: "#",
-    //     lineClamp: 5
-    // }
 ]
