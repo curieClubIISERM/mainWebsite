@@ -216,7 +216,7 @@ function updateContent(moleculeKey) {
 
     // Setup reference buttons
     const referencesButtons = document.querySelectorAll(".referencebtn");
-    const basePath = '../index.html';
+    const basePath = '/molecule-of-the-week.html';
     referencesButtons.forEach((referenceButton) => {
         referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
     });
