@@ -92,6 +92,7 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     const swiperDiv = swiperContainer.querySelector(".swiper")
     const swiperWrapper = swiperContainer.querySelector(".swiper-wrapper");
     const noEventDiv = document.querySelector(".no-new-event-div");
+    console.log(noEventDiv);
 
     //Removing old Slides
     swiperWrapper.querySelectorAll(".main-slide").forEach(card => {
@@ -260,7 +261,7 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
         let noNewEvent = document.createElement("div");
 
         swiperSlide.className = "swiper-slide";
-        noNewEventDiv.className = "no-new-event-div";
+        noNewEventDiv.className = "no-new-event-div main-slide";
         noNewEvent.className = "no-new-event";
 
         noNewEvent.textContent = NoEventString;
