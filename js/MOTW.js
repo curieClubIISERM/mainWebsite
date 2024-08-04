@@ -216,10 +216,10 @@ function updateContent(moleculeKey) {
 
     // Setup reference buttons
     const referencesButtons = document.querySelectorAll(".referencebtn");
-    const basePath = 'www.google.com';
-    // referencesButtons.forEach((referenceButton) => {
-    //     referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
-    // });
+    const basePath = '../index.html';
+    referencesButtons.forEach((referenceButton) => {
+        referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
+    });
 }
 
 function buttonAction() {
