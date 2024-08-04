@@ -91,7 +91,7 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     const prevBtn = swiperContainer.querySelector(".swiper-button-prev");
     const swiperDiv = swiperContainer.querySelector(".swiper")
     const swiperWrapper = swiperContainer.querySelector(".swiper-wrapper");
-    const noEventDiv = document.querySelector(".no-new-event-div");
+    // const noEventDiv = document.querySelector(".no-new-event-div");
 
     //Removing old Slides
     swiperWrapper.querySelectorAll(".main-slide").forEach(card => {
@@ -99,9 +99,9 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     })
 
     //Removing noevent Slide
-    if (noEventDiv) {
-        swiperWrapper.removeChild(noEventDiv)
-    }
+    // if (noEventDiv) {
+    //     swiperWrapper.removeChild(noEventDiv)
+    // }
 
     //Creating Swiper 
     const swiper = new Swiper(swiperDiv, {
@@ -254,21 +254,22 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
 
             index = index + 1;
         }
-    } else {
-        let swiperSlide = document.createElement("div");
-        let noNewEventDiv = document.createElement("div");
-        let noNewEvent = document.createElement("div");
+    } 
+    // else {
+    //     let swiperSlide = document.createElement("div");
+    //     let noNewEventDiv = document.createElement("div");
+    //     let noNewEvent = document.createElement("div");
 
-        swiperSlide.className = "swiper-slide";
-        noNewEventDiv.className = "no-new-event-div main-slide";
-        noNewEvent.className = "no-new-event";
+    //     swiperSlide.className = "swiper-slide";
+    //     noNewEventDiv.className = "no-new-event-div main-slide";
+    //     noNewEvent.className = "no-new-event";
 
-        noNewEvent.textContent = NoEventString;
+    //     noNewEvent.textContent = NoEventString;
 
-        noNewEventDiv.appendChild(noNewEvent);
-        swiperSlide.appendChild(noNewEventDiv);
-        swiperWrapper.appendChild(swiperSlide);
-    }
+    //     noNewEventDiv.appendChild(noNewEvent);
+    //     swiperSlide.appendChild(noNewEventDiv);
+    //     swiperWrapper.appendChild(swiperSlide);
+    // }
     var fillerSlide = document.createElement("div");
     fillerSlide.className = "swiper-slide filler-slide main-slide";
     swiperContainer.querySelector(".swiper-wrapper").appendChild(fillerSlide);
