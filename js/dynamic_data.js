@@ -261,7 +261,7 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
 
         noNewEventDiv.appendChild(noNewEvent);
         swiperSlide.appendChild(noNewEventDiv);
-        document.querySelector(swiperWrapperID).appendChild(swiperSlide);
+        swiperWrapper.appendChild(swiperSlide);
     }
     var fillerSlide = document.createElement("div");
     fillerSlide.className = "swiper-slide filler-slide main-slide";
