@@ -91,12 +91,14 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     const prevBtn = swiperContainer.querySelector(".swiper-button-prev");
     const swiperDiv = swiperContainer.querySelector(".swiper")
     const swiperWrapper = swiperContainer.querySelector(".swiper-wrapper");
+    const noEventDiv = document.querySelector(".no-new-event-div");
 
     //Removing old Slides
     swiperWrapper.querySelectorAll(".main-slide").forEach(card => {
         swiperWrapper.removeChild(card);
     })
-    noEventDiv = document.querySelector(".no-new-event-div");
+
+    //Removing noevent Slide
     if (noEventDiv) {
         swiperWrapper.removeChild(noEventDiv)
     }
