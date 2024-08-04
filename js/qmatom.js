@@ -1072,7 +1072,7 @@ function drawAxes(gl, buffers, viewMatrix) {
     var leftVw = (leftPx / gl.canvas.width) * 100;
     var topVh = (topPx / gl.canvas.height) * 100;
 
-    gsap.to(div, { opacity: 1 })
+    gsap.to(div, { opacity: 1, delay: 1})
     div.style.left = leftVw + "vw";
     div.style.top = topVh + "vh";
   }
@@ -1082,7 +1082,10 @@ function hideAxes() {
   var i;
   for (i = 0; i != 3; i++) {
     var div = document.getElementById("xyz".substring(i, i + 1) + "Label");
-    gsap.to(div, { opacity: 0, left: "105vw" });
+    gsap.to(div, {
+      opacity: 0,
+      left: "105vw" 
+    });
   }
 }
 
@@ -1597,10 +1600,9 @@ function onClickAnimations() {
             sliceChooser.selectedIndex = lastSliceState;
             sliceSlider.value = lastSliceSlidervalue;
             createOrbitals();
-            refresh();
-
-            axisValue = true;
           }
+          axisValue = true;
+          refresh();
         },
         onComplete: () => {
           gsap.set("#main", { display: "none" })

@@ -88,33 +88,11 @@ function addingSeriesToFooter() {
 }
 
 function containerfunction(eventList, NoEventString, onDisableTranslation, onEnableTranslation, style) {
-    const prevBtn = swiperContainer.querySelector(".swiper-button-prev");
-    const swiperDiv = swiperContainer.querySelector(".swiper")
-    const swiperWrapper = swiperContainer.querySelector(".swiper-wrapper");
-    // const noEventDiv = document.querySelector(".no-new-event-div");
 
     //Removing old Slides
     swiperWrapper.querySelectorAll(".main-slide").forEach(card => {
         swiperWrapper.removeChild(card);
     })
-
-    //Removing noevent Slide
-    // if (noEventDiv) {
-    //     swiperWrapper.removeChild(noEventDiv)
-    // }
-
-    //Creating Swiper 
-    const swiper = new Swiper(swiperDiv, {
-        direction: 'horizontal',
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        freeMode: true,
-        speed: 1000,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
 
     //Adding Cards 
     if (eventList.length > 0) {
@@ -133,7 +111,7 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
             //Adding Classes
             swiperSlide.className = "swiper-slide main-slide";
             card.className = "e-card playing";
-            card.style.transitionDelay = `${index / 20}s`;
+            // card.style.transitionDelay = `${index / 20}s`;
             if (style == 1) {
                 cardContent.className = "e-card-content";
                 cardTitle.className = "e-card-title";
@@ -249,30 +227,35 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
             //Appending Card to Swiper Slide
             swiperSlide.appendChild(card)
 
+            var tl = gsap.timeline();
+            tl.set(swiperSlide, { opacity: 0, yPercent: 2 })
+            tl.to(swiperSlide, { opacity: 1, yPercent: 0, delay: 0.3 * index })
+
             //Appending Swiper Slide to Body
             swiperWrapper.appendChild(swiperSlide);
 
             index = index + 1;
         }
-    } 
-    // else {
-    //     let swiperSlide = document.createElement("div");
-    //     let noNewEventDiv = document.createElement("div");
-    //     let noNewEvent = document.createElement("div");
+    } else {
+        let swiperSlide = document.createElement("div");
+        let noNewEventDiv = document.createElement("div");
+        let noNewEvent = document.createElement("div");
 
-    //     swiperSlide.className = "swiper-slide";
-    //     noNewEventDiv.className = "no-new-event-div main-slide";
-    //     noNewEvent.className = "no-new-event";
+        swiperSlide.className = "swiper-slide main-slide";
+        noNewEventDiv.className = "no-new-event-div";
+        noNewEvent.className = "no-new-event";
 
-    //     noNewEvent.textContent = NoEventString;
+        noNewEvent.textContent = NoEventString;
 
-    //     noNewEventDiv.appendChild(noNewEvent);
-    //     swiperSlide.appendChild(noNewEventDiv);
-    //     swiperWrapper.appendChild(swiperSlide);
-    // } 
+        noNewEventDiv.appendChild(noNewEvent);
+        swiperSlide.appendChild(noNewEventDiv);
+        swiperWrapper.appendChild(swiperSlide);
+    }
     var fillerSlide = document.createElement("div");
     fillerSlide.className = "swiper-slide filler-slide main-slide";
     swiperContainer.querySelector(".swiper-wrapper").appendChild(fillerSlide);
+    swiper.update();
+    swiper.slideTo(0, 0);
 
     //Definitng SVG animation
     function containerSVGAnmiation() {
@@ -382,10 +365,26 @@ function getQuote() {
 
 var activeContainerSection = "Upcoming Events";
 const swiperContainer = document.querySelector(".container");
+const prevBtn = swiperContainer.querySelector(".swiper-button-prev");
+const swiperDiv = swiperContainer.querySelector(".swiper")
+const swiperWrapper = swiperContainer.querySelector(".swiper-wrapper");
+//Creating Swiper 
+const swiper = new Swiper(swiperDiv, {
+    direction: 'horizontal',
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    freeMode: true,
+    speed: 1000,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 const secSVGConatiner = document.querySelector(".section-svgcontainer");
 const containerTopRight = document.querySelector(".container-top-right");
 var activeSVG = secSVGConatiner.querySelector("#annocument-svg");
 const mobileDisplayer = swiperContainer.querySelector(".show-active-btn");
+gsap.set("#new-event", { opacity: 1 })
 containerfunction(upcomingEventList, "As per now there is no upcoming event", 60, 20, 1);
 
 document.querySelectorAll(".container-top-left").forEach(function (containerbtn) {
@@ -399,25 +398,35 @@ document.querySelectorAll(".container-top-left").forEach(function (containerbtn)
             e.target.parentNode.querySelector(".active").classList.remove("active");
             if (containerTopRight.querySelector(".active")) {
                 const activeDisplaybtn = containerTopRight.querySelector(".active");
-                containerTopRight.querySelector(".active").classList.remove("active");
+                gsap.to(activeDisplaybtn, {
+                    opacity: 0,
+                    onComplete: () => {
+                        activeDisplaybtn.classList.remove("active");
+                    }
+                })
+
             }
 
             //Removing active staus from svg element
             secSVGConatiner.querySelector(".active").classList.remove("active");
 
             var stl = gsap.timeline();
-            stl.to(".e-card", {
+
+            stl.to(".main-slide", {
                 xPercent: 0,
                 yPercent: 1,
-                opacity: 0
-            });
-            stl.to(".main-slide", {
                 opacity: 0,
-                onEnter: () => {
+                stagger: 0.1,
+                onComplete: () => {
                     if (e.target.innerHTML == "Upcoming Events") {
                         activeSVG = secSVGConatiner.querySelector("#annocument-svg");
                         const activeDisplaybtn = swiperContainer.querySelector("#new-event");
-                        activeDisplaybtn.classList.add("active");
+                        gsap.to(activeDisplaybtn, {
+                            opacity: 1,
+                            onStart: () => {
+                                activeDisplaybtn.classList.add("active");
+                            }
+                        })
                         activeSVG.classList.add("active");
                         containerfunction(upcomingEventList, "As per now there is no upcoming event", 60, 20, 1);
 
@@ -430,19 +439,18 @@ document.querySelectorAll(".container-top-left").forEach(function (containerbtn)
                         activeSVG = secSVGConatiner.querySelector("#ongoing-svg");
                         const activeDisplaybtn = swiperContainer.querySelector("#volunteer-btn");
                         activeSVG.classList.add("active");
-                        activeDisplaybtn.classList.add("active");
+                        gsap.to(activeDisplaybtn, {
+                            opacity: 1,
+                            onStart: () => {
+                                activeDisplaybtn.classList.add("active");
+                            }
+                        })
                         containerfunction(onGoingSeriesList, "Currently No Series is going", 30, 20, 3);
 
                     };
                 }
             }
             );
-
-            stl.from(".e-card", {
-                yPercent: 1,
-                opacity: 1,
-                stagger: 0.1
-            });
             e.target.classList.add("active");
             activeContainerSection = e.target.innerHTML;
         }

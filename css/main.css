@@ -868,6 +868,6 @@ a {
   height: 100%;
 }
 
-button#volunteer-btn.display-btn.active span.second span.word:nth-child(3) {
+button.display-btn.active span.second span.word:not(:nth-child(1)) {
   padding-left: 0.3vw;
 }

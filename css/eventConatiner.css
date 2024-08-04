@@ -65,6 +65,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3vw;
+  margin-inline: 2vw;
+  height: 5vw;
 }
 
 .container-mobile-top-left {
@@ -73,7 +75,6 @@
 
 .container-top-left {
   color: rgb(156, 156, 156);
-  margin-left: 4vw;
   font-size: var(--font-size-7);
   font-family: "Prompt";
   font-optical-sizing: auto;
@@ -123,8 +124,10 @@
 }
 
 .container-top-right {
-  margin-top: 2.68vw;
-  margin-right: 2.8vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .display-btn {
@@ -133,7 +136,7 @@
   opacity: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: var(--font-size-13);
@@ -149,17 +152,7 @@
 }
 
 .display-btn.active {
-  animation: fade-up 1s ease forwards;
   display: flex;
-}
-
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .display-btn:hover {
@@ -328,7 +321,6 @@
   background: transparent;
   box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
   overflow: hidden;
-  /* transition: opacity 0.1s ease; */
 }
 
 .wave {
@@ -634,6 +626,7 @@
 }
 
 .no-new-event-div {
+  position: relative;
   width: 15vw;
   height: 17vw;
   background-image: linear-gradient(163deg, #ff00ff 0%, #3700ff 100%);
@@ -642,14 +635,18 @@
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0, 0, 0, 1);
   transition-property: box-shadow;
+  font-family: "Prompt";
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .no-new-event {
+  position: relative;
   width: 15vw;
   height: 17vw;
   position: absolute;
   top: 0%;
-  transform: translateY(-23.5%);
   color: white;
   display: flex;
   align-items: center;
@@ -669,7 +666,6 @@
 }
 
 .no-new-event:hover {
-  height: 16.5vw;
-  transform: scale(0.97) translateY(-22%);
+  transform: scale(0.99) ;
   border-radius: 18px;
 }

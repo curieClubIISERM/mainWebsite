@@ -38,6 +38,10 @@
   pointer-events: none;
   user-select: none;
   color: white;
+  font-family: "Prompt";
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .floating-div {

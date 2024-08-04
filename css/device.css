@@ -66,6 +66,7 @@
     .container-top {
         top: 2vw;
         padding: 2vw 0vw;
+        height: auto;
     }
 
     .container-mobile-top-left {
@@ -78,7 +79,7 @@
         position: absolute;
         height: 0%;
         top: 6vw;
-        left: 2vw;
+        left: 6vw;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -167,6 +168,23 @@
         height: 50vw;
         margin-bottom: 10vw;
     }
+
+    .no-new-event-div, .no-new-event-div:hover {
+        width: 35vw;
+        height: 45vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .no-new-event, .no-new-event:hover {
+        width: 34vw;
+        height: 44vw;
+    }
+    .no-new-event:hover {
+        transform: scale(0.99) translateY(-0.1%);
+    }
+    
 
     .swiper {
         width: 110vw;
