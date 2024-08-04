@@ -1,0 +1,346 @@
+.nav-600 {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 15vh;
+    margin: 0px;
+    padding: 0vw 2vw;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    font-size: var(--font-size-7);
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-left: 1vw;
+}
+
+.nav-left svg {
+    fill: #ffffff;
+    width: 5vw;
+    height: 4vw;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: var(--font-size-13);
+    gap: 1vw;
+}
+
+.nav-links a {
+    position: relative;
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+    transition: font-weight 0.5s ease;
+}
+
+.nav-links a:hover {
+    font-weight: 800;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-property: transform, width;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a:last-child {
+    width: 6vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    font-weight: 700;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.nav-links a:last-child::after {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    content: "";
+    width: 10%;
+    height: 99%;
+    border-radius: 2vw;
+    mix-blend-mode: difference;
+    transform: translate(-50%, 100%);
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-property: transform, width;
+}
+
+.nav-links a:last-child:hover:after {
+    width: 100%;
+    border-radius: 2vw;
+    transform: translate(-50%, 0%);
+}
+
+.nav2 {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 15vh;
+    margin: 0px;
+    padding: 0vw 2vw;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    z-index: 1;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+}
+
+.nav2 .nav-left {
+    font-weight: 500;
+}
+
+.nav2 svg {
+    fill: black;
+}
+
+.nav2-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    gap: 3vw;
+}
+
+.nav2-links a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1vw;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
+    overflow: hidden;
+    font-weight: 400;
+    color: var(--color1);
+    font-size: var(--font-size-13);
+    background-color: var(--color2);
+    transition: color 1s ease,
+        font-size 0.1s ease,
+        background-color 1s ease,
+        font-weight 0.1s ease;
+}
+
+.nav2-links a:hover {
+    color: var(--color2);
+    font-size: 1.01vw;
+    background-color: var(--color1);
+    font-weight: 500;
+}
+
+.nav2-links a::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 5vw 0.2vw / 50% 20%;
+    transform: skew(-45deg);
+    mix-blend-mode: soft-light;
+    background-color: var(--color1);
+    transition: top 0.2s ease,
+        left 0.5s ease,
+        transform 0.5s cubic-bezier(.21, -0.99, .7, 1.76);
+}
+
+.nav2-links a:hover::before {
+    top: 0%;
+    left: 0%;
+    transform: skew(0deg);
+}
+
+.theme-checkbox {
+    --toggle-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 6.25em;
+    height: 3.125em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: left 0.4s, background-position 0.4s;
+    border-radius: 99em;
+    position: relative;
+    border: 0px solid rgba(245, 245, 245, 0);
+    cursor: pointer;
+    font-size: var(--toggle-size);
+}
+
+.theme-checkbox::before {
+    content: "";
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0.438em;
+    left: 0.438em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.theme-checkbox:checked::before {
+    left: calc(100% - 2.25em - 0.438em);
+    background-position: 0;
+}
+
+.theme-checkbox:checked {
+    background-position: 100%;
+    border: 1px solid whitesmoke;
+}
+
+#page-nav nav {
+    position: fixed;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--font-size-13);
+    width: 60vw;
+    overflow: hidden;
+    background-color: #21212178;
+    border-radius: 20vw;
+    backdrop-filter: blur(20px);
+    z-index: 99;
+}
+
+#page-nav nav a {
+    position: relative;
+    color: white;
+    padding: 1vw;
+    text-wrap: nowrap;
+}
+
+#page-nav nav a::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, 0%);
+    height: 0.4vw;
+    width: 1vw;
+    filter: blur(7px);
+    border-radius: 50%;
+    background-color: #efefef;
+    mix-blend-mode: difference;
+    transition: top 250ms ease, left 200ms ease, filter 1500ms ease, transform 100ms ease, height 300ms ease, width 500ms ease, border-radius 500ms ease;
+}
+
+#page-nav nav a:hover::after {
+    top: 50%;
+    left: 50%;
+    filter: blur(4px);
+    transform: translate(-50%, -50%);
+    height: 30%;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 0px #ffffff,
+        0px 0px 12px 0px #d1d9e6,
+        0px 0px 4px 0px #d1d9e6,
+        0px 0px 4px 0px #ffffff;
+    transition: all 0.2s ease;
+}
+
+.label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #394a56;
+}
+
+.toggle {
+    isolation: isolate;
+    position: relative;
+    height: 2.5vw;
+    width: 5.5vw;
+    border-radius: 2vw;
+    overflow: hidden;
+    box-shadow: -8px -4px 8px 0px #ffffff,
+        8px 4px 12px 0px #d1d9e6,
+        4px 4px 4px 0px #d1d9e6 inset,
+        -4px -4px 4px 0px #ffffff inset;
+}
+
+.toggle-state {
+    display: none;
+}
+
+.toggle-state {
+    --color1: #ffffff;
+    --color2: #d1d9e6;
+}
+
+.toggle-state:checked {
+    --color1: #e7f8f7;
+    --color2: #d9e4fd;
+}
+
+.indicator {
+    height: 100%;
+    width: 200%;
+    background: #ecf0f3;
+    border-radius: 15px;
+    transform: translate3d(-75%, 0, 0);
+    transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+    box-shadow: -8px -4px 8px 0px var(--color1),
+        8px 4px 12px 0px var(--color2);
+}
+
+.toggle-state:checked~.indicator {
+    transform: translate3d(25%, 0, 0);
+    background: #e0fffb;
+    box-shadow: -8px -4px 8px 0px var(--color1),
+        8px 4px 12px 0px var(--color2);
+}
