@@ -354,7 +354,7 @@
         text-wrap: nowrap;
     }
 
-    #gallery-curser {
+    #gallery-cursor {
         height: 20vw;
         width: 20vw;
         font-size: 15vw;
@@ -510,7 +510,7 @@
         height: 100%;
     }
 
-    .curser.mobile {
+    .cursor.mobile {
         display: none;
       }
 }

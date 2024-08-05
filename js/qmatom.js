@@ -1685,12 +1685,22 @@ speedController.oninput = function () {
   changeInnerHTMLAsPercentage("speed", "simulationText");
 }
 
+function isSafari() {
+  const ua = navigator.userAgent;
+  return /Safari/.test(ua) && !/Chrome/.test(ua);
+}
+
+function isSafariIOS() {
+  const ua = navigator.userAgent;
+  return /iP(hone|od|ad)/.test(ua) && /Safari/.test(ua) && !/CriOS/.test(ua);
+}
+
 function isMobile() {
   return /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent);
 }
 
 window.onload = () => {
-  if (!isMobile()) {
+  if (!isMobile() || !isSafari || !isSafariIOS) {
     main();
     onClickAnimations();
   }

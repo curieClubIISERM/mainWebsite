@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     recentContainerScrollAnimation();
     appendSinusoidalGroup(40, 40);
     dnaAnimation(40);
-    galleryContainerCurser();
+    galleryContainercursor();
     aboutAnimation()
-    thanksContainerCurser();
+    thanksContainercursor();
     footerAnimationTrigger();
 
 });
@@ -43,7 +43,17 @@ function isMobile() {
     return /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent);
 }
 
-if (isMobile()) {
+function isSafari() {
+    const ua = navigator.userAgent;
+    return /Safari/.test(ua) && !/Chrome/.test(ua);
+  }
+  
+  function isSafariIOS() {
+    const ua = navigator.userAgent;
+    return /iP(hone|od|ad)/.test(ua) && /Safari/.test(ua) && !/CriOS/.test(ua);
+  }
+
+if (isMobile() || isSafari() || isSafariIOS()) {
     document.querySelectorAll(".mobile").forEach(function (element) {
         element.style.display = "none";
     })
@@ -392,20 +402,22 @@ function footerAnimationTrigger() {
     observer.observe(footer);
 }
 
-function thanksContainerCurser() {
+function thanksContainercursor() {
     const thanksContainer = document.getElementById("thanks");
-    const thanksCurser = document.getElementById("thanks-curser");
+    const thankscursor = document.getElementById("thanks-cursor");
     const thanksPersons = document.querySelectorAll(".thanks-person");
 
-    function moveCurser(x, y) {
-        gsap.to(thanksCurser, { left: `${x}px`, top: `${y}px` });
+    var mousein = false;
+
+    function movecursor(x, y) {
+        gsap.to(thankscursor, { left: `${x}px`, top: `${y}px` });
     }
 
     thanksContainer.onmousemove = (e) => {
         const rect = thanksContainer.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        moveCurser(x, y);
+        movecursor(x, y);
     };
 
     thanksContainer.ontouchmove = (e) => {
@@ -413,45 +425,57 @@ function thanksContainerCurser() {
         const touch = e.touches[0];
         const x = touch.clientX - rect.left;
         const y = touch.clientY - rect.top;
-        moveCurser(x, y);
+        movecursor(x, y);
     };
 
     thanksContainer.onmouseleave = thanksContainer.ontouchend = () => {
-        gsap.to(thanksCurser, { scale: 0 });
+        gsap.to(thankscursor, { scale: 0 });
+        mousein = false;
     };
 
     thanksContainer.onmouseenter = thanksContainer.ontouchstart = () => {
-        gsap.to(thanksCurser, { scale: 0.5 });
+        gsap.to(thankscursor, { scale: 0.5 });
+        mousein = true;
     };
 
     thanksPersons.forEach((thanksPerson) => {
         thanksPerson.onmouseenter = thanksPerson.ontouchstart = () => {
-            gsap.to(thanksCurser, { scale: 1 });
+            gsap.to(thankscursor, { scale: 1 });
         };
         thanksPerson.onmouseleave = thanksPerson.ontouchend = () => {
-            gsap.to(thanksCurser, { scale: 0.5 });
+            gsap.to(thankscursor, { scale: 0.5 });
         };
     });
+
+    lenis.on("scroll", ()=>{
+        if (mousein) {
+            gsap.to(thankscursor, { scale: 0})
+        } else {
+            gsap.to(thankscursor, { scale: 0.5})
+        }
+    })
 };
 
-function galleryContainerCurser() {
+function galleryContainercursor() {
     const galleryContainer = document.querySelector(".gallery-container");
-    const galleryCurser = document.getElementById("gallery-curser");
+    const gallerycursor = document.getElementById("gallery-cursor");
     const galleryWrappers = galleryContainer.querySelectorAll(".img-wrapper");
     const dna = galleryContainer.querySelector("#dna");
     const sugars = galleryContainer.querySelectorAll(".sugar");
 
-    function moveCurser(x, y) {
+    var mousein = false;
+
+    function movecursor(x, y) {
         const rect = galleryContainer.getBoundingClientRect();
         const dnaRect = dna.getBoundingClientRect();
         const dnaLeft = dnaRect.left - rect.left;
         const dnaRight = dnaRect.width - rect.left;
 
         if (x <= dnaRight && x >= dnaLeft) {
-            gsap.to(galleryCurser, { left: `${5}vw`, top: `${y}px` });
+            gsap.to(gallerycursor, { left: `${5}vw`, top: `${y}px` });
         } else {
-            galleryCurser.textContent = "";
-            gsap.to(galleryCurser, { left: `${x}px`, top: `${y}px` });
+            gallerycursor.textContent = "";
+            gsap.to(gallerycursor, { left: `${x}px`, top: `${y}px` });
         }
     }
 
@@ -459,7 +483,7 @@ function galleryContainerCurser() {
         const rect = galleryContainer.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        moveCurser(x, y);
+        movecursor(x, y);
     };
 
     galleryContainer.ontouchmove = (e) => {
@@ -467,45 +491,54 @@ function galleryContainerCurser() {
         const touch = e.touches[0];
         const x = touch.clientX - rect.left;
         const y = touch.clientY - rect.top;
-        moveCurser(x, y);
+        movecursor(x, y);
     };
 
     galleryContainer.onmouseleave = galleryContainer.ontouchend = () => {
-        gsap.to(galleryCurser, { scale: 0 });
+        gsap.to(gallerycursor, { scale: 0 });
+        mousein = false;
     };
 
     galleryContainer.onmouseenter = galleryContainer.ontouchstart = () => {
-        gsap.to(galleryCurser, { scale: 0.5 });
+        gsap.to(gallerycursor, { scale: 0.5 });
+        mousein = true;
     };
 
     galleryWrappers.forEach((galleryWrapper) => {
         galleryWrapper.onmouseenter = galleryWrapper.ontouchstart = () => {
-            galleryCurser.style.mixBlendMode = "normal";
-            gsap.to(galleryCurser, { scale: 0.1 });
+            gallerycursor.style.mixBlendMode = "normal";
+            gsap.to(gallerycursor, { scale: 0.1 });
         };
         galleryWrapper.onmouseleave = galleryWrapper.ontouchend = () => {
-            galleryCurser.style.mixBlendMode = "difference";
-            gsap.to(galleryCurser, { scale: 0.5 });
+            gallerycursor.style.mixBlendMode = "difference";
+            gsap.to(gallerycursor, { scale: 0.5 });
         };
     });
 
     dna.onmouseenter = dna.ontouchstart = () => {
-        gsap.to(galleryCurser, { scale: 0.5 });
+        gsap.to(gallerycursor, { scale: 0.5 });
     };
 
     dna.onmouseleave = dna.ontouchend = () => {
-        gsap.to(galleryCurser, { scale: 0.5 });
+        gsap.to(gallerycursor, { scale: 0.5 });
     };
 
     sugars.forEach((sugar) => {
         sugar.onmouseenter = sugar.ontouchstart = (e) => {
-            galleryCurser.textContent = e.target.getAttribute("nucleotide");
+            gallerycursor.textContent = e.target.getAttribute("nucleotide");
             gsap.to(e.target, { fill: "black" });
         };
         sugar.onmouseleave = sugar.ontouchend = (e) => {
             gsap.to(e.target, { fill: "#ffffff" });
         };
     });
+    lenis.on("scroll", ()=> {
+        if (mousein) {
+            gsap.to(gallerycursor, { scale: 0 });
+        } else {
+            gsap.to(gallerycursor, { scale: 0.5 });
+        }
+    })
 };
 
 function spanner(element) {
@@ -650,7 +683,7 @@ const initialOpacitySet = setTimeout(() => {
 function createSpanForHoverAnimation(elementID) {
     var element = document.querySelector(elementID);
     const text = new SplitType(element, { types: 'word, char', tagName: 'span' });
-    
+
     var element = document.querySelector(elementID);
     element.innerHTML = `<span class="first">${element.innerHTML}</span>` +
         `<span class="second">${element.innerHTML}</span>`;
@@ -838,7 +871,7 @@ function generateRandomBlob(cx, cy, numPoints = 6, rMin = 30, rMax = 70) {
 }
 
 document.querySelectorAll('.nav-scrollers').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault(); // Prevent default anchor click behavior
 
         // Get the target section id from the data-target attribute
@@ -846,6 +879,6 @@ document.querySelectorAll('.nav-scrollers').forEach(anchor => {
         const targetSection = document.getElementById(targetId);
 
         // Use GSAP to smoothly scroll to the target section
-        gsap.to(window, {duration: 2, scrollTo: targetSection});
+        gsap.to(window, { duration: 2, scrollTo: targetSection });
     });
 });

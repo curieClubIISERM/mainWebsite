@@ -73,6 +73,7 @@
             <feTurbulence type="turbulence" baseFrequency="1" numOctaves="7" result="turbulence" />
             <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" />
         </filter>
+
         <filter id="vividLight">
             <!-- Separate the image into R, G, B channels -->
             <feComponentTransfer>
@@ -97,6 +98,16 @@
 
             <!-- Combine the results -->
             <feBlend mode="overlay" in="dodge" in2="burn" />
+        </filter>
+
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="100" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 200 -100" result="gooey" />
+            <feBlend in="SourceGraphic" in2="gooey" />
         </filter>
     </svg>
     <div class="qatom mobile">
@@ -889,7 +900,7 @@ C10.3,5.6,10.9,6.4,10.9,7.2z" />
                 <div class="dna-container">
                     <h2>Recent Event Memories</h2>
                 </div>
-                <div class="curser mobile" id="gallery-curser"></div>
+                <div class="cursor mobile" id="gallery-cursor"></div>
             </div>
 
             <div class="scrollOverlay mobile">
@@ -972,7 +983,7 @@ C10.3,5.6,10.9,6.4,10.9,7.2z" />
                     <div class="persondiv" id="volunteers"></div>
                 </div>
             </div>
-            <div id="thanks-curser" class="curser mobile"></div>
+            <div id="thanks-cursor" class="cursor mobile"></div>
         </div>
 
         <div class="footer" id="footer">
