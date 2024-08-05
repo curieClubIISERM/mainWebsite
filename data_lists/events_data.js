@@ -45,22 +45,22 @@ export const recentEventList = [
     {
         type: "Student Talk",
         eventName: "Introduction to the Computational Quantum Chemistry",
-        eventDescription: "Lorem ipsum dolor amet a restiae vitae?"
+        eventDescription: ""
     },
     {
         type: "What it all about?",
         eventName: " A cross-disciplinary approach towards solving the 'Global energy crisis",
-        eventDescription: "Lorem ipsum dolor sit."
+        eventDescription: ""
     },
     {
         type: "Quiz",
         eventName: "Guess The Element",
-        eventDescription: "Lorem ndae nulla molestiae vitae?"
+        eventDescription: ""
     },
     {
         type: "Faculty Talk",
         eventName: "Biologiocal Phase Transitions",
-        eventDescription: "Lorem ipsum dolor sit amet dis illo amet a repudiandae nulla molestiae vitae?"
+        eventDescription: ""
     },
 ]
 
