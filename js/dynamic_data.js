@@ -81,6 +81,21 @@ function addingGoogleFormLinks() {
     }
 }
 
+// Update display-btn link
+function updatedisplaybtnLink() {
+    const volounterlink = googleFormLinks.find(item => item.type === "Volunteering").link;
+    const proposallink = googleFormLinks.find(item => item.type === "Proposing Event").link;
+  
+    document.getElementById("volunteer-btn").onclick = function() {
+      window.location.href = volounterlink;
+    };
+    
+    document.getElementById("new-event").onclick = function() {
+      window.location.href = proposallink;
+    };
+  }
+  
+
 function addingSeriesToFooter() {
     for (let series of onGoingSeriesList) {
         document.querySelector(".series .footer-links-container").innerHTML += `<a href="${series.link}">${series.seriesName}</a>`
@@ -457,6 +472,7 @@ document.querySelectorAll(".container-top-left").forEach(function (containerbtn)
     })
 })
 
+updatedisplaybtnLink()
 getQuote();
 addingImagesToRecentImages();
 addingConvenersinfo();

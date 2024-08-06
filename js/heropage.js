@@ -6,6 +6,67 @@ const lenis = new Lenis({
 })
 lenis.stop();
 
+var loadertl = gsap.timeline({
+    onComplete: () => lenis.start()
+});
+loadertl.from(".loader-svg", {
+    opacity: 0,
+    y: 1,
+    scale: 0.6,
+    duration: 2,
+    transformOrigin: "bottom center",
+    ease: "slow(0.1, 2, false)",
+})
+    .from(".loader-tittle", {
+        opacity: 0,
+        x: 10,
+        stagger: 0.3,
+        ease: "slow(0.7, 0.7, false)",
+        onComplete: () => {
+            if (windowLoaded) {
+                loadertl.resume();
+            } else {
+                loadertl.pause();
+            }
+        }
+    }, "-=0.5")
+    .to(".loader-tittle", {
+        opacity: 0,
+        x: -10,
+        stagger: 0.1,
+        filter: "blur(10px)",
+        ease: "slow(0.7, 0.7, false)",
+    })
+    .to(".loader-svg", {
+        opacity: 0,
+        y: -1,
+        duration: 1,
+        filter: "blur(20px)",
+        ease: "slow(0.1, 2, false)",
+    }, "-=0.5")
+    .to(window, { scrollTo: "#main" })
+    .to(".loader", {
+        opacity: 0,
+        filter: "blur(30px)",
+        duration: 1,
+        ease: "slow(0.1,0.7,false)",
+    })
+    .from(".testtube-container", { y: "10vh", filter: `blur(${10}px)`, opacity: 0, duration: 0.5 },)
+    .from(".nav-600", { yPercent: -100, duration: 0.3 }, "-=1.1")
+    .from(".heropage", { filter: `blur(${20}px)`, opacity: 0 }, "-=4.1")
+    .from("#hero-svg", { filter: `blur(${20}px)`, opacity: 0, scale: 0.8, duration: 0.5 })
+    .from(".panel *", { filter: `blur(${20}px)`, opacity: 0, yPercent: -10, stagger: 0.1 }, "-=1")
+
+
+let windowLoaded = false;
+
+window.addEventListener("load", () => {
+    windowLoaded = true;
+    if (loadertl.paused()) {
+        loadertl.resume();
+    }
+});
+
 const maxfill = 165;
 var footerInterval;
 const nucleotideBaseList = ["A", "T", "G", "C"];
@@ -53,8 +114,23 @@ function isSafari() {
     return /iP(hone|od|ad)/.test(ua) && /Safari/.test(ua) && !/CriOS/.test(ua);
   }
 
-if (isMobile() || isSafari() || isSafariIOS()) {
+if (isMobile()) {
     document.querySelectorAll(".mobile").forEach(function (element) {
+        element.style.display = "none";
+    })
+    document.querySelector('.heropage').style.backgroundImage = 'radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0))';
+    document.querySelector('.coordinatorinfo-container').style.backgroundImage = 'radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0))';
+    document.querySelector('.blobConatiner').style.display = 'flex';
+    document.querySelector('.blobConatiner').style.position = 'absolute';
+    document.querySelector('.blobConatiner').style.filter = 'blur(10px)';
+    document.querySelectorAll('.blobConatiner svg').forEach(function (element) {
+        element.style.width = '50vw';
+        element.style.height = '50vw';
+    });
+
+}
+if (isSafari() || isSafariIOS()) {
+    document.querySelectorAll(".safari").forEach(function (element) {
         element.style.display = "none";
     })
     document.querySelector('.heropage').style.backgroundImage = 'radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0))';
@@ -305,7 +381,7 @@ function recentContainerScrollAnimation() {
     linkToGallery = document.createElement("a");
     linkToGallery.className = "link-to-gallery";
     linkToGallery.textContent = "View all images"
-    linkToGallery.href = "";
+    linkToGallery.href = "https://drive.google.com/drive/folders/18AML3CUHoInIBesaNPoFONZYIC-QTnec?usp=drive_link";
     rImgsWrappers[rImgsWrappers.length - 1].appendChild(linkToGallery);
 
     const observerOptions = {
@@ -577,8 +653,8 @@ function aboutAnimation() {
         scrollTrigger: {
             trigger: '.aboutWrapper',
             start: 'top-=50 top',
-            end: 'bottom bottom',
-            scrub: 1
+            end: '60% 70%',
+            scrub: 1,
         }
     });
     gsap.to(".about", {
@@ -592,7 +668,7 @@ function aboutAnimation() {
         }
     }
     );
-    aboutTl.to(".about .adjustmentlayer", { opacity: 0.8 });
+    aboutTl.to(".about svg", { opacity: 0.1 });
     aboutTl.to(".about h2 span", { y: 0, opacity: 1, stagger: 0.1 }, "=+2");
     aboutTl.to(".description span", { y: 0, opacity: 1, stagger: 0.03 });
 }
@@ -757,69 +833,6 @@ function createSpanForHoverAnimation2(elementID, displacement) {
         gsap.to(secondSpans, { y: `-${displacement}vw`, ease: "steps(12)", stagger: 0.01 });
     });
 }
-
-var loadertl = gsap.timeline({
-    onComplete: () => lenis.start()
-});
-loadertl.from(".loader-svg", {
-    opacity: 0,
-    y: 1,
-    scale: 0.6,
-    duration: 2,
-    transformOrigin: "bottom center",
-    ease: "slow(0.1, 2, false)",
-})
-    .from(".loader-tittle", {
-        opacity: 0,
-        x: 10,
-        stagger: 0.3,
-        ease: "slow(0.7, 0.7, false)",
-        onComplete: () => {
-            if (windowLoaded) {
-                loadertl.resume();
-            } else {
-                loadertl.pause();
-            }
-        }
-    }, "-=0.5")
-    .to(".loader-tittle", {
-        opacity: 0,
-        x: -10,
-        stagger: 0.1,
-        filter: "blur(10px)",
-        ease: "slow(0.7, 0.7, false)",
-    })
-    .to(".loader-svg", {
-        opacity: 0,
-        y: -1,
-        duration: 1,
-        filter: "blur(20px)",
-        ease: "slow(0.1, 2, false)",
-    }, "-=0.5")
-    .to(window, { scrollTo: "#main" })
-    .to(".loader", {
-        opacity: 0,
-        filter: "blur(30px)",
-        duration: 1,
-        ease: "slow(0.1,0.7,false)",
-    })
-    .from(".testtube-container", { filter: `blur(${10}px)`, opacity: 0, duration: 0.5 }, "-=0.6")
-    .from(".nav-600", { yPercent: -100, duration: 0.3 }, "-=0.6")
-    .from(".heropage", { filter: `blur(${20}px)`, opacity: 0 }, "-=3.6")
-    .from("#hero-svg", { filter: `blur(${20}px)`, opacity: 0, scale: 0.8, duration: 0.5 })
-    .from(".panel *", { filter: `blur(${20}px)`, opacity: 0, yPercent: -10, stagger: 0.1 }, "-=0.5")
-
-
-
-let windowLoaded = false;
-
-window.addEventListener("load", () => {
-    windowLoaded = true;
-    if (loadertl.paused()) {
-        loadertl.resume();
-    }
-});
-
 
 function generateRandomBlob(cx, cy, numPoints = 6, rMin = 30, rMax = 70) {
     function randomBetween(min, max) {
