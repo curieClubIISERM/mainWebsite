@@ -51,7 +51,6 @@ loadertl.from(".loader-svg", {
         duration: 1,
         ease: "slow(0.1,0.7,false)",
     })
-    .from(".testtube-container", { y: "10vh", filter: `blur(${10}px)`, opacity: 0, duration: 0.5 },)
     .from(".nav-600", { yPercent: -100, duration: 0.3 }, "-=1.1")
     .from(".heropage", { filter: `blur(${20}px)`, opacity: 0 }, "-=4.1")
     .from("#hero-svg", { filter: `blur(${20}px)`, opacity: 0, scale: 0.8, duration: 0.5 })
