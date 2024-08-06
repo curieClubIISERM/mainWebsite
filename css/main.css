@@ -82,7 +82,7 @@ a {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 50vw;
+  height: 100vh;
   padding-top: 5vw;
   display: flex;
   align-items: center;
@@ -481,6 +481,7 @@ a {
 .testtube {
   filter: url(#gooey);
 }
+
 .testtube .bubble {
   width: 100%;
   height: 100%;
@@ -719,14 +720,24 @@ a {
 
 }
 
-.about .adjustmentlayer {
+.about svg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  background-color: rgb(0, 0, 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25vw;
+  height: 25vw;
+  fill: #dddddd;
+}
+
+.about svg path:nth-child(1) {
+  filter: blur(0.5px);
+  fill: #eaf1ff;
+}
+
+.about svg path:nth-child(2) {
+  fill: #7891c4;
+  filter: blur(0.7px);
 }
 
 .about-content {
@@ -851,8 +862,8 @@ a {
 }
 
 #thanks-cursor {
-  top: 15%;
-  left: 5.9%;
+  top: 13%;
+  left: 5.5%;
 }
 
 /* button Animations Styling */

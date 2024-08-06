@@ -260,7 +260,12 @@
   border: 1px solid #28293600;
   backdrop-filter: blur(0px);
 }
-
+#nlmChooserDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 /* Select Styling */
 .choose-option {
   text-align: center;
@@ -329,6 +334,9 @@ option {
 /* button styling  */
 .Zdiv {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 2vw 0px;
 }
 
@@ -511,22 +519,24 @@ option {
 /* Slicer Slider Styling */
 .SlicerDiv {
   position: absolute;
-  top: 110vw;
+  top: 110vh;
   left: 50%;
   transform: translate(-50%);
   width: 25vw;
   height: 3vw;
   margin: 1.5vw 0px;
+  opacity: 0;
   pointer-events: all;
   border-radius: 3vw;
   box-shadow: 0 1.5vw 1.5vw rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.3);
-  transition: top 0.3s ease;
+  transition: top 0.3s ease, opacity 0.2s ease;
 }
 
 .SlicerDiv.working {
-  top: 43vw;
+  top: 90vh;
+  opacity: 1;
 }
 
 .Slicecoordinator {
