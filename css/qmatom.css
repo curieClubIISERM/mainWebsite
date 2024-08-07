@@ -253,7 +253,6 @@
   scrollbar-width: none;
 }
 
-/* .qatomcontroller, */
 .qatomcontroller.changing {
   background-color: transparent;
   box-shadow: 0 15px 35px #28293600;

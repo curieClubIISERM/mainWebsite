@@ -21,6 +21,19 @@
         --font-size-4: 12vw;
     }
 
+    .qatom {
+        height: 100vh;
+    }
+
+    .split {
+        height: 100vh;
+    }
+
+    .split canvas {
+        left: 0vw;
+        transform: none;
+    }
+
     .mobile {
         display: none;
     }
@@ -29,7 +42,124 @@
         background-image: radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0));
         height: 100vh;
         flex-direction: column;
+        -webkit-mask-image: linear-gradient(to top, transparent 30%, black 50%);
+        mask-image: linear-gradient(to top, transparent 30%, black 50%);
+        -webkit-mask-size: 100% 200%;
+        mask-size: 100% 200%;
+        mask-position: 100% 0%;
+        mask-repeat: no-repeat;
     }
+
+    .backbtn {
+        width: 20vw;
+    }
+
+    .backbtn .backcircle {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .backbtn .backcircle .icon.arrow {
+        width: 4vw;
+    }
+
+    .backbtn .button-text {
+        font-size: 2.5vw;
+        left: 50%;
+        margin: 0 0 0 3vw;
+    }
+
+    .backbtn .backcircle .icon.arrow::before {
+        top: -0.9vw;
+        left: 0.6vw;
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .backbtn:hover .backcircle .icon.arrow {
+        transform: translate(2vw);
+    }
+
+    .add-qcontrols {
+        width: 7vw;
+        height: 7vw;
+        top: 20vw;
+    }
+
+    .add-qcontrols:hover {
+        width: 20vw;
+    }
+
+    .add-qcontrols svg {
+        width: 5vw;
+        top: 3.4vw;
+        left: 3.4vw;
+    }
+
+    .add-qcontrols:hover svg {
+        left: 4vw;
+    }
+
+    .add-qcontrols span {
+        top: 3.4vw;
+        left: 12vw;
+    }
+
+    .qmode {
+        font-size: 2.5vw;
+    }
+
+    .qatomcontroller {
+        padding-block: 5vh;
+        width: 60vw;
+        height: 50vh;
+    }
+
+    .breaker-line {
+        margin-block: 6vw;
+        width: 45vw;
+    }
+
+    .choose-option {
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+
+    .Zbtn {
+        font-size: 1vh;
+    }
+
+    .zbtndiv {
+        width: 15vw;
+        margin: 0.5vw;
+    }
+
+    .animation-option-label {
+        align-content: center;
+        text-align: center;
+    }
+
+    .selecter {
+        margin-block: 1vw;
+    }
+
+    .slider {
+        width: 100%;
+        height: 2vh;
+        margin: 3vh 1vw;
+        left: -30%;
+    }
+
+    .sliderDiv .slidersvg {
+        width: 3.5vw;
+        top: 0%;
+        left: -20%;
+    }
+
+    .slidertittle {
+        opacity: 0;
+    }
+
 
     .panel {
         top: -5%;
@@ -169,22 +299,25 @@
         margin-bottom: 10vw;
     }
 
-    .no-new-event-div, .no-new-event-div:hover {
+    .no-new-event-div,
+    .no-new-event-div:hover {
         width: 35vw;
         height: 45vw;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
-    .no-new-event, .no-new-event:hover {
+
+    .no-new-event,
+    .no-new-event:hover {
         width: 34vw;
         height: 44vw;
     }
+
     .no-new-event:hover {
         transform: scale(0.99) translateY(-0.1%);
     }
-    
+
 
     .swiper {
         width: 110vw;
@@ -512,5 +645,5 @@
 
     .cursor.mobile {
         display: none;
-      }
+    }
 }
