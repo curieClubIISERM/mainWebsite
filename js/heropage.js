@@ -106,12 +106,12 @@ function isMobile() {
 function isSafari() {
     const ua = navigator.userAgent;
     return /Safari/.test(ua) && !/Chrome/.test(ua);
-  }
-  
-  function isSafariIOS() {
+}
+
+function isSafariIOS() {
     const ua = navigator.userAgent;
     return /iP(hone|od|ad)/.test(ua) && /Safari/.test(ua) && !/CriOS/.test(ua);
-  }
+}
 
 if (isMobile()) {
     document.querySelectorAll(".mobile").forEach(function (element) {
@@ -522,11 +522,11 @@ function thanksContainercursor() {
         };
     });
 
-    lenis.on("scroll", ()=>{
+    lenis.on("scroll", () => {
         if (mousein) {
-            gsap.to(thankscursor, { scale: 0})
+            gsap.to(thankscursor, { scale: 0 })
         } else {
-            gsap.to(thankscursor, { scale: 0.5})
+            gsap.to(thankscursor, { scale: 0.5 })
         }
     })
 };
@@ -607,7 +607,7 @@ function galleryContainercursor() {
             gsap.to(e.target, { fill: "#ffffff" });
         };
     });
-    lenis.on("scroll", ()=> {
+    lenis.on("scroll", () => {
         if (mousein) {
             gsap.to(gallerycursor, { scale: 0 });
         } else {
@@ -667,7 +667,15 @@ function aboutAnimation() {
         }
     }
     );
-    aboutTl.to(".about svg", { opacity: 0.1 });
+    gsap.to(".about svg", {
+        opacity: 0.1,
+        scrollTrigger: {
+            trigger: '.aboutWrapper',
+            start: 'top-=100 top',
+            end: 'bottom bottom',
+            scrub: 1
+        }
+    });
     aboutTl.to(".about h2 span", { y: 0, opacity: 1, stagger: 0.1 }, "=+2");
     aboutTl.to(".description span", { y: 0, opacity: 1, stagger: 0.03 });
 }
