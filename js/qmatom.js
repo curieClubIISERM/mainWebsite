@@ -16,7 +16,6 @@ var zoom3d = .23
 var sqrt12 = Math.sqrt(.5)
 var nChooser, mChooser, lChooser, viewChooser;
 var sampleCount;
-var selectText;
 
 var sliceChooser;
 const SLICE_NONE = 0;
@@ -642,9 +641,6 @@ function main() {
     gl.viewport(0, 0, canvas.width, canvas.height);
     var norms = runPhysics(deltaTime)
     drawAtomScene(gl, buffers, deltaTime, norms);
-    selectText = null;
-    // if (!selectedState)
-    //   getById("selectText").innerHTML = selectText ? selectText : "";
 
     animating = (!dragStop) || zoomRate != 0 || autoZooming;
     if (!animating)
@@ -658,7 +654,6 @@ function main() {
     if (!animating)
       requestAnimationFrame(render);
   }
-
 
   // add button event handlers
   var func = function (event) {
@@ -1072,7 +1067,7 @@ function drawAxes(gl, buffers, viewMatrix) {
     var leftVw = (leftPx / gl.canvas.width) * 100;
     var topVh = (topPx / gl.canvas.height) * 100;
 
-    gsap.to(div, { opacity: 1, delay: 1})
+    gsap.to(div, { opacity: 1, delay: 1 })
     div.style.left = leftVw + "vw";
     div.style.top = topVh + "vh";
   }
@@ -1084,7 +1079,7 @@ function hideAxes() {
     var div = document.getElementById("xyz".substring(i, i + 1) + "Label");
     gsap.to(div, {
       opacity: 0,
-      left: "105vw" 
+      left: "105vw"
     });
   }
 }
@@ -1540,8 +1535,9 @@ function changedControllerPostion() {
       text: "Close",
       duration: 0.5
     });
+    var newleft = (isMobile() && isWebGLRenderable()) ? 69 : 82;
     gsap.to(qController, {
-      left: `${82}%`
+      left: `${newleft}%`
     })
 
   } else {
@@ -1680,6 +1676,105 @@ function onClickAnimations() {
 
   });
 }
+function mobileOnClickAnimations() {
+  const qbtn = document.querySelector("#qbtn");
+  const backButton = document.querySelector(".backbtn");
+  var lastSliceState;
+  var lastSliceSlidervalue;
+
+  qbtn.addEventListener('click', () => {
+    var tl = gsap.timeline();
+    tl.to(window, {
+      scrollTo: "#main", onStart: () => {
+        lenis.stop();
+      }
+    }, "start")
+      .to(".nav-600", { yPercent: -100, duration: 0.3 }, "start2")
+      .to(".testtube-container", { filter: `blur(${60}px)`, opacity: 0, duration: 0.5 }, "start2")
+      .to(".backbtn", { opacity: 1, filter: `blur(${0}px)` }, "start3")
+      .to(".add-qcontrols", { opacity: 1, filter: `blur(${0}px)` }, "start3")
+      .to(".heropage", {maskPosition: `100% 199%`, duration: 2}, "start3")
+      .to(".panel *", { filter: `blur(${60}px)`, opacity: 0, yPercent: -100, stagger: 0.1 }, "start3")
+      .to("#hero-svg", { filter: `blur(${60}px)`, opacity: 0, scale: 0.8, duration: 0.5 }, "start2")
+      .set("#atomCanvas", {
+        pointerEvents: "all",
+        onStart: () => {
+          if (lastSliceState && lastSliceSlidervalue) {
+            sliceChooser.selectedIndex = lastSliceState;
+            sliceSlider.value = lastSliceSlidervalue;
+            createOrbitals();
+          }
+          axisValue = true;
+          refresh();
+        },
+        onComplete: () => {
+          gsap.set("#main", { display: "none"})
+        }
+      })
+  })
+
+  addControl.addEventListener("click", () => {
+    changedControllerPostion();
+    addFlag++;
+  })
+
+  backButton.addEventListener('click', () => {
+    addFlag = 1;
+    changedControllerPostion();
+    var reverseTl = gsap.timeline({
+      scrollTo: "#main", onComplete: () => {
+        lenis.start();
+      }
+    });
+    reverseTl.to(".backbtn", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 }, "start")
+      .to(".add-qcontrols", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 }, "start")
+      .set("#atomCanvas", {
+        pointerEvents: "none",
+        onStart: () => {
+          axisValue = false;
+          refresh();
+        },
+        onComplete: () => {
+          gsap.set("#main", { display: "block" });
+          lenis.start()
+        }
+      })
+      .to(".heropage", {maskPosition: `100% ${0}%`, duration: 2}, "start2")
+      .to(".testtube-container", { filter: `blur(${0}px)`, opacity: 1, duration: 0.5 }, "start3")
+      .to(".nav-600", { yPercent: 0, duration: 0.3 },"start3")
+      .to(".heropage", { filter: `blur(${0}px)`, opacity: 1 }, "start3")
+      .to("#hero-svg", { filter: `blur(${0}px)`, opacity: 1, scale: 1, duration: 0.5 }, "start3")
+      .to(".panel *", { filter: `blur(${0}px)`, opacity: 1, yPercent: 0, stagger: 0.1, }, "start3")
+
+
+
+
+    lastSliceState = sliceChooser.selectedIndex;
+    lastSliceSlidervalue = sliceSlider.value;
+    sliceSlider.value = 0;
+    sliceChooser.selectedIndex = 0;
+    createOrbitals();
+    refresh();
+
+    clearTimeout(setDisplayNone);
+
+    if (brightnessBar.value > Math.round(Math.log(bestBrightness) * 100.)) {
+      brightnessBar.value = Math.round(Math.log(bestBrightness) * 100.) / 1.8;
+      brightnessChanged();
+      refresh();
+    };
+
+    if (speedController.value > 80) {
+      speedController.value = 80;
+      refresh();
+    };
+
+    if (zoom3d > 0.5) {
+      zoom3d = 0.23;
+    }
+
+  });
+}
 
 speedController.oninput = function () {
   changeInnerHTMLAsPercentage("speed", "simulationText");
@@ -1699,9 +1794,47 @@ function isMobile() {
   return /Mobi|Android|iPhone|iPad|iPod/.test(navigator.userAgent);
 }
 
+function isWebGLRenderable() {
+  // Try to create a WebGL context
+  const canvas = document.createElement('canvas');
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+
+  // Check if the context is available
+  if (!gl) {
+    console.log("WebGL not supported");
+    return false;
+  }
+
+  // Check for any errors
+  const error = gl.getError();
+  if (error !== gl.NO_ERROR) {
+    return false;
+  }
+
+  // Check for specific WebGL extensions or capabilities required by your model
+
+  if (!gl.getExtension('OES_texture_float')) {
+    return false;  //Required WebGL extension 'OES_texture_float' not supported
+  }
+
+  return true;
+}
+
+// Example usage
+if (!isWebGLRenderable()) {
+  document.querySelectorAll(".glsupport").forEach(function (element) {
+    element.style.display = "none";
+  });
+}
+
+
 window.onload = () => {
   if (!isMobile() || !isSafari || !isSafariIOS) {
     main();
     onClickAnimations();
+  }
+  if (isMobile() && isWebGLRenderable()) {
+    main();
+    mobileOnClickAnimations();
   }
 };
