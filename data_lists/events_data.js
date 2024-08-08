@@ -1,12 +1,12 @@
 export const upcomingEventList = [
-    // {
-    //     eventName: "Tresure Hunt",
-    //     eventDate: "2022-05-15",
-    //     eventTime: "6:00 PM",
-    //     eventVenue: "Curie Museum",
-    //     eventDescription: "Find hidden treasures in the Curie Museum",
-    //     eventImage: "",
-    // },
+     {
+         eventName: "INST Lab Tour",
+         eventDate: "2024-08-10",
+         eventTime: "Not Decided Yet",
+         eventVenue: "INST",
+         eventDescription: " ",
+         eventImage: "",
+     },
     // {
     //     eventName: "Tresure Hunt",
     //     eventDate: "2022-05-15",
