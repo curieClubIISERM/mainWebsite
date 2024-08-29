@@ -2,7 +2,7 @@ export const upcomingEventList = [
      {
          eventName: "INST Lab Tour",
          eventDate: "2022-08-30",
-         eventTime: "12:00 PM",
+         eventTime: "11:00 AM",
          eventVenue: "INST",
          eventDescription: " ",
          eventImage: "",
