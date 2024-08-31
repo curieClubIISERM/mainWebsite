@@ -499,6 +499,10 @@
 .r-card-description {
   padding: 1vw 0.7vw 2vw 0.7vw;
   min-height: 6vw;
+  line-height: 1.47vw;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 
 .s-card-description {
