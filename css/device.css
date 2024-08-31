@@ -419,6 +419,8 @@
 
     .r-card-description {
         height: 14.5vw;
+        line-height: normal;
+        display: flex;
     }
 
     .r-card-description::after {

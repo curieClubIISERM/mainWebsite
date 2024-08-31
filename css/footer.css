@@ -264,6 +264,10 @@
   .social-media .icon-content a[data-social="youtube"] .filled {
     background-color: #ff0000;
   }
+ 
+  .social-media .icon-content a[data-social="github"] .filled {
+    background-color: #24262a;
+  }
 
 
   /* footer2 Styling */
