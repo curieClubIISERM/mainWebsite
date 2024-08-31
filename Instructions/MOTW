@@ -1,6 +1,15 @@
 
 /* 
-How to Add a New Molecule
+How to Add a New Molecule?
+
+//Uploading Images of the Molecule
+1. Go to assests/MOTW/
+2. Make a directory of the molecule by its name (i.e. Arteminisinin) then go into that folder.
+3. Upload the images of the molecule file ( make sure that file is webp so that it loads quickly, use any online convertrer for that) 
+
+
+//Uploading PDF of the Molecule
+1. Go to assests/
 
 Follow the steps below to add a new molecule entry to the JavaScript object. Replace placeholders with actual values.
 */
