@@ -1,12 +1,12 @@
 export const upcomingEventList = [
-     {
-         eventName: "INST Lab Tour",
-         eventDate: "2022-08-30",
-         eventTime: "11:00 AM",
-         eventVenue: "INST",
-         eventDescription: " ",
-         eventImage: "",
-     },
+    //  {
+    //      eventName: "INST Lab Tour",
+    //      eventDate: "2022-08-30",
+    //      eventTime: "11:00 AM",
+    //      eventVenue: "INST",
+    //      eventDescription: " ",
+    //      eventImage: "",
+    //  },
     // {
     //     eventName: "Tresure Hunt",
     //     eventDate: "2022-05-15",
@@ -42,6 +42,11 @@ export const upcomingEventList = [
 ]
 
 export const recentEventList = [
+    {
+        type: "Lab Tour",
+        eventName: "INST Lab Tour",
+        eventDescription: "A lab tour to INST, where students see and learn about various machines and equipment used for research works in INST MOhali "
+    },
     {
         type: "Student Talk",
         eventName: "Introduction to the Computational Quantum Chemistry",
