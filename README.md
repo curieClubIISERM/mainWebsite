@@ -14,7 +14,7 @@ Visit our live website at: [Curie Club Website](https://curieclubiiserm.github.i
 
 - **Event Updates:** Stay informed about upcoming events and activities.
 - **Molecule of the Week:** Learn about fascinating molecules.
-- **Explore Orbital:** Dive into quantum mechanics with our 3D orbital visualizer. Choose quantum numbers n, l, m and see the corresponding orbital. Adjust the evolution speed, brightness, and use the slice option to project the orbital onto xy, yz, or xz planes. Slide the plane using the slider for an interactive experience.
+- **Explore Orbital:** Dive into quantum mechanics with our 3D orbital visualizer. Choose quantum numbers n, l, m and see the corresponding orbital. Adjust the evolution speed, brightness, and use the slice option to project the orbital onto xy, yz, or xz planes. Slide the plane using the slider for an interactive experience.
 - **Gallery:** Explore photos and videos from our past events.
 
 ## Contributing
