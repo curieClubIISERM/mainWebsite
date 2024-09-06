@@ -75,7 +75,7 @@ geosmin: {
         { linkTitle: "Geosmin Overview - Wikipedia", link: "https://en.wikipedia.org/wiki/Geosmin" },
         { linkTitle: "Geosmin - Molecule of the Week - ACS", link: "https://www.acs.org/molecule-of-the-week/archive/g/geosmin.html" }
     ]
-}
+},
 ```
 
 ### Final Step: Add the Molecule to the JS File
