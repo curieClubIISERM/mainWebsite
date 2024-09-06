@@ -7,5 +7,6 @@ export const volunteers = [
     "Srushti Ragade (MS22239)",
     "Aditya Bora (MS22181)",
     "Anjela Datta (MS22261)",
+    "Vedantika Dey (MS23239)",
     "Sakshi (MS23105)"
 ];
