@@ -1,12 +1,11 @@
 export const upcomingEventList = [
-    //  {
-    //      eventName: "INST Lab Tour",
-    //      eventDate: "2022-08-30",
-    //      eventTime: "11:00 AM",
-    //      eventVenue: "INST",
-    //      eventDescription: " ",
-    //      eventImage: "",
-    //  },
+      {
+          eventName: "CHEM NIGHT",
+          eventDate: "2024-09-16",
+          eventTime: "09:00 PM",
+          eventVenue: "LH5 / LH6",
+          eventDescription: " ",
+      },
     // {
     //     eventName: "Tresure Hunt",
     //     eventDate: "2022-05-15",
