@@ -9,9 +9,9 @@ export const coordinators = [
         position: "Convener",
         image: "assests/Coordinaters_images/prince_profile_pic.webp"
     },
-    {
-        name: "Manoj Soni",
-        position: "Co-convener",
-        image: "assests/Coordinaters_images/manoj_profile_pic.webp"
-    }
+    //{
+    //    name: "Manoj Soni",
+    //    position: "Co-convener",
+    //    image: "assests/Coordinaters_images/manoj_profile_pic.webp"
+    //}
 ];
