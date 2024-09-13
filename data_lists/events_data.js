@@ -4,7 +4,7 @@ export const upcomingEventList = [
           eventDate: "2024-09-16",
           eventTime: "09:00 PM",
           eventVenue: "LH5 / LH6",
-          eventDescription: " ",
+          eventDescription: "As part of the Fresher's Week, CHEM NIGHT will feature an exciting quiz along with chemistry-related activities, fun challenges, and a prize pool worth Rs. 1500.",
       },
     // {
     //     eventName: "Tresure Hunt",
