@@ -4,7 +4,7 @@ export const upcomingEventList = [
           eventDate: "2024-09-16",
           eventTime: "09:00 PM",
           eventVenue: "LH5 / LH6",
-          eventDescription: "As part of the Fresher's Week, CHEM NIGHT will feature an exciting quiz along with chemistry-related activities, fun challenges, and a prize pool worth Rs. 1500.",
+          eventDescription: "As part of the Fresher's Week, Molecule Mania will feature an exciting quiz which will be hosted by Vedansh Gupta (MS23)",
       },
     // {
     //     eventName: "Tresure Hunt",
