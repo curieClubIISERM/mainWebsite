@@ -1,6 +1,6 @@
 export const upcomingEventList = [
       {
-          eventName: "CHEM NIGHT",
+          eventName: "Molecule Mania",
           eventDate: "2024-09-16",
           eventTime: "09:00 PM",
           eventVenue: "LH5 / LH6",
