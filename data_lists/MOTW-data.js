@@ -1,5 +1,30 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    paracetamol: {
+        moleculeName: "Paracetamol",
+        publishDate: "2024-09-16",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Vedansh Gupta (MS23)",
+            Designer: "Dibyendu Sarkar (MS22)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Paracetamol/1.webp",
+            slide2: "../assests/MOTW/Paracetamol/2.webp",
+            slide3: "../assests/MOTW/Paracetamol/3.webp",
+            slide4: "../assests/MOTW/Paracetamol/4.webp",
+            slide5: "../assests/MOTW/Paracetamol/5.webp",
+            slide6: "../assests/MOTW/Paracetamol/6.webp",
+        },        
+        pdflink: "drive.toDownload(https://drive.google.com/file/d/1DlDLGLlgtGRNAA0U3QW9J2rIPwPUQePv/view?usp=drive_link)",
+        references: [
+            { linkTitle: "N-Acetyl-p-aminophenol - SVG Structure", link: "https://shorturl.at/LRlGa" },
+            { linkTitle: "N-Acetyl-p-aminophenol - File on Wikipedia", link: "https://en.wikipedia.org/wiki/File:N-Acetyl-p-aminophenol.svg" },
+            { linkTitle: "Paracetamol - Wikipedia", link: "https://en.wikipedia.org/wiki/Paracetamol" },
+            { linkTitle: "Paracetamol - Shortened URL", link: "https://shorturl.at/y2Lic" }
+        ]                
+    },
     geosmin: {
         moleculeName: "Geosmin",
         publishDate: "2024-04-06",
