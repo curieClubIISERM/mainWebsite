@@ -1,11 +1,11 @@
 export const upcomingEventList = [
-      {
-          eventName: "Molecule Mania",
-          eventDate: "2024-09-16",
-          eventTime: "09:00 PM",
-          eventVenue: "LH5 / LH6",
-          eventDescription: "As part of the Fresher's Week, Molecule Mania will feature an exciting quiz which will be hosted by Vedansh Gupta (MS23)",
-      },
+    //{
+    //    eventName: "Molecule Mania",
+    //    eventDate: "2024-09-16",
+    //    eventTime: "09:00 PM",
+    //    eventVenue: "LH5 / LH6",
+    //    eventDescription: "As part of the Fresher's Week, Molecule Mania will feature an exciting quiz which will be hosted by Vedansh Gupta (MS23)",
+    //},
     // {
     //     eventName: "Tresure Hunt",
     //     eventDate: "2022-05-15",
@@ -41,6 +41,11 @@ export const upcomingEventList = [
 ]
 
 export const recentEventList = [
+     {
+        type: "Quiz",
+        eventName: "Chem Night",
+        eventDescription: "As part of the Fresher's Week, Chem Night will feature an exciting quiz "
+    },
     {
         type: "Lab Tour",
         eventName: "INST Lab Tour",
