@@ -1,5 +1,9 @@
 export const images = [
     {
+        src: "assests/events_images/Chem_Night.webp",
+        alt: "Chem Night"
+    },
+    {
         src: "assests/events_images/INST_lab_tour.webp",
         alt: "INST Lab Tour"
     },
