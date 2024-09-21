@@ -17,7 +17,7 @@ export const molecules = {
             slide5: "../assests/MOTW/Paracetamol/5.webp",
             slide6: "../assests/MOTW/Paracetamol/6.webp",
         },        
-        pdflink: "drive.toDownload(https://drive.google.com/file/d/1DlDLGLlgtGRNAA0U3QW9J2rIPwPUQePv/view?usp=drive_link)",
+        pdflink: drive.toDownload("https://drive.google.com/file/d/1DlDLGLlgtGRNAA0U3QW9J2rIPwPUQePv/view?usp=drive_link"),
         references: [
             { linkTitle: "N-Acetyl-p-aminophenol - SVG Structure", link: "https://shorturl.at/LRlGa" },
             { linkTitle: "N-Acetyl-p-aminophenol - File on Wikipedia", link: "https://en.wikipedia.org/wiki/File:N-Acetyl-p-aminophenol.svg" },
