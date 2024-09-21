@@ -1,5 +1,30 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    dopamine: {
+        moleculeName: "Dopamine",
+        publishDate: "2024-09-22",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Nafeeha .N (MS22)",
+            Designer: "Gali Lekya (MS22)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Dopamine/1.webp",
+            slide2: "../assests/MOTW/Dopamine/2.webp",
+            slide3: "../assests/MOTW/Dopamine/3.webp",
+            slide4: "../assests/MOTW/Dopamine/4.webp",
+            slide5: "../assests/MOTW/Dopamine/5.webp",
+            slide6: "../assests/MOTW/Dopamine/6.webp",
+        },
+        pdflink: drive.toDownload("https://drive.google.com/file/d/17xMPkouQoYmk14MibunyKlzdFMzaXPCh/view?usp=sharing"),
+        references: [
+            { "linkTitle": "Dopamine - Healthdirect", "link": "https://www.healthdirect.gov.au/amp/article/dopamine" },
+            { "linkTitle": "Dopamine - PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Dopamine" },
+            { "linkTitle": "Happy Hormones - Healthline", "link": "https://www.healthline.com/health/happy-hormone" },
+            { "linkTitle": "Brain Chemistry and Mood - Houston Methodist", "link": "https://www.houstonmethodist.org/blog/articles/2021/sep/brain-chemistry-your-mood-4-hormones-that-promote-happiness/" }
+        ]
+    },
     paracetamol: {
         moleculeName: "Paracetamol",
         publishDate: "2024-09-16",
