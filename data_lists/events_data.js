@@ -42,7 +42,7 @@ export const upcomingEventList = [
 
 export const recentEventList = [
     {
-        type: "Treasure Hunt.webp",
+        type: "Treasure Hunt",
         eventName: "Curie Treasure Hunt",
         eventDescription: 'On September 20th, we held the "Curie Treasure Hunt," a fun, science-themed event where teams solved chemistry-related clues, combining learning with adventure.'
     },
