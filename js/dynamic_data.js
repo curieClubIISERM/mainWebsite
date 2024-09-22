@@ -108,10 +108,6 @@ function containerfunction(eventList, NoEventString, onDisableTranslation, onEna
     swiperWrapper.querySelectorAll(".main-slide").forEach(card => {
         swiperWrapper.removeChild(card);
     })
-    noEventDiv = document.querySelector(".no-new-event-div");
-    if (noEventDiv) {
-        swiperWrapper.removeChild(noEventDiv)
-    }
 
     //Adding Cards 
     if (eventList.length > 0) {
@@ -434,9 +430,6 @@ document.querySelectorAll(".container-top-left").forEach(function (containerbtn)
             stl.to(".main-slide", {
                 xPercent: 0,
                 yPercent: 1,
-                opacity: 0
-            });
-            stl.to(".no-new-event-div, .main-slide", {
                 opacity: 0,
                 stagger: 0.1,
                 onComplete: () => {
