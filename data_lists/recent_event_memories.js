@@ -1,5 +1,9 @@
 export const images = [
     {
+        src: "assests/events_images/Curie_Treasure _Hunt.webp",
+        alt: "Curie Treasure Hunt"
+    },
+    {
         src: "assests/events_images/Chem_Night.webp",
         alt: "Chem Night"
     },
@@ -14,10 +18,6 @@ export const images = [
     {
         src: "assests/events_images/curie_quiz.webp",
         alt: "Curie Quiz Poster"
-    },
-    {
-        src: "assests/events_images/GreenTalk.webp",
-        alt: "Green Talk"
     },
     {
         src: "assests/events_images/chembio_talk.webp",

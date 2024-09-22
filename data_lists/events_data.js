@@ -41,6 +41,11 @@ export const upcomingEventList = [
 ]
 
 export const recentEventList = [
+    {
+        type: "Treasure Hunt.webp",
+        eventName: "Curie Treasure Hunt",
+        eventDescription: 'On September 20th, we held the "Curie Treasure Hunt," a fun, science-themed event where teams solved chemistry-related clues, combining learning with adventure.'
+    },
      {
         type: "Quiz",
         eventName: "Chem Night",
@@ -64,11 +69,6 @@ export const recentEventList = [
     {
         type: "Quiz",
         eventName: "Guess The Element",
-        eventDescription: " "
-    },
-    {
-        type: "Faculty Talk",
-        eventName: "Biologiocal Phase Transitions",
         eventDescription: " "
     },
 ]
