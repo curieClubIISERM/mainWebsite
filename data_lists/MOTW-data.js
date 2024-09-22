@@ -16,6 +16,7 @@ export const molecules = {
             slide4: "../assests/MOTW/Dopamine/4.webp",
             slide5: "../assests/MOTW/Dopamine/5.webp",
             slide6: "../assests/MOTW/Dopamine/6.webp",
+            slide7: "../assests/MOTW/Dopamine/7.webp",
         },
         pdflink: drive.toDownload("https://drive.google.com/file/d/17xMPkouQoYmk14MibunyKlzdFMzaXPCh/view?usp=sharing"),
         references: [
