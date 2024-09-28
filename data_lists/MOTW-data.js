@@ -1,5 +1,30 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    parabens: {
+        moleculeName: "Parabens",
+        publishDate: "2024-09-29",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Prabhleen (MS23)",
+            Designer: "Gauri (MS24)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Parabens/1.webp",
+            slide2: "../assests/MOTW/Parabens/2.webp",
+            slide3: "../assests/MOTW/Parabens/3.webp",
+            slide4: "../assests/MOTW/Parabens/4.webp",
+            slide5: "../assests/MOTW/Parabens/5.webp",
+            slide6: "../assests/MOTW/Parabens/6.webp",
+        },
+        pdflink: drive.toDownload("https://drive.google.com/file/d/1LQMEUHUww1xyKSdqZvZgfxtxzNAA70Xo/view?usp=drive_link"),
+        references: [
+            { "linkTitle": "Parabens - Wikipedia", "link": "https://en.wikipedia.org/wiki/Paraben" },
+            { "linkTitle": "Parabens - Chemeurope", "link": "https://www.chemeurope.com" },
+            { "linkTitle": "Parabens - Skin Inc.", "link": "https://www.skininc.com" },
+            { "linkTitle": "Parabens - FDA", "link": "https://www.fda.gov/cosmetics/cosmetic-ingredients/parabens-cosmetics" },
+        ]
+    },
     dopamine: {
         moleculeName: "Dopamine",
         publishDate: "2024-09-22",
