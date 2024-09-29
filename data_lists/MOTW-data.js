@@ -16,6 +16,10 @@ export const molecules = {
             slide4: "../assests/MOTW/Parabens/4.webp",
             slide5: "../assests/MOTW/Parabens/5.webp",
             slide6: "../assests/MOTW/Parabens/6.webp",
+            slide7: "../assests/MOTW/Parabens/7.webp",
+            slide8: "../assests/MOTW/Parabens/8.webp",
+            slide9: "../assests/MOTW/Parabens/9.webp",
+            slide10: "../assests/MOTW/Parabens/10.webp",
         },
         pdflink: drive.toDownload("https://drive.google.com/file/d/1LQMEUHUww1xyKSdqZvZgfxtxzNAA70Xo/view?usp=drive_link"),
         references: [
