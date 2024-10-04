@@ -1,5 +1,31 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    penguinone: {
+        moleculeName: "Penguinone",
+        publishDate: "2024-10-5",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Snigdha Sharma (MS24)",
+            Designer: "Divyanshi (MS24)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Penguinone/1.webp",
+            slide2: "../assests/MOTW/Penguinone/2.webp",
+            slide3: "../assests/MOTW/Penguinone/3.webp",
+            slide4: "../assests/MOTW/Penguinone/4.webp",
+            slide5: "../assests/MOTW/Penguinone/5.webp",
+            slide6: "../assests/MOTW/Penguinone/6.webp",
+            slide7: "../assests/MOTW/Penguinone/7.webp",
+        },
+        pdflink: drive.toDownload("https://drive.google.com/file/d/1LQMEUHUww1xyKSdqZvZgfxtxzNAA70Xo/view?usp=drive_link"),
+        references: [
+            { "linkTitle": "Penguinone - Wikipedia", "link": "https://en.wikipedia.org/wiki/Penguinone" },
+            { "linkTitle": "Penguinone - Peak Scientific", "link": "https://www.peakscientific.com/discover/news/penguinone/" },
+            { "linkTitle": "Penguinone - PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/12564106#section=Computed-Properties" },
+            { "linkTitle": "Dienone-Phenol Rearrangement - ScienceDirect", "link": "https://www.sciencedirect.com/topics/chemistry/dienone-phenol-rearrangement" }
+        ]        
+    },
     parabens: {
         moleculeName: "Parabens",
         publishDate: "2024-09-29",
