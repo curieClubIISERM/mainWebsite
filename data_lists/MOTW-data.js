@@ -2,7 +2,7 @@ import { drive } from "../assests/assest.js";
 export const molecules = {
     penguinone: {
         moleculeName: "Penguinone",
-        publishDate: "2024-10-5",
+        publishDate: "2024-10-05",
         publishTime: "09:30",
         credits: {
             Writer: "Snigdha Sharma (MS24)",
