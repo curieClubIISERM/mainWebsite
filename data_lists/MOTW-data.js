@@ -1,5 +1,38 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    vanilline: {
+        moleculeName: "Vanilline",
+        publishDate: "2024-10-13",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Bhavyanth Chinni (MS24)",
+            Designer: "Srushti Ragade (MS22)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Vanilline/1.webp",
+            slide2: "../assests/MOTW/Vanilline/2.webp",
+            slide3: "../assests/MOTW/Vanilline/3.webp",
+            slide4: "../assests/MOTW/Vanilline/4.webp",
+            slide5: "../assests/MOTW/Vanilline/5.webp",
+            slide6: "../assests/MOTW/Vanilline/6.webp",
+            slide7: "../assests/MOTW/Vanilline/7.webp",
+        },
+        pdflink: drive.toDownload("https://drive.google.com/file/d/1HsPNxtnRlskISbis98lajLTKw02e7z5d/view?usp=sharing"),
+        references: [
+            { "linkTitle": "Vanilla - Drugs.com", "link": "https://www.drugs.com/npp/vanilla.html" },
+            { "linkTitle": "Vanillin - ACS Molecule of the Week", "link": "https://www.acs.org/molecule-of-the-week/archive/v/vanillin.html" },
+            { "linkTitle": "Vanillin: A Review on the Therapeutic Prospects - NCBI", "link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7790484/" },
+            { "linkTitle": "Vanillin - Material Properties", "link": "https://material-properties.org/vanillin/#google_vignette" },
+            { "linkTitle": "Vanillin - Wikipedia", "link": "https://en.wikipedia.org/wiki/Vanillin" },
+            { "linkTitle": "Vanillin vs. Vanilla: Key Differences Explained", "link": "https://shorturl.at/HogvY" },
+            { "linkTitle": "Vanillin - PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/vanillin" },
+            { "linkTitle": "Vanillin Production Routes - FoodCrumbles", "link": "https://foodcrumbles.com/making-vanillin-three-production-routes-chemistry/" },
+            { "linkTitle": "Vanilla Pod Image - RateTea", "link": "https://ratetea.com/image/827/" },
+            { "linkTitle": "Vanillin: Uses, Benefits, and Overview", "link": "https://shorturl.at/DsF55" },
+            { "linkTitle": "Vanillin: Fascinating Facts and Insights", "link": "https://shorturl.at/1goUB" }
+        ]
+    },
     penguinone: {
         moleculeName: "Penguinone",
         publishDate: "2024-10-05",
