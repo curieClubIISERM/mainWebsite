@@ -17,6 +17,7 @@ export const molecules = {
             slide5: "../assests/MOTW/Vanilline/5.webp",
             slide6: "../assests/MOTW/Vanilline/6.webp",
             slide7: "../assests/MOTW/Vanilline/7.webp",
+            slide8: "../assests/MOTW/Vanilline/8.webp",
         },
         pdflink: drive.toDownload("https://drive.google.com/file/d/1HsPNxtnRlskISbis98lajLTKw02e7z5d/view?usp=sharing"),
         references: [
