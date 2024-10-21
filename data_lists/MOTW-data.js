@@ -6,7 +6,7 @@ export const molecules = {
         publishTime: "09:30",
         credits: {
             Writer: "Mitul Sharma (MS24)",
-            Designer: "Gauri Maheshwari (MS24)",
+            Designer: "Gauri (MS24)",
             Editor: ""
         },
         slides: {
