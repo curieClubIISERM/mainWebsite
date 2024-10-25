@@ -20,11 +20,14 @@ export const molecules = {
         },
         pdflink: drive.toDownload("https://drive.google.com/file/d/1Qqk4-RIRJRpF1p3qJSKfY0J8iL8MZ-LM/view?usp=sharing"),
         references: [
-            { "linkTitle": "", "link": "https://www.britannica.com/science/taxol" },
-            { "linkTitle": "", "link": "https://www.mdpi.com/1420-3049/28/22/7517" },
-            { "linkTitle": "", "link": "https://www.youtube.com/watch?v=6pehkAB4GTY" },
-            { "linkTitle": "", "link": "https://microbiologyjournal.org/production-and-characterization-of-taxol-as-anticancer-agent-from-aspergillus-terreus/" },
-        ]
+            { "linkTitle": "Histamine - Cleveland Clinic", "link": "https://my.clevelandclinic.org/health/articles/24854-histamine" },
+            { "linkTitle": "Histamine - Wikipedia", "link": "https://en.wikipedia.org/wiki/Histamine" },
+            { "linkTitle": "Medicinal Chemistry of Antihistamines - PharmaFactz", "link": "https://pharmafactz.com/medicinal-chemistry-of-antihistamines/" },
+            { "linkTitle": "Histamine - Journal of Pharmacology and Pharmacotherapeutics", "link": "https://academic.oup.com/jpp/article-abstract/25/10/787/6201112?redirectedFrom=PDF" },
+            { "linkTitle": "Histamine - PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Histamine" },
+            { "linkTitle": "Histamine Metabolism - ScienceDirect", "link": "https://www.sciencedirect.com/topics/medicine-and-dentistry/histamine-metabolism" },
+            { "linkTitle": "Histamine Synthesis and Degradation - NCBI Bookshelf", "link": "https://www.ncbi.nlm.nih.gov/books/NBK538201/#:~:text=Though%20not%20synthesized%20in%20the,histidase)%2C%20followed%20by%20urocanase.&text=Serine%20esterases%2C%20such%20as%20trypsin,the%20active%2Dsite%20serine%20hydroxyl" }
+        ]        
     },
     taxols: {
         moleculeName: "Taxols",
