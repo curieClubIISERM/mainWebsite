@@ -1,5 +1,31 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    histamine: {
+        moleculeName: "Histamine",
+        publishDate: "2024-10-26",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Subodh (MS24)",
+            Designer: "Khushi (MS24)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Histamine/1.webp",
+            slide2: "../assests/MOTW/Histamine/2.webp",
+            slide3: "../assests/MOTW/Histamine/3.webp",
+            slide4: "../assests/MOTW/Histamine/4.webp",
+            slide5: "../assests/MOTW/Histamine/5.webp",
+            slide6: "../assests/MOTW/Histamine/6.webp",
+            slide7: "../assests/MOTW/Histamine/7.webp",
+        },
+        pdflink: drive.toDownload("https://drive.google.com/file/d/1Qqk4-RIRJRpF1p3qJSKfY0J8iL8MZ-LM/view?usp=sharing"),
+        references: [
+            { "linkTitle": "", "link": "https://www.britannica.com/science/taxol" },
+            { "linkTitle": "", "link": "https://www.mdpi.com/1420-3049/28/22/7517" },
+            { "linkTitle": "", "link": "https://www.youtube.com/watch?v=6pehkAB4GTY" },
+            { "linkTitle": "", "link": "https://microbiologyjournal.org/production-and-characterization-of-taxol-as-anticancer-agent-from-aspergillus-terreus/" },
+        ]
+    },
     taxols: {
         moleculeName: "Taxols",
         publishDate: "2024-10-21",
