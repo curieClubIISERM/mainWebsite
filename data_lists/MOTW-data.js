@@ -20,7 +20,7 @@ export const molecules = {
             slide7: "../assests/MOTW/Nociceptin/8.webp",
             slide7: "../assests/MOTW/Nociceptin/9.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1mXfJoFy_R7pN6G2og7qSXxNpGnZZPEVu/view?usp=sharing"),
+        pdflink: drive.toDownload("https://drive.google.com/file/d/1AYh0QEKHFL9XmVf1h6qI7kB6Cnl8YSM1/view?usp=sharing"),
         references: [
             { "linkTitle": "Nociceptin and Surface Interaction Mechanisms", "link": "https://www.sciencedirect.com/science/article/pii/0014579394802351" },
             { "linkTitle": "Nociceptin Pathways in Drug Discovery", "link": "https://www.nature.com/articles/nrd2572" },
