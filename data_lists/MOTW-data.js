@@ -1,5 +1,34 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    theobromine: {
+        moleculeName: "Theobromine",
+        publishDate: "2024-11-09",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Bhoomi (MS24)",
+            Designer: "Garima (MS24)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Theobromine/1.webp",
+            slide2: "../assests/MOTW/Theobromine/2.webp",
+            slide3: "../assests/MOTW/Theobromine/3.webp",
+            slide4: "../assests/MOTW/Theobromine/4.webp",
+            slide5: "../assests/MOTW/Theobromine/5.webp",
+            slide6: "../assests/MOTW/Theobromine/6.webp",
+            slide7: "../assests/MOTW/Theobromine/7.webp",
+            slide7: "../assests/MOTW/Theobromine/8.webp",
+            slide7: "../assests/MOTW/Theobromine/9.webp",
+            slide7: "../assests/MOTW/Theobromine/10.webp"
+        },
+        pdflink: drive.toDownload("https://drive.google.com/file/d/17u-0iQmTYzCdfeLIxltuWvx9EI-MCFtZ/view?usp=sharing"),
+        references: [
+            { "linkTitle": "Theobromine: PubChem Compound Summary", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Theobromine" },
+            { "linkTitle": "DrugBank: Theobromine (DB01412)", "link": "https://go.drugbank.com/drugs/DB01412" },
+            { "linkTitle": "NCBI Bookshelf: Theobromine Overview", "link": "https://www.ncbi.nlm.nih.gov/books/NBK507032/#:~:text=Theobromine%20is%20the%20principal%20alkaloid%20of%20the%20cacao%20bean.,forms%20of%20chocolate%2Dbased%20foods" },
+            { "linkTitle": "ScienceDirect: Neurological Effects of Theobromine", "link": "https://www.sciencedirect.com/science/article/pii/S1756464624001282#:~:text=In%20the%20brain%2C%20it%20can,Alzheimer's%20disease%2C%20and%20Parkinson's%20disease" }
+        ]       
+    },
     nociceptin: {
         moleculeName: "Nociceptin",
         publishDate: "2024-11-03",
