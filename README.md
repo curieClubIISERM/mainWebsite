@@ -27,6 +27,7 @@ For any queries, you can reach out to us via:
 - **Email:** [curieclub@iisermohali.ac.in](mailto:curieclub@iisermohali.ac.in)
 - **Twitter:** [@Curie_IISERM](https://twitter.com/Curie_IISERM)
 - **Instagram:** [curie_club_iiserm](https://www.instagram.com/curie_club_iiserm/)
+- **Linkedin** [curie-club](https://www.linkedin.com/company/curie-club)
 
 ---
 
