@@ -1,6 +1,6 @@
 export const upcomingEventList = [
     {
-    "eventName": "Talk and Interactive Session with Alumnus Dr. Mayank Saraswat",
+    "eventName": "Alumnus Talk",
     "eventDate": "2024-11-12",
     "eventTime": "05:30 PM",
     "eventVenue": "AB2-5A",
