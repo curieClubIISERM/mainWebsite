@@ -1,11 +1,11 @@
 export const upcomingEventList = [
-    {
-    "eventName": "Alumnus Talk",
-    "eventDate": "2024-11-12",
-    "eventTime": "05:30 PM",
-    "eventVenue": "AB2-5A",
-    "eventDescription": "Join us for a session with Dr. Mayank Saraswat on internships and research opportunities in Germany, followed by a talk on 'VUV Photoionization of Astrochemically Relevant Molecules.' Discover recent findings on polyaromatic hydrocarbons (PAHs) in space and explore pathways for research abroad."
-    }
+    //{
+    //"eventName": "Alumnus Talk",
+    //"eventDate": "2024-11-12",
+    //"eventTime": "05:30 PM",
+    //"eventVenue": "AB2-5A",
+    //"eventDescription": "Join us for a session with Dr. Mayank Saraswat on internships and research opportunities in Germany, followed by a talk on 'VUV Photoionization of Astrochemically Relevant Molecules.' Discover recent findings on polyaromatic hydrocarbons (PAHs) in space and explore pathways for research abroad."
+    //}
     //{
     //    eventName: "Molecule Mania",
     //    eventDate: "2024-09-16",
