@@ -1,17 +1,17 @@
 export const coordinators = [
     {
-        name: "Prince Raj",
+        name: "Preet Vidhuri",
         position: "Convener",
-        image: "assests/Coordinaters_images/prince_profile_pic.webp"
+        image: "assests/Coordinaters_images/preet_profile_pic.webp"
     },
     {
-        name: "Ankit",
+        name: "Prabhleen Kaur",
         position: "Co-convener",
-        image: "assests/Coordinaters_images/ankit_profile_pic.webp"
+        image: "assests/Coordinaters_images/prabhleen_profile_pic.webp"
     },
-    //{
-    //    name: "Manoj Soni",
-    //    position: "Co-convener",
-    //    image: "assests/Coordinaters_images/manoj_profile_pic.webp"
-    //}
+    {
+       name: "Anisha Choudhary",
+       position: "Co-convener",
+       image: "assests/Coordinaters_images/anisha_profile_pic.webp"
+    }
 ];
