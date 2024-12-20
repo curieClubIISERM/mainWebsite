@@ -2,7 +2,7 @@ import { drive } from "../assests/assest.js";
 export const molecules = {
     lidocaine: {
         moleculeName: "Lidocaine",
-        publishDate: "2024-12-22",
+        publishDate: "2024-12-30",
         publishTime: "09:30",
         credits: {
             Writer: "Manshvi (MS24)",
