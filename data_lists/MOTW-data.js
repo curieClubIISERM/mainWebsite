@@ -1,5 +1,34 @@
 import { drive } from "../assests/assest.js";
 export const molecules = {
+    lidocaine: {
+        moleculeName: "Lidocaine",
+        publishDate: "2024-12-22",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Manshvi (MS24)",
+            Designer: "Manshvi (MS24)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Lidocaine/1.webp",
+            slide2: "../assests/MOTW/Lidocaine/2.webp",
+            slide3: "../assests/MOTW/Lidocaine/3.webp",
+            slide4: "../assests/MOTW/Lidocaine/4.webp",
+            slide5: "../assests/MOTW/Lidocaine/5.webp",
+            slide6: "../assests/MOTW/Lidocaine/6.webp",
+            slide7: "../assests/MOTW/Lidocaine/7.webp",
+            slide8: "../assests/MOTW/Lidocaine/8.webp",
+            slide9: "../assests/MOTW/Lidocaine/9.webp"
+        },
+        pdflink: drive.toDownload("https://drive.google.com/file/d/1ffYfKcmzh-6JtmZeuajszdY3IqmY9exM/view?usp=sharing"),
+        references: [
+            {"linkTitle": "Lidocaine: Wikipedia", "link": "https://en.wikipedia.org/wiki/Lidocaine"}, 
+            {"linkTitle": "DrugBank: Lidocaine (DB00281)", "link": "https://go.drugbank.com/drugs/DB00281"}, 
+            {"linkTitle": "Cleveland Clinic: Lidocaine Skin Cream or Ointment", "link": "https://my.clevelandclinic.org/health/drugs/19854-lidocaine-skin-cream-or-ointment"}, 
+            {"linkTitle": "NCBI Bookshelf: Lidocaine Overview", "link": "https://www.ncbi.nlm.nih.gov/books/NBK539881/"}, 
+            {"linkTitle": "Mayo Clinic: Lidocaine Topical Application Route", "link": "https://www.mayoclinic.org/drugs-supplements/lidocaine-topical-application-route/description/drg-20072776"}
+        ]       
+    },
     theobromine: {
         moleculeName: "Theobromine",
         publishDate: "2024-11-09",
