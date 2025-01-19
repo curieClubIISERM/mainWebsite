@@ -1,112 +1,40 @@
 # How to Add Events, Series Data, and Event Memories
 
-## Adding Upcoming Events
+## Adding Event Details
 
-1. **Locate the Data File:**
-   - Open the JavaScript file located at `data_lists/events_data.js`.
+1. **Locate the Google Sheet:**
+   - Open the Google Sheet linked to the Curie Club website. The link should be shared with authorized users.
 
-2. **Add the Upcoming Event Data:**
-   - Use the following structure to add a new event to the `upcomingEventList` object. Replace the placeholders with the actual event details.
+2. **Add the Event Data:**
+   - Navigate to the `Event Details` tab in the Google Sheet.
+   - Use the following format to fill in the event details in a horizontal manner:
 
-```javascript
-upcomingEventList: [
-    {
-        eventName: /* 'EVENT NAME' */, // e.g., 'INST Lab Tour'
-        eventDate: /* 'YYYY-MM-DD' */, // e.g., '2022-08-30'
-        eventTime: /* 'HH:MM AM/PM' */, // e.g., '11:00 AM'
-        eventVenue: /* 'EVENT VENUE' */, // e.g., 'INST'
-        eventDescription: /* 'DESCRIPTION OF THE EVENT' */, // Optional: Add a brief description
-    },
-    // Add more events here as needed
-]
-```
+| **Event Type** | **Event Name**    | **Event Date** | **Event Time** | **Probably Event Duration** | **Event Venue** | **Event Description** |
+|----------------|-------------------|----------------|----------------|-----------------------------|-----------------|------------------------|
+| Talk           | Student's Talk    | 2025-01-20     | 01:00 AM       | 02:00                      | LH5 / LH6       | An engaging session where students will present their research and ideas, fostering knowledge sharing and collaboration.             |
 
-### Example of an Upcoming Event Entry
+3. **Save Changes:**
+   - Once you have updated the sheet, the data will automatically reflect on the website via the integrated Google Apps Script.
 
-```javascript
-upcomingEventList: [
-    {
-        eventName: "INST Lab Tour",
-        eventDate: "2022-08-30",
-        eventTime: "11:00 AM",
-        eventVenue: "INST",
-        eventDescription: "A guided tour of the INST laboratories where students will learn about cutting-edge research equipment.",
-    }
-]
-```
-
-
-
-
-## Adding Recent Events
-
-1. **Locate the Data File:**
-   - Open the JavaScript file located at `data_lists/events_data.js`.
-
-2. **Add the Recent Event Data:**
-   - Use the following structure to add a recent event to the `recentEventList` object. Replace the placeholders with the actual event details.
-
-```javascript
-recentEventList: [
-    {
-        type: /* 'EVENT TYPE' */, // e.g., 'Lab Tour'
-        eventName: /* 'EVENT NAME' */, // e.g., 'INST Lab Tour'
-        eventDescription: /* 'DESCRIPTION OF THE EVENT' */ // Provide a brief description of what the event was about
-    },
-    // Add more recent events here as needed
-]
-```
-
-### Example of a Recent Event Entry
-
-```javascript
-recentEventList: [
-    {
-        type: "Lab Tour",
-        eventName: "INST Lab Tour",
-        eventDescription: "A lab tour to INST, where students see and learn about various machines and equipment used for research works in INST Mohali."
-    }
-]
-```
-
-
-
+---
 
 ## Adding Ongoing Series
 
-1. **Locate the Data File:**
-   - Open the JavaScript file located at `data_lists/events_data.js`.
+1. **Locate the Google Sheet:**
+   - Open the Google Sheet linked to the Curie Club website.
 
 2. **Add the Ongoing Series Data:**
-   - Use the following structure to add a series to the `onGoingSeriesList` object. Replace the placeholders with the actual series details.
+   - Navigate to the `Ongoing Series` tab in the Google Sheet.
+   - Use the following format to fill in the series details in a horizontal manner:
 
-```javascript
-onGoingSeriesList: [
-    {
-        seriesName: /* 'SERIES NAME' */, // e.g., 'Molecule Of The Week'
-        seriesDescription: /* 'DESCRIPTION OF THE SERIES' */, // Provide a brief description of the series
-        link: /* 'LINK TO SERIES PAGE' */, // e.g., 'htmls/molecule-of-the-week.html'
-        lineClamp: /* NUMBER OF LINES TO CLAMP THE DESCRIPTION */ // e.g., 3
-    },
-    // Add more series here as needed
-]
-```
+| **Series Name**       | **Series Description**                            | **Link**                          | **Line Clamp** |
+|-----------------------|--------------------------------------------------|-----------------------------------|----------------|
+| Molecule Of The Week  | Explore a new molecule and its significance weekly.| htmls/molecule-of-the-week.html   | 3              |
 
-### Example of an Ongoing Series Entry
+3. **Save Changes:**
+   - Once you have updated the sheet, the data will automatically reflect on the website.
 
-```javascript
-onGoingSeriesList: [
-    {
-        seriesName: "Molecule Of The Week",
-        seriesDescription: "Join us every week as we explore a new molecule and its significance in chemistry. If you're interested in contributing and suggesting a molecule, get in touch!",
-        link: "htmls/molecule-of-the-week.html",
-        lineClamp: 3
-    }
-]
-```
-
-
-
+---
 
 ## Adding Recent Event Memories
 
@@ -149,3 +77,4 @@ images: [
     }
 ]
 ```
+
