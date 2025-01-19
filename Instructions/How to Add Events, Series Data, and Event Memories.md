@@ -13,6 +13,8 @@
 |----------------|-------------------|----------------|----------------|-----------------------------|-----------------|------------------------|
 | Talk           | Student's Talk    | 2025-01-20     | 01:00 AM       | 02:00                      | LH5 / LH6       | An engaging session where students will present their research and ideas, fostering knowledge sharing and collaboration.             |
 
+ - **Important:** Ensure that the **Event Type** field is never left empty. If no specific type is available, please enter at least a space to keep the field filled.
+
 3. **Save Changes:**
    - Once you have updated the sheet, the data will automatically reflect on the website via the integrated Google Apps Script.
 
