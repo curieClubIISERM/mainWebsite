@@ -66,7 +66,7 @@ function initLoaderAnimation() {
 // Initialize loader animation
 initLoaderAnimation();
 
-import { drive } from "../assests/assest.js";
+import { drive } from "./utility.js";
 import { molecules } from "../data_lists/MOTW-data.js";
 import { googleFormLinks } from "../data_lists/google_forms.js";
 
@@ -227,13 +227,13 @@ function updateContent(moleculeKey) {
     document.querySelector(".moleculeName-display").innerHTML = stringSpanner(molecule.moleculeName);
 
     // Update download buttons
-    document.querySelectorAll(".downloadbtn").forEach(btn => {
-        btn.setAttribute("href", molecule.pdflink);
+    document.querySelectorAll(".download-btn").forEach(btn => {
+        btn.setAttribute("href", molecule.pdfLink);
         btn.setAttribute("download", `${molecule.moleculeName}.pdf`);
     });
 
     // Setup reference buttons
-    const referencesButtons = document.querySelectorAll(".referencebtn");
+    const referencesButtons = document.querySelectorAll(".reference-btn");
     const basePath = 'MOTW-reference.html';
     referencesButtons.forEach((referenceButton) => {
         referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
@@ -242,15 +242,15 @@ function updateContent(moleculeKey) {
 
 function buttonAction() {
 
-    gsap.set(".max-mode, .maxbuttonContainer, .upperbar", {
+    gsap.set(".max-mode, .max-button-container, .upper-bar", {
         opacity: 0,
         pointerEvents: "none"
     })
 
     // Min Zoom Button
-    const minZoombtn = document.querySelector("#min-toggle");
+    const minZoomBtn = document.querySelector("#min-toggle");
 
-    minZoombtn.addEventListener("click", () => {
+    minZoomBtn.addEventListener("click", () => {
         const minSwiperWrapper = contentContainer.querySelector(".swiper-wrapper");
         const minSwiperSlides = contentContainer.querySelectorAll(".swiper-slide");
         const activeIndex = minSwiper.activeIndex;
@@ -311,7 +311,7 @@ function buttonAction() {
 
             // Timeline animations for the max mode
             const tl = gsap.timeline();
-            gsap.set(".max-mode, .maxbuttonContainer, .upperbar", {
+            gsap.set(".max-mode, .max-button-container, .upper-bar", {
                 opacity: 1,
                 pointerEvents: "all"
             });
@@ -328,7 +328,7 @@ function buttonAction() {
                     backgroundColor: `#28293600`,
                     backdropFilter: `blur(${0}px)`
                 })
-                .set(".upparbackground", {
+                .set(".upper-background", {
                     opacity: 0
                 })
                 .set(".max-button", {
@@ -343,7 +343,7 @@ function buttonAction() {
                     backgroundColor: `#2829368a`,
                     backdropFilter: `blur(${17}px)`
                 })
-                .to(".upparbackground", {
+                .to(".upper-background", {
                     opacity: 1
                 })
                 .to(".max-molecule-swiper", {
@@ -375,9 +375,9 @@ function buttonAction() {
     });
 
     // Max Zoom Button
-    const maxZoombtn = document.querySelector("#max-toggle");
+    const maxZoomBtn = document.querySelector("#max-toggle");
 
-    maxZoombtn.addEventListener("click", () => {
+    maxZoomBtn.addEventListener("click", () => {
         const maxSwiperWrapper = maxModeContainer.querySelector(".swiper-wrapper");
         const maxSwiperSlides = maxSwiperWrapper.querySelectorAll(".swiper-slide");
         const activeIndex = maxSwiper.activeIndex;
@@ -438,7 +438,7 @@ function buttonAction() {
                         onComplete: () => {
                             // Remove the cloned slide from the body
                             document.body.removeChild(clonedSlide);
-                            gsap.set(".max-mode, .maxbuttonContainer, .upperbar", {
+                            gsap.set(".max-mode, .max-button-container, .upper-bar", {
                                 opacity: 0,
                                 pointerEvents: "none"
                             });
@@ -471,14 +471,14 @@ function buttonAction() {
                 backgroundColor: `#28293600`,
                 backdropFilter: `blur(${0}px)`
             });
-            gsap.to(".upparbackground", {
+            gsap.to(".upper-background", {
                 opacity: 0
             });
         }
     });
 
     //Down Button
-    const downloadButtons = document.querySelectorAll(".downloadbtn");
+    const downloadButtons = document.querySelectorAll(".download-btn");
 
     downloadButtons.forEach((downloadButton) => {
         downloadButton.addEventListener("click", () => {
@@ -608,8 +608,8 @@ requestAnimationFrame(raf)
 
 
 //Getting Some Element
-const moleculeConatiner = document.querySelector(".moleculeContainer");
-const moleculeLogoContainerImg = moleculeConatiner.querySelector(".moleculelogoContainer img");
+const moleculeContainer = document.querySelector(".moleculeContainer");
+const moleculeLogoContainerImg = moleculeContainer.querySelector(".molecule-logo-container img");
 const mouseScrollerSymbol = document.getElementById("mouse-scroller-symbol");
 const mouseWheelScroller = mouseScrollerSymbol.getElementById("mouse-scroller");
 const arrows = mouseScrollerSymbol.querySelectorAll("polygon");
@@ -672,11 +672,11 @@ gsap.to(mouseWheelScroller, {
 
 // Event Listener for opening the molecule container
 moleculeLogoContainerImg.onclick = () => {
-    moleculeConatiner.classList.toggle("open");
+    moleculeContainer.classList.toggle("open");
     mouseScrollerSymbol.classList.toggle("open");
     moleculeLogoContainerImg.classList.toggle("open");
 
-    if (moleculeConatiner.classList.contains("open")) {
+    if (moleculeContainer.classList.contains("open")) {
         // Initialize animation states
         gsap.set(".moleculeName li", { opacity: 0, xPercent: -100 });
         gsap.set(".moleculeNameWrapper h2", { opacity: 0, x: 0 });

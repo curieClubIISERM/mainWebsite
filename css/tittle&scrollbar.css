@@ -40,7 +40,7 @@
       /* transform:translateY(3%) translateX(10%) scale(1.0); */
       opacity: var(--initialOpacity);
       filter:blur(2px);
-      fill:color-mix(in lab,currentcolor,varvar(--fillcolor) 40%)
+      fill:color-mix(in lab,currentcolor,var(--fillcolor) 40%)
       }
     15% {
     transform:translateY(0%) translateX(5%) scale(1.0);
@@ -112,10 +112,10 @@
     transform: rotate(var(--deg));
   }
   #branch11, #branch22 {
-    animation: fliker 6s  ease alternate infinite;
+    animation: flicker 6s  ease alternate infinite;
     opacity: 0;
   }
-  @keyframes fliker {
+  @keyframes flicker {
     0% {
         opacity: 0;
     }

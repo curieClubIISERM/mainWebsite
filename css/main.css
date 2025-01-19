@@ -1,5 +1,5 @@
 :root {
-  --backgroundcolor: #e0e0e0;
+  --background-color: #e0e0e0;
   --liquid-color: blue;
   --primary-color: black;
   --secondary-color: #000;
@@ -63,7 +63,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--backgroundcolor);
+  background-color: var(--background-color);
   overflow-x: hidden;
   scrollbar-width: none;
   user-select: none;
@@ -232,7 +232,7 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background-color: var(--backgroundcolor);
+  background-color: var(--background-color);
 }
 
 .quotes-container {
@@ -283,7 +283,7 @@ a {
 }
 
 
-/* Image Conatainer */
+/* Image Container */
 .gallery-container {
   position: relative;
   background-color: black;
@@ -347,7 +347,7 @@ a {
   mix-blend-mode: difference;
 }
 
-.image-conatiner {
+.image-container {
   position: relative;
   left: 30%;
   width: 60%;
@@ -476,11 +476,11 @@ a {
   filter: drop-shadow(0px 0px 3px var(--liquid-color));
 }
 
-.testtube {
+.test-tube {
   filter: url(#gooey);
 }
 
-.testtube .bubble {
+.test-tube .bubble {
   width: 100%;
   height: 100%;
   fill: var(--secondary-color);
@@ -488,7 +488,7 @@ a {
   transition: all 2s ease
 }
 
-.testtube .fill2 {
+.test-tube .fill2 {
   fill: blue !important;
   filter: drop-shadow(0px 0px 2px blue);
 }
@@ -513,7 +513,7 @@ a {
   animation: bubbles 5s linear infinite 4s
 }
 
-.testtube-container {
+.test-tube-container {
   position: relative;
   top: 0;
   left: 0;
@@ -552,9 +552,9 @@ a {
 
 
 
-/* Coordinator's Conatiner Styling */
+/* Coordinator's Container Styling */
 
-.coordinatorinfo-container {
+.coordinator-info-container {
   position: relative;
   top: 0;
   left: 0;
@@ -566,11 +566,11 @@ a {
   gap: 4vw;
 }
 
-.blobConatiner {
+.blobContainer {
   display: none;
 }
 
-.coordinfo-cards {
+.coord-info-cards {
   width: 20vw;
   height: 25vw;
   background: rgba(174, 189, 255, 0.25);
@@ -580,11 +580,11 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.coordinfo-cards:nth-child(1) {
+.coord-info-cards:nth-child(1) {
   background: rgba(255, 204, 174, 0.25);
 }
 
-.coordinfo-cards:nth-child(3) {
+.coord-info-cards:nth-child(3) {
   background: rgba(246, 255, 209, 0.25);
 }
 
@@ -629,7 +629,7 @@ a {
   text-shadow: 0px 0px 3vw rgb(0, 145, 255);
 }
 
-.coord-postion {
+.coord-position {
   position: relative;
   top: 25%;
   font-family: "Poppins";
@@ -652,7 +652,7 @@ a {
   text-shadow: 0px 0px 2vw black;
 }
 
-.coordinatorinfo-container a {
+.coordinator-info-container a {
   position: absolute;
   top: 1vw;
   right: 0.5vw;
@@ -674,30 +674,30 @@ a {
   display: none;
 }
 
-.coordinatorinfo-container a:hover {
+.coordinator-info-container a:hover {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.784);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0px 0px 0.1vw rgba(255, 255, 255, 0.784);
   background-color: rgba(38, 71, 94, 0.341);
 }
 
-.coordinatorinfo-container a {
+.coordinator-info-container a {
   overflow: hidden;
 }
 
-.coordinatorinfo-container a .second {
+.coordinator-info-container a .second {
   left: 17%;
 }
 
-/* About Section Syling */
+/* About Section Styling */
 
 .aboutWrapper {
   position: relative;
-  top: 5vw;
+  top: 4.05vw;
   left: 0;
   height: 50vw;
   width: 100vw;
-  background-color: var(--backgroundcolor);
+  background-color: var(--background-color);
 }
 
 .about {
@@ -802,7 +802,7 @@ a {
   justify-content: space-evenly;
 }
 
-.thanks-catogary {
+.thanks-category {
   position: relative;
   font-family: 'Montserrat', sans-serif;
   font-size: var(--font-size-11);
@@ -813,13 +813,13 @@ a {
   justify-content: center;
 }
 
-.thanks-catogary-name {
+.thanks-category-name {
   position: relative;
   width: 18vw;
   color: rgba(0, 0, 0, 0.777);
 }
 
-.persondiv {
+.person-div {
   position: relative;
   width: 60vw;
   color: rgba(35, 35, 35, 0.791);

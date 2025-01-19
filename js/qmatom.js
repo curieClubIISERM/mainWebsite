@@ -22,7 +22,7 @@ const SLICE_NONE = 0;
 const SLICE_X = 1;
 const SLICE_Y = 2;
 const SLICE_Z = 3;
-var sliceval = 0;
+var sliceVal = 0;
 var sliceFaces = [];
 var selectedSlice;
 var axisValue = false;
@@ -30,8 +30,8 @@ var axisValue = false;
 const qatomController = getById('qatomcontroller');
 const speedController = getById("speed");
 const optionsHeading = document.getElementsByClassName("choose-option");
-const breakinglines = document.getElementsByClassName("breaker-line");
-const selecters = document.getElementsByClassName("selecter");
+const breakingLines = document.getElementsByClassName("breaker-line");
+const selectors = document.getElementsByClassName("selecter");
 const brightnessText = getById("brightnessText");
 const simulationText = getById("simulationText");
 
@@ -587,11 +587,11 @@ function main() {
   sliceSlider.oninput = function () {
     if (sliceChooser.selectedIndex > SLICE_NONE) {
       selectedSlice = true;
-      sliceval = sliceSlider.value;
-      if (sliceval < -.99)
-        sliceval = -.99;
-      if (sliceval > .99)
-        sliceval = .99;
+      sliceVal = sliceSlider.value;
+      if (sliceVal < -.99)
+        sliceVal = -.99;
+      if (sliceVal > .99)
+        sliceVal = .99;
       refresh();
     }
     // gsap.to(".canvas-overlay", { top: `${150}%`, left: `${150}%` })
@@ -1183,7 +1183,7 @@ function drawAtom(phases, pos) {
     for (i = 0; i != 4; i++) {
       verts[i * 3 + coord1] = (i > 1) ? 1 : -1;
       verts[i * 3 + coord2] = (i & 1) ? 1 : -1;
-      verts[i * 3 + slice - SLICE_X] = sliceval;
+      verts[i * 3 + slice - SLICE_X] = sliceVal;
     }
   }
   gl.bindBuffer(gl.ARRAY_BUFFER, buffers.extra);
@@ -1281,11 +1281,11 @@ function drawCube(gl, buffers, projectionMatrix, viewMatrix, drawBack) {
       var coord1 = (slice == SLICE_X) ? 1 : 0;
       var coord2 = (slice == SLICE_Z) ? 1 : 2;
       computeFace(i, 0, pts);
-      pts[slice - SLICE_X] = sliceval;
+      pts[slice - SLICE_X] = sliceVal;
       verts = [].concat(pts);
       var proj1 = projectCoords(pts);
       computeFace(i, 2, pts);
-      pts[slice - SLICE_X] = sliceval;
+      pts[slice - SLICE_X] = sliceVal;
       var proj2 = projectCoords(pts);
       verts = verts.concat(pts);
       gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
@@ -1356,17 +1356,17 @@ function zoom(x) {
 }
 
 
-//functions to disappear qatomcontroller, optionsHeadings, breakinglines and Selectors
+//functions to disappear qatomcontroller, optionsHeadings, breakingLines and Selectors
 function disappearingControls() {
   qatomController.classList.add('changing');
   Array.prototype.forEach.call(optionsHeading, ((option) => {
     option.classList.add("changing");
   }));
-  Array.prototype.forEach.call(breakinglines, ((breakingline) => {
-    breakingline.classList.add("changing");
+  Array.prototype.forEach.call(breakingLines, ((breakingLine) => {
+    breakingLine.classList.add("changing");
   }));
-  Array.prototype.forEach.call(selecters, ((selecter) => {
-    selecter.classList.add("changing");
+  Array.prototype.forEach.call(selectors, ((selector) => {
+    selector.classList.add("changing");
   }));
 }
 
@@ -1510,7 +1510,7 @@ qatomController.onmousemove = appearingControls;
 const addControl = document.querySelector(".add-qcontrols");
 var addFlag = 0
 
-function changedControllerPostion() {
+function changedControllerPosition() {
   const line1 = addControl.querySelector("#line1");
   const line2 = addControl.querySelector("#line2");
   const line3 = addControl.querySelector("#line3");
@@ -1535,9 +1535,9 @@ function changedControllerPostion() {
       text: "Close",
       duration: 0.5
     });
-    var newleft = (isMobile() && isWebGLRenderable()) ? 69 : 82;
+    var newLeft = (isMobile() && isWebGLRenderable()) ? 69 : 82;
     gsap.to(qController, {
-      left: `${newleft}%`
+      left: `${newLeft}%`
     })
 
   } else {
@@ -1567,9 +1567,9 @@ function changedControllerPostion() {
 
 function onClickAnimations() {
   const qbtn = document.querySelector("#qbtn");
-  const backButton = document.querySelector(".backbtn");
+  const backButton = document.querySelector(".back-btn");
   var lastSliceState;
-  var lastSliceSlidervalue;
+  var lastSliceSliderValue;
 
   qbtn.addEventListener('click', () => {
     var tl = gsap.timeline();
@@ -1579,7 +1579,7 @@ function onClickAnimations() {
       }
     }, "start")
       .to(".nav-600", { yPercent: -100, duration: 0.3 })
-      .to(".testtube-container", { filter: `blur(${60}px)`, opacity: 0, duration: 0.5 }, "-=0.6")
+      .to(".test-tube-container", { filter: `blur(${60}px)`, opacity: 0, duration: 0.5 }, "-=0.6")
       .to(".panel *", { filter: `blur(${60}px)`, opacity: 0, yPercent: -100, stagger: 0.1 })
       .to("#hero-svg", { filter: `blur(${60}px)`, opacity: 0, scale: 0.8, duration: 0.5 }, "-=4.5")
       .to(".heropage", { filter: `blur(${40}px)`, opacity: 0, duration: 0.5 }, "-=3.5")
@@ -1592,9 +1592,9 @@ function onClickAnimations() {
         pointerEvents: "all",
         duration: 0.7,
         onStart: () => {
-          if (lastSliceState && lastSliceSlidervalue) {
+          if (lastSliceState && lastSliceSliderValue) {
             sliceChooser.selectedIndex = lastSliceState;
-            sliceSlider.value = lastSliceSlidervalue;
+            sliceSlider.value = lastSliceSliderValue;
             createOrbitals();
           }
           axisValue = true;
@@ -1606,20 +1606,20 @@ function onClickAnimations() {
         }
       }, "-=3")
       .to(".qatom", { height: "100vh" })
-      .to(".backbtn", { opacity: 1, filter: `blur(${0}px)` }, "=-3")
+      .to(".back-btn", { opacity: 1, filter: `blur(${0}px)` }, "=-3")
       .to(".add-qcontrols", { opacity: 1, filter: `blur(${0}px)` }, "=-3")
   })
 
   addControl.addEventListener("click", () => {
-    changedControllerPostion();
+    changedControllerPosition();
     addFlag++;
   })
 
   backButton.addEventListener('click', () => {
     addFlag = 1;
-    changedControllerPostion();
+    changedControllerPosition();
     var reverseTl = gsap.timeline();
-    reverseTl.to(".backbtn", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 })
+    reverseTl.to(".back-btn", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 })
       .to(".add-qcontrols", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 }, "=-0.2")
       .to(".split", { height: "220vw", duration: 0.1 })
       .to(".qatom", { height: "180vw", duration: 0.1 })
@@ -1641,7 +1641,7 @@ function onClickAnimations() {
           lenis.start()
         }
       })
-      .to(".testtube-container", { filter: `blur(${0}px)`, opacity: 1, duration: 0.5 }, "-=0.6")
+      .to(".test-tube-container", { filter: `blur(${0}px)`, opacity: 1, duration: 0.5 }, "-=0.6")
       .to(".nav-600", { yPercent: 0, duration: 0.3 })
       .to(".heropage", { filter: `blur(${0}px)`, opacity: 1 }, "-=3")
       .to("#hero-svg", { filter: `blur(${0}px)`, opacity: 1, scale: 1, duration: 0.5 })
@@ -1651,7 +1651,7 @@ function onClickAnimations() {
 
 
     lastSliceState = sliceChooser.selectedIndex;
-    lastSliceSlidervalue = sliceSlider.value;
+    lastSliceSliderValue = sliceSlider.value;
     sliceSlider.value = 0;
     sliceChooser.selectedIndex = 0;
     createOrbitals();
@@ -1678,9 +1678,9 @@ function onClickAnimations() {
 }
 function mobileOnClickAnimations() {
   const qbtn = document.querySelector("#qbtn");
-  const backButton = document.querySelector(".backbtn");
+  const backButton = document.querySelector(".back-btn");
   var lastSliceState;
-  var lastSliceSlidervalue;
+  var lastSliceSliderValue;
 
   qbtn.addEventListener('click', () => {
     var tl = gsap.timeline();
@@ -1690,8 +1690,8 @@ function mobileOnClickAnimations() {
       }
     }, "start")
       .to(".nav-600", { yPercent: -100, duration: 0.3 }, "start2")
-      .to(".testtube-container", { filter: `blur(${60}px)`, opacity: 0, duration: 0.5 }, "start2")
-      .to(".backbtn", { opacity: 1, filter: `blur(${0}px)` }, "start3")
+      .to(".test-tube-container", { filter: `blur(${60}px)`, opacity: 0, duration: 0.5 }, "start2")
+      .to(".back-btn", { opacity: 1, filter: `blur(${0}px)` }, "start3")
       .to(".add-qcontrols", { opacity: 1, filter: `blur(${0}px)` }, "start3")
       .to(".heropage", {maskPosition: `100% 199%`, duration: 2}, "start3")
       .to(".panel *", { filter: `blur(${60}px)`, opacity: 0, yPercent: -100, stagger: 0.1 }, "start3")
@@ -1699,9 +1699,9 @@ function mobileOnClickAnimations() {
       .set("#atomCanvas", {
         pointerEvents: "all",
         onStart: () => {
-          if (lastSliceState && lastSliceSlidervalue) {
+          if (lastSliceState && lastSliceSliderValue) {
             sliceChooser.selectedIndex = lastSliceState;
-            sliceSlider.value = lastSliceSlidervalue;
+            sliceSlider.value = lastSliceSliderValue;
             createOrbitals();
           }
           axisValue = true;
@@ -1714,19 +1714,19 @@ function mobileOnClickAnimations() {
   })
 
   addControl.addEventListener("click", () => {
-    changedControllerPostion();
+    changedControllerPosition();
     addFlag++;
   })
 
   backButton.addEventListener('click', () => {
     addFlag = 1;
-    changedControllerPostion();
+    changedControllerPosition();
     var reverseTl = gsap.timeline({
       scrollTo: "#main", onComplete: () => {
         lenis.start();
       }
     });
-    reverseTl.to(".backbtn", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 }, "start")
+    reverseTl.to(".back-btn", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 }, "start")
       .to(".add-qcontrols", { opacity: 0, filter: `blur(${10}px)`, duration: 0.5 }, "start")
       .set("#atomCanvas", {
         pointerEvents: "none",
@@ -1739,8 +1739,8 @@ function mobileOnClickAnimations() {
           lenis.start()
         }
       })
-      .to(".heropage", {maskPosition: `100% ${0}%`, duration: 2}, "start2")
-      .to(".testtube-container", { filter: `blur(${0}px)`, opacity: 1, duration: 0.5 }, "start3")
+      .to(".heropage", {maskPosition: `100% ${20}%`, duration: 2}, "start2")
+      .to(".test-tube-container", { filter: `blur(${0}px)`, opacity: 1, duration: 0.5 }, "start3")
       .to(".nav-600", { yPercent: 0, duration: 0.3 },"start3")
       .to(".heropage", { filter: `blur(${0}px)`, opacity: 1 }, "start3")
       .to("#hero-svg", { filter: `blur(${0}px)`, opacity: 1, scale: 1, duration: 0.5 }, "start3")
@@ -1750,7 +1750,7 @@ function mobileOnClickAnimations() {
 
 
     lastSliceState = sliceChooser.selectedIndex;
-    lastSliceSlidervalue = sliceSlider.value;
+    lastSliceSliderValue = sliceSlider.value;
     sliceSlider.value = 0;
     sliceChooser.selectedIndex = 0;
     createOrbitals();

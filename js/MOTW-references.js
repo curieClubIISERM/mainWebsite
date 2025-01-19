@@ -33,7 +33,7 @@ function updateReferences(moleculeKey) {
 
     const linkContainer = document.querySelector('.link-container');
     if (!molecule) {
-        gsap.to("#loadertext", {text: `Molecule data not found`, duration: 0.5});
+        gsap.to("#loader-text", {text: `Molecule data not found`, duration: 0.5});
     }
     linkContainer.innerHTML = ''; // Clear existing links
 
@@ -43,7 +43,7 @@ function updateReferences(moleculeKey) {
     function checkLinkLoaded() {
         if (loadedLinks === totalLinks) {
             var tl = gsap.timeline();
-            tl.to("#loadertext", { text: "", duration: 0.5, opacity: 0}, "start")
+            tl.to("#loader-text", { text: "", duration: 0.5, opacity: 0}, "start")
             tl.to("#molecule-name", {text: `Molecule Name`, duration: 0.5}, "start");
             tl.to("#molecule-name", {text: `${molecule.moleculeName}`, delay: 0.5, duration: 0.5})
             tl.from(".link-container a", {opacity: 0, y: 10, stagger: 0.2, delay: 0.2}, "start");
@@ -53,7 +53,7 @@ function updateReferences(moleculeKey) {
     if (molecule && molecule.references) {
         molecule.references.forEach(ref => {
             const anchor = document.createElement('a');
-            anchor.className = "referlink"
+            anchor.className = "refer-link"
             anchor.href = ref.link;
             anchor.target = '_blank'; // Open link in a new tab
 
@@ -102,7 +102,7 @@ function updateReferences(moleculeKey) {
 
 gsap.to(window, { duration: 0.1, scrollTo: 0 });
 
-gsap.to(".scrollheader", {
+gsap.to(".scroll-header", {
     top: `10%`,
     scrollTrigger: {
         trigger: ".link-container",

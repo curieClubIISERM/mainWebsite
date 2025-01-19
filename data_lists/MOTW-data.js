@@ -1,4 +1,4 @@
-import { drive } from "../assests/assest.js";
+import { drive } from "../js/utility.js";
 export const molecules = {
     lidocaine: {
         moleculeName: "Lidocaine",
@@ -20,7 +20,7 @@ export const molecules = {
             slide8: "../assests/MOTW/Lidocaine/8.webp",
             slide9: "../assests/MOTW/Lidocaine/9.webp"
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1ffYfKcmzh-6JtmZeuajszdY3IqmY9exM/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1ffYfKcmzh-6JtmZeuajszdY3IqmY9exM/view?usp=sharing"),
         references: [
             {"linkTitle": "Lidocaine: Wikipedia", "link": "https://en.wikipedia.org/wiki/Lidocaine"}, 
             {"linkTitle": "DrugBank: Lidocaine (DB00281)", "link": "https://go.drugbank.com/drugs/DB00281"}, 
@@ -50,7 +50,7 @@ export const molecules = {
             slide7: "../assests/MOTW/Theobromine/9.webp",
             slide7: "../assests/MOTW/Theobromine/10.webp"
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/17u-0iQmTYzCdfeLIxltuWvx9EI-MCFtZ/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/17u-0iQmTYzCdfeLIxltuWvx9EI-MCFtZ/view?usp=sharing"),
         references: [
             { "linkTitle": "Theobromine: PubChem Compound Summary", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Theobromine" },
             { "linkTitle": "DrugBank: Theobromine (DB01412)", "link": "https://go.drugbank.com/drugs/DB01412" },
@@ -78,7 +78,7 @@ export const molecules = {
             slide7: "../assests/MOTW/Nociceptin/8.webp",
             slide7: "../assests/MOTW/Nociceptin/9.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1AYh0QEKHFL9XmVf1h6qI7kB6Cnl8YSM1/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1AYh0QEKHFL9XmVf1h6qI7kB6Cnl8YSM1/view?usp=sharing"),
         references: [
             { "linkTitle": "Nociceptin and Surface Interaction Mechanisms", "link": "https://www.sciencedirect.com/science/article/pii/0014579394802351" },
             { "linkTitle": "Nociceptin Pathways in Drug Discovery", "link": "https://www.nature.com/articles/nrd2572" },
@@ -105,7 +105,7 @@ export const molecules = {
             slide6: "../assests/MOTW/Histamine/6.webp",
             slide7: "../assests/MOTW/Histamine/7.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1Qqk4-RIRJRpF1p3qJSKfY0J8iL8MZ-LM/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1Qqk4-RIRJRpF1p3qJSKfY0J8iL8MZ-LM/view?usp=sharing"),
         references: [
             { "linkTitle": "Histamine - Cleveland Clinic", "link": "https://my.clevelandclinic.org/health/articles/24854-histamine" },
             { "linkTitle": "Histamine - Wikipedia", "link": "https://en.wikipedia.org/wiki/Histamine" },
@@ -137,7 +137,7 @@ export const molecules = {
             slide7: "../assests/MOTW/Taxols/9.webp",
             slide7: "../assests/MOTW/Taxols/10.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1F0dNOX1sgX-ylbvQil8nidXDwaKdzZfS/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1F0dNOX1sgX-ylbvQil8nidXDwaKdzZfS/view?usp=sharing"),
         references: [
             { "linkTitle": "Taxol - Britannica", "link": "https://www.britannica.com/science/taxol" },
             { "linkTitle": "Taxol - MDPI", "link": "https://www.mdpi.com/1420-3049/28/22/7517" },
@@ -164,7 +164,7 @@ export const molecules = {
             slide7: "../assests/MOTW/Vanilline/7.webp",
             slide8: "../assests/MOTW/Vanilline/8.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1HsPNxtnRlskISbis98lajLTKw02e7z5d/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1HsPNxtnRlskISbis98lajLTKw02e7z5d/view?usp=sharing"),
         references: [
             { "linkTitle": "Vanilla - Drugs.com", "link": "https://www.drugs.com/npp/vanilla.html" },
             { "linkTitle": "Vanillin - ACS Molecule of the Week", "link": "https://www.acs.org/molecule-of-the-week/archive/v/vanillin.html" },
@@ -197,7 +197,7 @@ export const molecules = {
             slide6: "../assests/MOTW/Penguinone/6.webp",
             slide7: "../assests/MOTW/Penguinone/7.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1LQMEUHUww1xyKSdqZvZgfxtxzNAA70Xo/view?usp=drive_link"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1LQMEUHUww1xyKSdqZvZgfxtxzNAA70Xo/view?usp=drive_link"),
         references: [
             { "linkTitle": "Penguinone - Wikipedia", "link": "https://en.wikipedia.org/wiki/Penguinone" },
             { "linkTitle": "Penguinone - Peak Scientific", "link": "https://www.peakscientific.com/discover/news/penguinone/" },
@@ -226,7 +226,7 @@ export const molecules = {
             slide9: "../assests/MOTW/Parabens/9.webp",
             slide10: "../assests/MOTW/Parabens/10.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1LQMEUHUww1xyKSdqZvZgfxtxzNAA70Xo/view?usp=drive_link"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1LQMEUHUww1xyKSdqZvZgfxtxzNAA70Xo/view?usp=drive_link"),
         references: [
             { "linkTitle": "Parabens - Wikipedia", "link": "https://en.wikipedia.org/wiki/Paraben" },
             { "linkTitle": "Parabens - Chemeurope", "link": "https://www.chemeurope.com" },
@@ -252,7 +252,7 @@ export const molecules = {
             slide6: "../assests/MOTW/Dopamine/6.webp",
             slide7: "../assests/MOTW/Dopamine/7.webp",
         },
-        pdflink: drive.toDownload("https://drive.google.com/file/d/17xMPkouQoYmk14MibunyKlzdFMzaXPCh/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/17xMPkouQoYmk14MibunyKlzdFMzaXPCh/view?usp=sharing"),
         references: [
             { "linkTitle": "Dopamine - Healthdirect", "link": "https://www.healthdirect.gov.au/amp/article/dopamine" },
             { "linkTitle": "Dopamine - PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Dopamine" },
@@ -277,7 +277,7 @@ export const molecules = {
             slide5: "../assests/MOTW/Paracetamol/5.webp",
             slide6: "../assests/MOTW/Paracetamol/6.webp",
         },        
-        pdflink: drive.toDownload("https://drive.google.com/file/d/1DlDLGLlgtGRNAA0U3QW9J2rIPwPUQePv/view?usp=drive_link"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1DlDLGLlgtGRNAA0U3QW9J2rIPwPUQePv/view?usp=drive_link"),
         references: [
             { linkTitle: "N-Acetyl-p-aminophenol - SVG Structure", link: "https://shorturl.at/LRlGa" },
             { linkTitle: "N-Acetyl-p-aminophenol - File on Wikipedia", link: "https://en.wikipedia.org/wiki/File:N-Acetyl-p-aminophenol.svg" },
@@ -302,7 +302,7 @@ export const molecules = {
             slide5: "../assests/MOTW/Geosmin/5.webp",
             slide6: "../assests/MOTW/Geosmin/6.webp",
         },        
-        pdflink: "https://drive.google.com/uc?export=download&id=13Vd5BlfiRxo2YTLm1N5Wjer_BxFieDih",
+        pdfLink: "https://drive.google.com/uc?export=download&id=13Vd5BlfiRxo2YTLm1N5Wjer_BxFieDih",
         references: [
             { linkTitle: "Geosmin Overview - Wikipedia", link: "https://en.wikipedia.org/wiki/Geosmin" },
             { linkTitle: "Geosmin - Molecule of the Week - ACS", link: "https://www.acs.org/molecule-of-the-week/archive/g/geosmin.html" }
@@ -326,7 +326,7 @@ export const molecules = {
             slide6: "../assests/MOTW/Capsaicin/6.webp",
             slide7: "../assests/MOTW/Capsaicin/7.webp",
         },
-        pdflink: "https://drive.google.com/uc?export=download&id=1tPCib9J4kTz5c5NS9FyTRULWCXI_m9gq",
+        pdfLink: "https://drive.google.com/uc?export=download&id=1tPCib9J4kTz5c5NS9FyTRULWCXI_m9gq",
         references: [
             { linkTitle: "Capsaicin Compound Information - PubChem", link: "https://pubchem.ncbi.nlm.nih.gov/compound/Capsaicin" },
             { linkTitle: "Capsaicin - Simple Wikipedia", link: "https://simple.wikipedia.org/wiki/Capsaicin" },
@@ -350,7 +350,7 @@ export const molecules = {
             slide5: "../assests/MOTW/Caffeine/5.webp",
             slide6: "../assests/MOTW/Caffeine/6.webp",
         },
-        pdflink: "https://drive.google.com/uc?export=download&id=13Q35fKLlMs9gGZOdveIZPpUlHEJbwuvw",
+        pdfLink: "https://drive.google.com/uc?export=download&id=13Q35fKLlMs9gGZOdveIZPpUlHEJbwuvw",
         references: [
             { linkTitle: "The Chemist Who Discovered Caffeine - Caffe Society", link: "https://www.caffesociety.co.uk/blog/the-chemist-who-discovered-caffeine-friedlieb-ferdinand-runge" },
             { linkTitle: "Caffeine Facts - Thrillist", link: "https://www-thrillist-com.cdn.ampproject.org/v/s/www.thrillist.com/amphtml/drink/nation/caffeine-facts-things-you-didn-t-know-about-caffeine?amp_gsa=1&_js_v=a9&usqp=mq331AQIUAKwASCAAgM%3D#amp_tf=From%20%251%24s&aoh=17111073848337&referrer=https%3A%2F%2Fwww.google.com&ampshare=https%3A%2F%2Fwww.thrillist.com%2Fdrink%2Fnation%2Fcaffeine-facts-things-you-didn-t-know-about-caffeine" },
@@ -378,7 +378,7 @@ export const molecules = {
             slide7: "../assests/MOTW/Mustard_Gas/7.webp",
         }
         ,
-        pdflink: "https://drive.google.com/uc?export=download&id=13QEdF6wUL8w-mIV1SwSOFQm1cMsIu-RD",
+        pdfLink: "https://drive.google.com/uc?export=download&id=13QEdF6wUL8w-mIV1SwSOFQm1cMsIu-RD",
         references: [
             { linkTitle: "Mustard Gas Overview - Wikipedia", link: "https://en.m.wikipedia.org/wiki/Mustard_gas" },
             { linkTitle: "Mustard Gas and Genetic Damage - NCBI", link: "https://www.ncbi.nlm.nih.gov/books/NBK304425/#:~:text=There%20is%20strong%20evidence%20that,type%20and%20chromatid%2Dtype%20aberrations." },
@@ -411,7 +411,7 @@ export const molecules = {
             slide8: "../assests/MOTW/Luciferin/8.webp"
         }
         ,
-        pdflink: "https://drive.google.com/uc?export=download&id=13Q_h1-O1PIGagUFmZQvs-EDjU60f6Eud",
+        pdfLink: "https://drive.google.com/uc?export=download&id=13Q_h1-O1PIGagUFmZQvs-EDjU60f6Eud",
         references: [
             { linkTitle: "RSC: Advances in Luciferin Chemistry", link: "https://pubs.rsc.org/en/content/articlehtml/2021/cs/d0cs01492c" },
             { linkTitle: "PubChem: Firefly Luciferin Structure", link: "https://pubchem.ncbi.nlm.nih.gov/compound/Firefly-luciferin#section=2D-Structure" },
@@ -434,7 +434,7 @@ export const molecules = {
             slide4: "../assests/MOTW/Tetranitratoxycarbon/4.webp",
             slide5: "../assests/MOTW/Tetranitratoxycarbon/5.webp"
         },
-        pdflink: "https://drive.google.com/uc?export=download&id=13TZTqnRr5lWkNKALq8qdmuaKmaOYW47t",
+        pdfLink: "https://drive.google.com/uc?export=download&id=13TZTqnRr5lWkNKALq8qdmuaKmaOYW47t",
         references: [
             { linkTitle: "Tetranitratoxycarbon: Mechanochemical Synthesis and Characterization", link: "https://www.chm.bris.ac.uk/motm/tnoc/1-s2.0-S2210271X11005433-main.pdf" },
             { linkTitle: "Tetranitratoxycarbon - Wikipedia", link: "http://en.wikipedia.org/wiki/Tetranitratoxycarbon" },
@@ -458,7 +458,7 @@ export const molecules = {
             slide5: "../assests/MOTW/PROZAC/5.webp",
             slide6: "../assests/MOTW/PROZAC/6.webp"
         },
-        pdflink: "https://drive.google.com/uc?export=download&id=13T5WY3IypygquGQ6sYwyNMSiB1jKQ21p",
+        pdfLink: "https://drive.google.com/uc?export=download&id=13T5WY3IypygquGQ6sYwyNMSiB1jKQ21p",
         references: [
             { linkTitle: "Wikipedia: Fluoxetine Overview", link: "https://en.m.wikipedia.org/wiki/Fluoxetine#:~:text=Fluoxetine%20was%20invented%20by%20Eli,Organization's%20List%20of%20Essential%20Medicines" },
             { linkTitle: "NCBI: Mechanism of Action of Fluoxetine", link: "https://www.ncbi.nlm.nih.gov/books/NBK459223/#:~:text=Mechanism%20of%20Action,-Serotonin%20and%20norepinephrine&text=Presynaptic%20serotonin%20(5HT1A)%20receptors%20are,located%20in%20the%20presynaptic%20terminal" },
@@ -486,7 +486,7 @@ export const molecules = {
             slide5: "../assests/MOTW/DFNS/5.webp",
             slide6: "../assests/MOTW/DFNS/6.webp"
         },
-        pdflink: "https://drive.google.com/uc?export=download&id=1h5q0k56SN2OY0Sjzz23aHf4zibE8Qcum",        
+        pdfLink: "https://drive.google.com/uc?export=download&id=1h5q0k56SN2OY0Sjzz23aHf4zibE8Qcum",        
         references: [
             { linkTitle: "DFNS as a Versatile Catalyst for Sustainable Chemistry", link: "https://doi.org/10.1002/cssc.201701076" },
             { linkTitle: "Dendritic Fibrous Nanosilica: Design, Synthesis, and Applications", link: "https://doi.org/10.1021/acs.accounts.2c00031" },
@@ -514,7 +514,7 @@ export const molecules = {
             slide7: "../assests/MOTW/Artemisinin/7.webp",
             slide8: "../assests/MOTW/Artemisinin/8.webp"
         },
-        pdflink: "https://drive.google.com/uc?export=download&id=13IPNOPsX63CxC8keRRgtLJ5BefQXxV0n",
+        pdfLink: "https://drive.google.com/uc?export=download&id=13IPNOPsX63CxC8keRRgtLJ5BefQXxV0n",
         references: [
             { linkTitle: "The Nobel Prize in Physiology or Medicine 1902", link: "https://www.nobelprize.org/prizes/medicine/1902/summary/" },
             { linkTitle: "NOBEL PRIZE OF MEDICINE 2015", link: "https://www.nobelprize.org/prizes/medicine/2015/summary/" },

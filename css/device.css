@@ -46,37 +46,37 @@
         mask-image: linear-gradient(to top, transparent 30%, black 50%);
         -webkit-mask-size: 100% 200%;
         mask-size: 100% 200%;
-        mask-position: 100% 0%;
+        mask-position: 100% 20%;
         mask-repeat: no-repeat;
     }
 
-    .backbtn {
+    .back-btn {
         width: 20vw;
     }
 
-    .backbtn .backcircle {
+    .back-btn .back-circle {
         width: 7vw;
         height: 7vw;
     }
 
-    .backbtn .backcircle .icon.arrow {
+    .back-btn .back-circle .icon.arrow {
         width: 4vw;
     }
 
-    .backbtn .button-text {
+    .back-btn .button-text {
         font-size: 2.5vw;
         left: 50%;
         margin: 0 0 0 3vw;
     }
 
-    .backbtn .backcircle .icon.arrow::before {
+    .back-btn .back-circle .icon.arrow::before {
         top: -0.9vw;
         left: 0.6vw;
         width: 2vw;
         height: 2vw;
     }
 
-    .backbtn:hover .backcircle .icon.arrow {
+    .back-btn:hover .back-circle .icon.arrow {
         transform: translate(2vw);
     }
 
@@ -129,7 +129,7 @@
         font-size: 1vh;
     }
 
-    .zbtndiv {
+    .z-btn-div {
         width: 15vw;
         margin: 0.5vw;
     }
@@ -139,7 +139,7 @@
         text-align: center;
     }
 
-    .selecter {
+    .selector {
         margin-block: 1vw;
     }
 
@@ -150,13 +150,13 @@
         left: -30%;
     }
 
-    .sliderDiv .slidersvg {
+    .sliderDiv .slider-svg {
         width: 3.5vw;
         top: 0%;
         left: -20%;
     }
 
-    .slidertittle {
+    .slider-tittle {
         opacity: 0;
     }
 
@@ -222,7 +222,7 @@
         z-index: 15;
     }
 
-    .container .hambuger {
+    .container .hamburger {
         padding: 4vw 2vw;
         stroke: aliceblue;
         display: flex;
@@ -230,14 +230,14 @@
         justify-content: center;
     }
 
-    .container .hambuger svg {
+    .container .hamburger svg {
         position: relative;
         width: 4vw;
         height: 6vw;
         border-radius: 1vw 0vw 0vw 1vw;
     }
 
-    .container .hambuger::after {
+    .container .hamburger::after {
         box-sizing: border-box;
         content: "";
         position: absolute;
@@ -252,12 +252,12 @@
         transition: opacity 0s;
     }
 
-    .container .hambuger.clicked::after {
+    .container .hamburger.clicked::after {
         opacity: 1;
         transition: opacity 0.5s;
     }
 
-    .container .hambuger svg line {
+    .container .hamburger svg line {
         fill: none;
         stroke-width: 9;
         stroke-linecap: round;
@@ -496,28 +496,28 @@
         pointer-events: none;
     }
 
-    .coordinatorinfo-container {
+    .coordinator-info-container {
         height: 70vw;
         background-image: radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0));
     }
 
-    .blobConatiner {
+    .blobContainer {
         display: flex;
         position: absolute;
         filter: blur(10px);
     }
 
-    .blobConatiner svg {
+    .blobContainer svg {
         width: 50vw;
         height: 50vw;
     }
 
-    .coordinatorinfo-container a {
+    .coordinator-info-container a {
         top: 5vw;
         right: 3vw;
     }
 
-    .coordinfo-cards {
+    .coord-info-cards {
         width: 28vw;
         height: 40vw;
         border-radius: 6px;
@@ -534,7 +534,7 @@
         text-shadow: none;
     }
 
-    .coord-postion {
+    .coord-position {
         top: 18%;
         font-weight: 200;
         font-size: 3vw;
@@ -575,11 +575,11 @@
         gap: 5vw;
     }
 
-    .thanks-catogary {
+    .thanks-category {
         font-weight: 800;
     }
 
-    .persondiv {
+    .person-div {
         padding-left: 5vw;
         grid-template-columns: repeat(2, 1fr);
         gap: 2vw;

@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 
-.backbtn {
+.back-btn {
   position: absolute;
   pointer-events: all;
   top: 5vh;
@@ -77,12 +77,12 @@
   opacity: 0;
 }
 
-.backbtn {
+.back-btn {
   width: 15vw;
   height: auto;
 }
 
-.backbtn .backcircle {
+.back-btn .back-circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -93,7 +93,7 @@
   background: #282936;
 }
 
-.backbtn .backcircle .icon {
+.back-btn .back-circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -102,7 +102,7 @@
   background: #fff;
 }
 
-.backbtn .backcircle .icon.arrow {
+.back-btn .back-circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 2vw;
   width: 1.4vw;
@@ -110,7 +110,7 @@
   background: none;
 }
 
-.backbtn .backcircle .icon.arrow::before {
+.back-btn .back-circle .icon.arrow::before {
   position: absolute;
   content: "";
   top: -0.4vw;
@@ -122,7 +122,7 @@
   transform: rotate(-135deg);
 }
 
-.backbtn .button-text {
+.back-btn .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 50%;
@@ -138,16 +138,16 @@
   font-style: normal;
 }
 
-.backbtn:hover .backcircle {
+.back-btn:hover .back-circle {
   width: 100%;
 }
 
-.backbtn:hover .backcircle .icon.arrow {
+.back-btn:hover .back-circle .icon.arrow {
   background: #fff;
   transform: translate(1.2vw, 0);
 }
 
-.backbtn:hover .button-text {
+.back-btn:hover .button-text {
   color: #fff;
 }
 
@@ -278,7 +278,7 @@
   color: transparent;
 }
 
-.selecter {
+.selector {
   position: relative;
   background-color: #1d1e286e;
   font-family: "Manrope";
@@ -297,13 +297,13 @@
   margin-top: 1vw;
 }
 
-.selecter.changing {
+.selector.changing {
   opacity: 0;
 }
 
-.selecter:hover,
-.selecter:focus,
-.selecter:active {
+.selector:hover,
+.selector:focus,
+.selector:active {
   padding: 0.4vw 0.7vw;
   border-radius: 2vw;
   border: aliceblue solid 0.1vw;
@@ -331,7 +331,7 @@ option {
 }
 
 /* button styling  */
-.Zdiv {
+.Z-div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,9 +339,9 @@ option {
   margin: 2vw 0px;
 }
 
-.zbtndiv {
-  --zbtncolor: red;
-  --zbtnboxcolor: blue;
+.z-btn-div {
+  --z-btn-color: red;
+  --z-btn-box-color: blue;
   position: relative;
   width: 10vw;
   margin: 0vw 1vw;
@@ -358,26 +358,26 @@ option {
   transition: all 0.3s ease;
 }
 
-.zbtndiv:has(.changing) {
+.z-btn-div:has(.changing) {
   opacity: 0;
 }
 
-.zbtndiv:nth-child(1) {
-  --zbtncolor: #2db2ff;
-  --zbtnboxcolor: #25ccff;
+.z-btn-div:nth-child(1) {
+  --z-btn-color: #2db2ff;
+  --z-btn-box-color: #25ccff;
 }
 
-.zbtndiv:nth-child(2) {
-  --zbtncolor: #ff1f71;
-  --zbtnboxcolor: #ff1f99;
+.z-btn-div:nth-child(2) {
+  --z-btn-color: #ff1f71;
+  --z-btn-box-color: #ff1f99;
 }
 
-.zbtndiv:hover {
+.z-btn-div:hover {
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 0.5vw 0.5vw rgba(0, 0, 0, 0.8);
 }
 
-.zbtndiv::before {
+.z-btn-div::before {
   content: "";
   position: absolute;
   top: 0;
@@ -387,22 +387,22 @@ option {
   border-radius: 1vw;
   transform: translate(-50%, -10%);
   z-index: -1;
-  background: var(--zbtncolor);
-  box-shadow: 0 0 5px var(--zbtncolor),
-    0 0 15px var(--zbtncolor),
-    0 0 30px var(--zbtncolor),
-    0 0 60px var(--zbtncolor);
+  background: var(--z-btn-color);
+  box-shadow: 0 0 5px var(--z-btn-color),
+    0 0 15px var(--z-btn-color),
+    0 0 30px var(--z-btn-color),
+    0 0 60px var(--z-btn-color);
   transition: all 0.3s;
 }
 
-.zbtndiv:hover::before {
+.z-btn-div:hover::before {
   width: 95%;
   height: 100%;
-  background: var(--zbtncolor);
-  box-shadow: 0 0 1vw var(--zbtncolor),
-    0 0 2.5vw var(--zbtncolor),
-    0 0 3.5vw var(--zbtncolor),
-    0 0 9vw var(--zbtncolor);
+  background: var(--z-btn-color);
+  box-shadow: 0 0 1vw var(--z-btn-color),
+    0 0 2.5vw var(--z-btn-color),
+    0 0 3.5vw var(--z-btn-color),
+    0 0 9vw var(--z-btn-color);
   transform: translate(-50%, 0%);
 }
 
@@ -436,7 +436,7 @@ option {
   filter: blur(0px);
 }
 
-.zbtndiv:hover .Zbtn::after {
+.z-btn-div:hover .Zbtn::after {
   transform: skewX(20deg) translate(150%);
   filter: blur(10px);
 }
@@ -479,7 +479,7 @@ option {
   box-shadow: -200px 0 0 200px rgba(255, 255, 255, 0.8);
 }
 
-.slidertittle {
+.slider-tittle {
   position: absolute;
   top: 50%;
   left: 60%;
@@ -495,12 +495,12 @@ option {
   transition: all 0.3s ease;
 }
 
-.sliderDiv:has(.slider:hover) .slidertittle {
+.sliderDiv:has(.slider:hover) .slider-tittle {
   color: rgba(0, 0, 0, 0.9);
   letter-spacing: 0.2vw;
 }
 
-.sliderDiv .slidersvg {
+.sliderDiv .slider-svg {
   --svgrot: 45deg;
   position: absolute;
   width: 2.5vw;
@@ -510,7 +510,7 @@ option {
   transition: all 0.3s ease;
 }
 
-.sliderDiv:has(.slider:hover) .slidersvg {
+.sliderDiv:has(.slider:hover) .slider-svg {
   fill: rgba(255, 255, 255, 1);
   transform: rotate(var(--svgrot));
 }
@@ -538,7 +538,7 @@ option {
   opacity: 1;
 }
 
-.Slicecoordinator {
+.slice-coordinator {
   background-color: transparent;
   border-radius: 3vw;
   appearance: none;
@@ -555,7 +555,7 @@ option {
   overflow: hidden;
 }
 
-.Slicecoordinator::-webkit-slider-thumb {
+.slice-coordinator::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 2.9vw;
   width: 3vw;
@@ -563,7 +563,7 @@ option {
   background: rgba(255, 255, 255, 0.4);
 }
 
-.SlicerDiv .slidersvg {
+.SlicerDiv .slider-svg {
   --svgrot: 45deg;
   --diameter: 3vw;
   position: absolute;

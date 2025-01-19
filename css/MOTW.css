@@ -95,7 +95,7 @@ li {
     gap: 2vw;
 }
 
-.moleculelogoContainer img {
+.molecule-logo-container img {
     position: relative;
     top: 10vw;
     left: 0;
@@ -106,7 +106,7 @@ li {
     transition: top 0.5s ease, left 0.5s ease;
 }
 
-.moleculelogoContainer img.open {
+.molecule-logo-container img.open {
     top: 13vw;
     left: 2vw;
 }
@@ -398,11 +398,11 @@ li {
     padding: 0.7vw;
 }
 
-.min-buttons a svg .stokesvg {
+.min-buttons a svg .stoke-svg {
     stroke: var(--color2);
 }
 
-.min-button.zoombtn svg {
+.min-button.zoom-btn svg {
     stroke: #000000;
     fill: var(--color2);
     stroke-width: 5;
@@ -412,12 +412,12 @@ li {
     padding: 0.9vw;
 }
 
-.min-button.zoombtn:hover svg {
+.min-button.zoom-btn:hover svg {
     padding: 0.5vw;
     stroke-width: 3;
 }
 
-.min-button.referencebtn svg {
+.min-button.reference-btn svg {
     fill: var(--color2);
 }
 
@@ -434,7 +434,7 @@ li {
     backdrop-filter: blur(17px);
 }
 
-.upperbar {
+.upper-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -442,7 +442,7 @@ li {
     z-index: 10;
 }
 
-.upparbackground {
+.upper-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -453,7 +453,7 @@ li {
     backdrop-filter: blur(5px);
 }
 
-.maxbuttonContainer {
+.max-button-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -472,22 +472,22 @@ li {
     background: none;
 }
 
-.zoombtn,
-.referencebtn {
+.zoom-btn,
+.reference-btn {
     fill: white;
 }
 
-.referencebtn {
+.reference-btn {
     stroke: white;
     stroke-width: 0;
     transition: stroke-width 0.4s ease;
 }
 
-.referencebtn:hover {
+.reference-btn:hover {
     stroke-width: 0.1vw;
 }
 
-#maxdownload {
+#max-download {
     fill: none;
     stroke: #ffffff00;
     stroke-linecap: round;
@@ -500,8 +500,7 @@ li {
     height: 3vw;
 }
 
-.stokesvg {
-    --stokesize: 5;
+.stoke-svg {
     fill: none;
     stroke: #FFFFFF;
     stroke-width: 5;
@@ -680,19 +679,19 @@ li {
         padding-block: 5vw;
     }
 
-    .moleculelogoContainer {
+    .molecule-logo-container {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .moleculelogoContainer img {
+    .molecule-logo-container img {
         top: 20vw;
         left: 0;
         width: 31vw;
     }
 
-    .moleculelogoContainer img.open {
+    .molecule-logo-container img.open {
         top: 20vw;
         left: 0;
     }
@@ -781,13 +780,13 @@ li {
         margin: 3vw;
     }
 
-    .footer2-sociallinks ul {
+    .footer2-social-links ul {
         padding: 0.6vw 2vw;
         padding-right: 4vw;
         gap: 2vw;
     }
 
-    .footer2-sociallinks svg {
+    .footer2-social-links svg {
         width: 4vw;
         height: 4vw;
     }
@@ -828,11 +827,11 @@ li {
         opacity: 1;
     }
 
-    .maxbuttonContainer {
+    .max-button-container {
         display: none;
     }
 
-    .max-button.zoombtn {
+    .max-button.zoom-btn {
         width: 10vw;
         height: 14vw;
     }

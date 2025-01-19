@@ -38,7 +38,7 @@
     gap: 55vw;
   }
   
-  .footerheading {
+  .footer-heading {
     width: fit-content;
     height: fit-content;
     color: rgba(255, 255, 255, 0.794);
@@ -312,7 +312,7 @@
     padding: 0.7vw 1.2vw 0.7vw 2vw;
 }
 
-.footer2-sociallinks a::after,
+.footer2-social-links a::after,
 .footer2 h3::after {
     content: "";
     position: absolute;
@@ -326,7 +326,7 @@
     transition: width 800ms ease;
 }
 
-.footer2-sociallinks a:hover:after {
+.footer2-social-links a:hover:after {
     width: 50%;
 }
 
@@ -334,7 +334,7 @@
     width: 1vw;
 }
 
-.footer2-sociallinks ul,
+.footer2-social-links ul,
 .footer2-left a {
     display: flex;
     align-items: center;
@@ -345,13 +345,13 @@
         inset -0.4vw -0.3vw 0.4vw var(--color5);
 }
 
-.footer2-sociallinks ul {
+.footer2-social-links ul {
     align-content: center;
     padding: 0.2vw 1.5vw 0.1vw 0.1vw;
     gap: 0vw;
 }
 
-.footer2-sociallinks li {
+.footer2-social-links li {
     height: 3vw;
     width: 3vw;
     border-radius: 50%;
@@ -361,7 +361,7 @@
 
 }
 
-.footer2-sociallinks a {
+.footer2-social-links a {
     position: relative;
     display: flex;
     align-items: center;
@@ -370,11 +370,11 @@
     transition: transform 500ms ease;
 }
 
-.footer2-sociallinks a:hover {
+.footer2-social-links a:hover {
     transform: scale(1);
 }
 
-.footer2-sociallinks svg {
+.footer2-social-links svg {
     height: 1.5vw;
     width: 1.5vw;
     fill: black;

@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
     createSpanForHoverAnimation("#new-event");
     createSpanForHoverAnimation("#volunteer-btn");
     createSpanForHoverAnimation("#qbtn");
-    createSpanForHoverAnimation2(".coordinatorinfo-container a", 2);
+    createSpanForHoverAnimation2(".coordinator-info-container a", 2);
     recentContainerScrollAnimation();
     appendSinusoidalGroup(40, 40);
     dnaAnimation(40);
@@ -119,10 +119,10 @@ if (isMobile()) {
     })
     document.querySelector('.heropage').style.backgroundImage = 'radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0))';
     document.querySelector('.coordinatorinfo-container').style.backgroundImage = 'radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0))';
-    document.querySelector('.blobConatiner').style.display = 'flex';
-    document.querySelector('.blobConatiner').style.position = 'absolute';
-    document.querySelector('.blobConatiner').style.filter = 'blur(10px)';
-    document.querySelectorAll('.blobConatiner svg').forEach(function (element) {
+    document.querySelector('.blobContainer').style.display = 'flex';
+    document.querySelector('.blobContainer').style.position = 'absolute';
+    document.querySelector('.blobContainer').style.filter = 'blur(10px)';
+    document.querySelectorAll('.blobContainer svg').forEach(function (element) {
         element.style.width = '50vw';
         element.style.height = '50vw';
     });
@@ -134,10 +134,10 @@ if (isSafari() || isSafariIOS()) {
     })
     document.querySelector('.heropage').style.backgroundImage = 'radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0))';
     document.querySelector('.coordinatorinfo-container').style.backgroundImage = 'radial-gradient(rgb(1, 35, 139), rgb(0, 0, 0))';
-    document.querySelector('.blobConatiner').style.display = 'flex';
-    document.querySelector('.blobConatiner').style.position = 'absolute';
-    document.querySelector('.blobConatiner').style.filter = 'blur(10px)';
-    document.querySelectorAll('.blobConatiner svg').forEach(function (element) {
+    document.querySelector('.blobContainer').style.display = 'flex';
+    document.querySelector('.blobContainer').style.position = 'absolute';
+    document.querySelector('.blobContainer').style.filter = 'blur(10px)';
+    document.querySelectorAll('.blobContainer svg').forEach(function (element) {
         element.style.width = '50vw';
         element.style.height = '50vw';
     });
@@ -295,9 +295,9 @@ function dnaAnimation(strandNumber) {
             }, `nucleotide${(i + 28) % strandNumber - 1} start`)
 
         for (let j = 1; j < 27; j++) {
-            const nextline = document.querySelector(`#nucleotide${(i + j) % strandNumber} line`)
-            nextX1 = nextline.getAttribute('x1');
-            nextX2 = nextline.getAttribute('x2');
+            const nextLine = document.querySelector(`#nucleotide${(i + j) % strandNumber} line`)
+            nextX1 = nextLine.getAttribute('x1');
+            nextX2 = nextLine.getAttribute('x2');
             tl.to(line, {
                 attr: { x1: `${nextX1}`, x2: `${nextX2}` },
                 duration: 0.1
@@ -349,19 +349,19 @@ function setLenis() {
         }
 
         lastProgress = progress;
-        var chemicalheight = (1 - progress) * maxfill;
+        var chemicalHeight = (1 - progress) * maxfill;
 
         gsap.to("#chemical", {
-            attr: { d: `M 7,180 c 0,0,2,35,15,35 s 17-35,17-35 V${chemicalheight} h-32 V170.5z` },
+            attr: { d: `M 7,180 c 0,0,2,35,15,35 s 17-35,17-35 V${chemicalHeight} h-32 V170.5z` },
             ease: "none"
         });
 
         // Change initial position of bubble elements
-        var maxcx = 190;
-        var newcx = maxcx * (1 - progress);
+        const MAXcx = 190;
+        const NEWcx = MAXcx * (1 - progress);
 
         gsap.to(".bubble", {
-            attr: { cy: `${newcx}` },
+            attr: { cy: `${NEWcx}` },
         });
     })
 
@@ -375,7 +375,7 @@ function setLenis() {
 }
 
 function recentContainerScrollAnimation() {
-    const imgConatiner = document.getElementById('.image-conatiner');
+    const imgContainer = document.getElementById('.image-container');
     const rImgsWrappers = document.querySelectorAll(".img-grid .img-wrapper");
     linkToGallery = document.createElement("a");
     linkToGallery.className = "link-to-gallery";
@@ -384,7 +384,7 @@ function recentContainerScrollAnimation() {
     rImgsWrappers[rImgsWrappers.length - 1].appendChild(linkToGallery);
 
     const observerOptions = {
-        root: imgConatiner,
+        root: imgContainer,
         rootMargin: '0px',
         threshold: 0.5
     };
@@ -434,13 +434,13 @@ function lightblueAnimation() {
             const randomLeft = -80 + Math.random() * 200;
             const randomTop = Math.random() * 10;
             const randWidth = Math.random() * 40;
-            const randskew = Math.random() * 50;
+            const randSkew = Math.random() * 50;
             const randDuration = 6 + Math.round(Math.random() * 5);
             gsap.to(element, {
                 left: `${randomLeft}%`,
                 top: `${100 + randomTop}%`,
                 width: `${randWidth}%`,
-                transform: `skew(${randskew}deg)`,
+                transform: `skew(${randSkew}deg)`,
                 ease: "none",
                 duration: randDuration
             });
@@ -479,13 +479,13 @@ function footerAnimationTrigger() {
 
 function thanksContainercursor() {
     const thanksContainer = document.getElementById("thanks");
-    const thankscursor = document.getElementById("thanks-cursor");
+    const thanksCursor = document.getElementById("thanks-cursor");
     const thanksPersons = document.querySelectorAll(".thanks-person");
 
-    var mousein = false;
+    var mouseIn = false;
 
     function movecursor(x, y) {
-        gsap.to(thankscursor, { left: `${x}px`, top: `${y}px` });
+        gsap.to(thanksCursor, { left: `${x}px`, top: `${y}px` });
     }
 
     thanksContainer.onmousemove = (e) => {
@@ -504,41 +504,41 @@ function thanksContainercursor() {
     };
 
     thanksContainer.onmouseleave = thanksContainer.ontouchend = () => {
-        gsap.to(thankscursor, { scale: 0 });
-        mousein = false;
+        gsap.to(thanksCursor, { scale: 0 });
+        mouseIn = false;
     };
 
     thanksContainer.onmouseenter = thanksContainer.ontouchstart = () => {
-        gsap.to(thankscursor, { scale: 0.5 });
-        mousein = true;
+        gsap.to(thanksCursor, { scale: 0.5 });
+        mouseIn = true;
     };
 
     thanksPersons.forEach((thanksPerson) => {
         thanksPerson.onmouseenter = thanksPerson.ontouchstart = () => {
-            gsap.to(thankscursor, { scale: 1 });
+            gsap.to(thanksCursor, { scale: 1 });
         };
         thanksPerson.onmouseleave = thanksPerson.ontouchend = () => {
-            gsap.to(thankscursor, { scale: 0.5 });
+            gsap.to(thanksCursor, { scale: 0.5 });
         };
     });
 
     lenis.on("scroll", () => {
-        if (mousein) {
-            gsap.to(thankscursor, { scale: 0 })
+        if (mouseIn) {
+            gsap.to(thanksCursor, { scale: 0 })
         } else {
-            gsap.to(thankscursor, { scale: 0.5 })
+            gsap.to(thanksCursor, { scale: 0.5 })
         }
     })
 };
 
 function galleryContainercursor() {
     const galleryContainer = document.querySelector(".gallery-container");
-    const gallerycursor = document.getElementById("gallery-cursor");
+    const galleryCursor = document.getElementById("gallery-cursor");
     const galleryWrappers = galleryContainer.querySelectorAll(".img-wrapper");
     const dna = galleryContainer.querySelector("#dna");
     const sugars = galleryContainer.querySelectorAll(".sugar");
 
-    var mousein = false;
+    var mouseIn = false;
 
     function movecursor(x, y) {
         const rect = galleryContainer.getBoundingClientRect();
@@ -547,10 +547,10 @@ function galleryContainercursor() {
         const dnaRight = dnaRect.width - rect.left;
 
         if (x <= dnaRight && x >= dnaLeft) {
-            gsap.to(gallerycursor, { left: `${5}vw`, top: `${y}px` });
+            gsap.to(galleryCursor, { left: `${5}vw`, top: `${y}px` });
         } else {
-            gallerycursor.textContent = "";
-            gsap.to(gallerycursor, { left: `${x}px`, top: `${y}px` });
+            galleryCursor.textContent = "";
+            gsap.to(galleryCursor, { left: `${x}px`, top: `${y}px` });
         }
     }
 
@@ -570,37 +570,37 @@ function galleryContainercursor() {
     };
 
     galleryContainer.onmouseleave = galleryContainer.ontouchend = () => {
-        gsap.to(gallerycursor, { scale: 0 });
-        mousein = false;
+        gsap.to(galleryCursor, { scale: 0 });
+        mouseIn = false;
     };
 
     galleryContainer.onmouseenter = galleryContainer.ontouchstart = () => {
-        gsap.to(gallerycursor, { scale: 0.5 });
-        mousein = true;
+        gsap.to(galleryCursor, { scale: 0.5 });
+        mouseIn = true;
     };
 
     galleryWrappers.forEach((galleryWrapper) => {
         galleryWrapper.onmouseenter = galleryWrapper.ontouchstart = () => {
-            gallerycursor.style.mixBlendMode = "normal";
-            gsap.to(gallerycursor, { scale: 0.1 });
+            galleryCursor.style.mixBlendMode = "normal";
+            gsap.to(galleryCursor, { scale: 0.1 });
         };
         galleryWrapper.onmouseleave = galleryWrapper.ontouchend = () => {
-            gallerycursor.style.mixBlendMode = "difference";
-            gsap.to(gallerycursor, { scale: 0.5 });
+            galleryCursor.style.mixBlendMode = "difference";
+            gsap.to(galleryCursor, { scale: 0.5 });
         };
     });
 
     dna.onmouseenter = dna.ontouchstart = () => {
-        gsap.to(gallerycursor, { scale: 0.5 });
+        gsap.to(galleryCursor, { scale: 0.5 });
     };
 
     dna.onmouseleave = dna.ontouchend = () => {
-        gsap.to(gallerycursor, { scale: 0.5 });
+        gsap.to(galleryCursor, { scale: 0.5 });
     };
 
     sugars.forEach((sugar) => {
         sugar.onmouseenter = sugar.ontouchstart = (e) => {
-            gallerycursor.textContent = e.target.getAttribute("nucleotide");
+            galleryCursor.textContent = e.target.getAttribute("nucleotide");
             gsap.to(e.target, { fill: "black" });
         };
         sugar.onmouseleave = sugar.ontouchend = (e) => {
@@ -608,10 +608,10 @@ function galleryContainercursor() {
         };
     });
     lenis.on("scroll", () => {
-        if (mousein) {
-            gsap.to(gallerycursor, { scale: 0 });
+        if (mouseIn) {
+            gsap.to(galleryCursor, { scale: 0 });
         } else {
-            gsap.to(gallerycursor, { scale: 0.5 });
+            gsap.to(galleryCursor, { scale: 0.5 });
         }
     })
 };
@@ -622,19 +622,19 @@ function spanner(element) {
 }
 
 function stringSpanner(string) {
-    let spanedText = "";
+    let spannedText = "";
     for (let char of string) {
-        spanedText += `<span>${char}</span>`;
+        spannedText += `<span>${char}</span>`;
     };
-    return spanedText;
+    return spannedText;
 }
 
 function sentenceSpanner(sentence) {
-    let spannedSenetence = "";
+    let spannedSentence = "";
     sentence.split(" ").forEach(word => {
-        spannedSenetence += `<span>${word}</span> `;
+        spannedSentence += `<span>${word}</span> `;
     });
-    return spannedSenetence;
+    return spannedSentence;
 }
 
 function spanner2(element) {
@@ -645,39 +645,90 @@ function spanner2(element) {
 function aboutAnimation() {
     spanner(".about h2");
     spanner(".description")
-    gsap.set(".about", { clipPath: `polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)`, transform: `scale(1.4)` });
-    gsap.set(".about h2 span", { y: 50, opacity: 0 });
-    gsap.set(".description span", { y: 20, opacity: 0 })
-    aboutTl = gsap.timeline({
+    // gsap.set(".about", { clipPath: `polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)`, transform: `scale(1.4)` });
+    // gsap.set(".about h2 span", { y: 50, opacity: 0 });
+    // gsap.set(".description span", { y: 20, opacity: 0 })
+    // aboutTl = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.aboutWrapper',
+    //         start: 'top+=50 top+=150',
+    //         end: '60% 70%',
+    //         markers: true,
+    //         scrub: 1,
+    //     }
+    // });
+    // gsap.to(".about", {
+    //     clipPath: `polygon(${0}% ${0}%, ${100}% ${0}%, ${100}% ${100}%, ${0}% ${100}%)`,
+    //     transform: `scale(${1})`,
+    //     scrollTrigger: {
+    //         trigger: '.aboutWrapper',
+    //         start: 'top-=100 top',
+    //         end: 'bottom bottom',
+    //         scrub: 1
+    //     }
+    // }
+    // );
+    // gsap.to(".about svg", {
+    //     opacity: 0.1,
+    //     scrollTrigger: {
+    //         trigger: '.aboutWrapper',
+    //         start: 'top-=100 top',
+    //         end: 'bottom bottom',
+    //         scrub: 1
+    //     }
+    // });
+    // aboutTl.to(".about h2 span", { y: 0, opacity: 1, stagger: 0.1 }, "=+2");
+    // aboutTl.to(".description span", { y: 0, opacity: 1, stagger: 0.03 });
+    // Set initial states
+    gsap.set(".about", {
+        clipPath: `polygon(20% 20%, 80% 20%, 80% 80%, 20% 80%)`,
+        transform: `scale(1.4)`
+    });
+    gsap.set(".about h2 span", {
+        y: 50,
+        opacity: 0
+    });
+    gsap.set(".description span", {
+        y: 20,
+        opacity: 0
+    });
+
+    // Create a single timeline
+    const aboutTl = gsap.timeline({
         scrollTrigger: {
             trigger: '.aboutWrapper',
-            start: 'top-=50 top',
-            end: '60% 70%',
+            start: 'top+=50 top+=150',
+            end: 'bottom bottom',
             scrub: 1,
         }
     });
-    gsap.to(".about", {
-        clipPath: `polygon(${0}% ${0}%, ${100}% ${0}%, ${100}% ${100}%, ${0}% ${100}%)`,
-        transform: `scale(${1})`,
-        scrollTrigger: {
-            trigger: '.aboutWrapper',
-            start: 'top-=100 top',
-            end: 'bottom bottom',
-            scrub: 1
-        }
-    }
-    );
-    gsap.to(".about svg", {
-        opacity: 0.1,
-        scrollTrigger: {
-            trigger: '.aboutWrapper',
-            start: 'top-=100 top',
-            end: 'bottom bottom',
-            scrub: 1
-        }
-    });
-    aboutTl.to(".about h2 span", { y: 0, opacity: 1, stagger: 0.1 }, "=+2");
-    aboutTl.to(".description span", { y: 0, opacity: 1, stagger: 0.03 });
+
+    // Add animations to the timeline
+    aboutTl
+        .to(".about", {
+            clipPath: `polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)`,
+            transform: `scale(1)`,
+            duration: 2
+        })
+        .to(".about svg", {
+            opacity: 0.1,
+            duration: 2
+        }, "<-=1") // Start at the same time as the previous animation
+        .to(".about h2 span", {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            duration: 1
+        }, "<+=1.5") // Slight delay after the previous animations
+        .to(".description span", {
+            y: 0,
+            opacity: 1,
+            stagger: 0.03,
+            duration: 1
+        }, "<"); // Start immediately after the previous animation
+
+    // ScrollTrigger ensures smooth animations synchronized with scrolling
+
 }
 
 function particles() {

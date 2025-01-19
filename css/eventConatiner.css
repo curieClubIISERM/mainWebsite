@@ -20,16 +20,6 @@
   }
 }
 
-@keyframes maskAnimation {
-  0% {
-    mask-position: 100% 0%;
-  }
-
-  100% {
-    mask-position: 0% 0%;
-  }
-}
-
 .container {
   position: relative;
   top: 0;
@@ -55,7 +45,7 @@
   z-index: -1;
   background: radial-gradient(#000, transparent) 0 0/1em 1em space;
   content: "";
-  animation: fadeMove 2s linear infinite, maskAnimation 2s linear infinite;
+  animation: fadeMove 2s linear infinite;
 }
 
 .container-top {
@@ -189,7 +179,7 @@
   fill: aliceblue;
 }
 
-#annocument-svg {
+#announcement-svg {
   width: 12vw;
 }
 
@@ -334,6 +324,11 @@
   margin-top: -70%;
   background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
   pointer-events: none;
+}
+
+.e-card:has(.happening) .wave {
+  background: linear-gradient(744deg, #ff8c42, #ff6b00 60%, #ffcc00);
+
 }
 
 .wave:nth-child(2),
