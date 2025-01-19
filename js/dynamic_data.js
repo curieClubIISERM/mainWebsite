@@ -133,18 +133,18 @@ function addingConvenersinfo() {
 function addingVolunteersName(data) {
     const volunteersDiv = document.querySelector("#volunteers");
     const thanksCurser = document.getElementById("thanks-curser");
-    data.forEach(person => {
+    data.slice(0, 12).forEach(person => {
         const personDiv = document.createElement('div');
         personDiv.className = 'thanks-person';
         personDiv.textContent = formatStudentInfo(person);
         personDiv.onmouseenter = () => {
             gsap.to(thanksCurser, { scale: 1 });
-        }
+        };
         personDiv.onmouseleave = () => {
             gsap.to(thanksCurser, { scale: 0.5 });
-        }
+        };
         volunteersDiv.appendChild(personDiv);
-    })
+    });    
 }
 
 function addingGoogleFormLinks() {
