@@ -6,7 +6,7 @@
    - Open the Google Sheet linked to the Curie Club website. The link should be shared with authorized users.
 
 2. **Add the Event Data:**
-   - Navigate to the `Event Details` tab in the Google Sheet.
+   - Navigate to the `Event Detail` tab in the Google Sheet.
    - Use the following format to fill in the event details in a horizontal manner:
 
 | **Event Type** | **Event Name**    | **Event Date** | **Event Time** | **Probably Event Duration** | **Event Venue** | **Event Description** |
@@ -23,8 +23,8 @@
 1. **Locate the Google Sheet:**
    - Open the Google Sheet linked to the Curie Club website.
 
-2. **Add the Ongoing Series Data:**
-   - Navigate to the `Ongoing Series` tab in the Google Sheet.
+2. **Add the Series Data:**
+   - Navigate to the `Series Detail` tab in the Google Sheet.
    - Use the following format to fill in the series details in a horizontal manner:
 
 | **Series Name**       | **Series Description**                            | **Link**                          | **Line Clamp** |
