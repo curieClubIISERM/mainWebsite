@@ -1739,7 +1739,7 @@ function mobileOnClickAnimations() {
           lenis.start()
         }
       })
-      .to(".heropage", {maskPosition: `100% ${20}%`, duration: 2}, "start2")
+      .to(".heropage", {maskPosition: `100% ${0}%`, duration: 2}, "start2")
       .to(".test-tube-container", { filter: `blur(${0}px)`, opacity: 1, duration: 0.5 }, "start3")
       .to(".nav-600", { yPercent: 0, duration: 0.3 },"start3")
       .to(".heropage", { filter: `blur(${0}px)`, opacity: 1 }, "start3")
