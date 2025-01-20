@@ -46,7 +46,7 @@
         mask-image: linear-gradient(to top, transparent 30%, black 50%);
         -webkit-mask-size: 100% 200%;
         mask-size: 100% 200%;
-        mask-position: 100% 20%;
+        mask-position: 100% 0%;
         mask-repeat: no-repeat;
     }
 
