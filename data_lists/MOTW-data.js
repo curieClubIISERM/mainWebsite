@@ -1,5 +1,49 @@
 import { drive } from "../js/utility.js";
 export const molecules = {
+    carbyne: {
+        moleculeName: "Carbyne",
+        publishDate: "2024-02-09",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Shashvita (MS24)",
+            Designer: "Niranjana (MS24)",
+            Editor: ""
+        },
+        slides: {
+            slide1: "../assests/MOTW/Carbyne/1.webp",
+            slide2: "../assests/MOTW/Carbyne/2.webp",
+            slide3: "../assests/MOTW/Carbyne/3.webp",
+            slide4: "../assests/MOTW/Carbyne/4.webp",
+            slide5: "../assests/MOTW/Carbyne/5.webp",
+            slide6: "../assests/MOTW/Carbyne/6.webp",
+            slide7: "../assests/MOTW/Carbyne/7.webp",
+            slide8: "../assests/MOTW/Carbyne/8.webp",
+            slide9: "../assests/MOTW/Carbyne/9.webp",
+            slide10: "../assests/MOTW/Carbyne/10.webp",
+            slide11: "../assests/MOTW/Carbyne/11.webp",
+            slide12: "../assests/MOTW/Carbyne/12.webp",
+            slide13: "../assests/MOTW/Carbyne/13.webp",
+        },
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1omi8l6z0i4y2G45NbP1-ZkesI8JzFotV/view?usp=sharing"),
+        "references": [
+            {
+                "linkTitle": "LabXchange: Linear Acetylenic Carbon",
+                "link": "https://www.labxchange.org/library/items/lb:LabXchange:0f37aae6:html:1"
+            },
+            {
+                "linkTitle": "Wikipedia: Linear Acetylenic Carbon",
+                "link": "https://en.wikipedia.org/wiki/Linear_acetylenic_carbon"
+            },
+            {
+                "linkTitle": "AZoM: Linear Acetylenic Carbon",
+                "link": "https://www.azom.com/article.aspx?ArticleID=10250"
+            },
+            {
+                "linkTitle": "Research Features: Carbyne - A Simple but Strong Chain of Carbon Atoms",
+                "link": "https://researchfeatures.com/carbyne-simple-strong-chain-carbon-atoms/"
+            }
+        ]
+    },
     lidocaine: {
         moleculeName: "Lidocaine",
         publishDate: "2024-12-30",
@@ -22,12 +66,12 @@ export const molecules = {
         },
         pdfLink: drive.toDownload("https://drive.google.com/file/d/1ffYfKcmzh-6JtmZeuajszdY3IqmY9exM/view?usp=sharing"),
         references: [
-            {"linkTitle": "Lidocaine: Wikipedia", "link": "https://en.wikipedia.org/wiki/Lidocaine"}, 
-            {"linkTitle": "DrugBank: Lidocaine (DB00281)", "link": "https://go.drugbank.com/drugs/DB00281"}, 
-            {"linkTitle": "Cleveland Clinic: Lidocaine Skin Cream or Ointment", "link": "https://my.clevelandclinic.org/health/drugs/19854-lidocaine-skin-cream-or-ointment"}, 
-            {"linkTitle": "NCBI Bookshelf: Lidocaine Overview", "link": "https://www.ncbi.nlm.nih.gov/books/NBK539881/"}, 
-            {"linkTitle": "Mayo Clinic: Lidocaine Topical Application Route", "link": "https://www.mayoclinic.org/drugs-supplements/lidocaine-topical-application-route/description/drg-20072776"}
-        ]       
+            { "linkTitle": "Lidocaine: Wikipedia", "link": "https://en.wikipedia.org/wiki/Lidocaine" },
+            { "linkTitle": "DrugBank: Lidocaine (DB00281)", "link": "https://go.drugbank.com/drugs/DB00281" },
+            { "linkTitle": "Cleveland Clinic: Lidocaine Skin Cream or Ointment", "link": "https://my.clevelandclinic.org/health/drugs/19854-lidocaine-skin-cream-or-ointment" },
+            { "linkTitle": "NCBI Bookshelf: Lidocaine Overview", "link": "https://www.ncbi.nlm.nih.gov/books/NBK539881/" },
+            { "linkTitle": "Mayo Clinic: Lidocaine Topical Application Route", "link": "https://www.mayoclinic.org/drugs-supplements/lidocaine-topical-application-route/description/drg-20072776" }
+        ]
     },
     theobromine: {
         moleculeName: "Theobromine",
@@ -56,7 +100,7 @@ export const molecules = {
             { "linkTitle": "DrugBank: Theobromine (DB01412)", "link": "https://go.drugbank.com/drugs/DB01412" },
             { "linkTitle": "NCBI Bookshelf: Theobromine Overview", "link": "https://www.ncbi.nlm.nih.gov/books/NBK507032/#:~:text=Theobromine%20is%20the%20principal%20alkaloid%20of%20the%20cacao%20bean.,forms%20of%20chocolate%2Dbased%20foods" },
             { "linkTitle": "ScienceDirect: Neurological Effects of Theobromine", "link": "https://www.sciencedirect.com/science/article/pii/S1756464624001282#:~:text=In%20the%20brain%2C%20it%20can,Alzheimer's%20disease%2C%20and%20Parkinson's%20disease" }
-        ]       
+        ]
     },
     nociceptin: {
         moleculeName: "Nociceptin",
@@ -85,7 +129,7 @@ export const molecules = {
             { "linkTitle": "Advances in Nociceptin and Chemical Synthesis", "link": "https://pubs.acs.org/doi/abs/10.1021/bk-2013-1131.ch016" },
             { "linkTitle": "Nociception vs. Pain: A Comparative Overview", "link": "https://pain.ucsf.edu/understanding-pain-pain-basics/nociception-versus-pain" },
             { "linkTitle": "New Insights into Nociceptin in Pain Processing", "link": "https://www.sciencedaily.com/releases/2014/01/140108154043.htm" }
-        ]        
+        ]
     },
     histamine: {
         moleculeName: "Histamine",
@@ -114,7 +158,7 @@ export const molecules = {
             { "linkTitle": "Histamine - PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Histamine" },
             { "linkTitle": "Histamine Metabolism - ScienceDirect", "link": "https://www.sciencedirect.com/topics/medicine-and-dentistry/histamine-metabolism" },
             { "linkTitle": "Histamine Synthesis and Degradation - NCBI Bookshelf", "link": "https://www.ncbi.nlm.nih.gov/books/NBK538201/#:~:text=Though%20not%20synthesized%20in%20the,histidase)%2C%20followed%20by%20urocanase.&text=Serine%20esterases%2C%20such%20as%20trypsin,the%20active%2Dsite%20serine%20hydroxyl" }
-        ]        
+        ]
     },
     taxols: {
         moleculeName: "Taxols",
@@ -143,7 +187,7 @@ export const molecules = {
             { "linkTitle": "Taxol - MDPI", "link": "https://www.mdpi.com/1420-3049/28/22/7517" },
             { "linkTitle": "Taxol: Mechanism of Action - YouTube", "link": "https://www.youtube.com/watch?v=6pehkAB4GTY" },
             { "linkTitle": "Taxol from Aspergillus terreus - Microbiology Journal", "link": "https://microbiologyjournal.org/production-and-characterization-of-taxol-as-anticancer-agent-from-aspergillus-terreus/" }
-        ]        
+        ]
     },
     vanilline: {
         moleculeName: "Vanilline",
@@ -203,7 +247,7 @@ export const molecules = {
             { "linkTitle": "Penguinone - Peak Scientific", "link": "https://www.peakscientific.com/discover/news/penguinone/" },
             { "linkTitle": "Penguinone - PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/12564106#section=Computed-Properties" },
             { "linkTitle": "Dienone-Phenol Rearrangement - ScienceDirect", "link": "https://www.sciencedirect.com/topics/chemistry/dienone-phenol-rearrangement" }
-        ]        
+        ]
     },
     parabens: {
         moleculeName: "Parabens",
@@ -276,14 +320,14 @@ export const molecules = {
             slide4: "../assests/MOTW/Paracetamol/4.webp",
             slide5: "../assests/MOTW/Paracetamol/5.webp",
             slide6: "../assests/MOTW/Paracetamol/6.webp",
-        },        
+        },
         pdfLink: drive.toDownload("https://drive.google.com/file/d/1DlDLGLlgtGRNAA0U3QW9J2rIPwPUQePv/view?usp=drive_link"),
         references: [
             { linkTitle: "N-Acetyl-p-aminophenol - SVG Structure", link: "https://shorturl.at/LRlGa" },
             { linkTitle: "N-Acetyl-p-aminophenol - File on Wikipedia", link: "https://en.wikipedia.org/wiki/File:N-Acetyl-p-aminophenol.svg" },
             { linkTitle: "Paracetamol - Wikipedia", link: "https://en.wikipedia.org/wiki/Paracetamol" },
             { linkTitle: "Paracetamol - Shortened URL", link: "https://shorturl.at/y2Lic" }
-        ]                
+        ]
     },
     geosmin: {
         moleculeName: "Geosmin",
@@ -301,12 +345,12 @@ export const molecules = {
             slide4: "../assests/MOTW/Geosmin/4.webp",
             slide5: "../assests/MOTW/Geosmin/5.webp",
             slide6: "../assests/MOTW/Geosmin/6.webp",
-        },        
+        },
         pdfLink: "https://drive.google.com/uc?export=download&id=13Vd5BlfiRxo2YTLm1N5Wjer_BxFieDih",
         references: [
             { linkTitle: "Geosmin Overview - Wikipedia", link: "https://en.wikipedia.org/wiki/Geosmin" },
             { linkTitle: "Geosmin - Molecule of the Week - ACS", link: "https://www.acs.org/molecule-of-the-week/archive/g/geosmin.html" }
-        ]        
+        ]
     },
     capsaicin: {
         moleculeName: "Capsaicin",
@@ -331,7 +375,7 @@ export const molecules = {
             { linkTitle: "Capsaicin Compound Information - PubChem", link: "https://pubchem.ncbi.nlm.nih.gov/compound/Capsaicin" },
             { linkTitle: "Capsaicin - Simple Wikipedia", link: "https://simple.wikipedia.org/wiki/Capsaicin" },
             { linkTitle: "Capsaicin Overview - NCBI", link: "https://www.ncbi.nlm.nih.gov/books/NBK459168/" }
-        ]        
+        ]
     },
     caffeine: {
         moleculeName: "Caffeine",
@@ -357,7 +401,7 @@ export const molecules = {
             { linkTitle: "9 Reasons Why Coffee is Good for You - Johns Hopkins Medicine", link: "https://www.hopkinsmedicine.org/health/wellness-and-prevention/9-reasons-why-the-right-amount-of-coffee-is-good-for-you" },
             { linkTitle: "11 Facts About Caffeine - Do Something", link: "https://www.dosomething.org/us/facts/11-facts-about-caffeine#:~:text=Caffeine%20has%20been%20linked%20to,to%20start%20feeling%20the%20effects" },
             { linkTitle: "Coffee & Caffeine: Surprising Facts - Maui Coffee", link: "https://maui.coffee/blogs/hawaii/coffee-caffeine-surprising-facts" }
-        ]     
+        ]
     },
     mustardGas: {
         moleculeName: "Mustard Gas",
@@ -389,7 +433,7 @@ export const molecules = {
             { linkTitle: "Mustard Gas Image 4 - Google Images", link: "https://images.app.goo.gl/wAKh6YUUqnUVbxTRA" },
             { linkTitle: "Mustard Gas Image 5 - Google Images", link: "https://images.app.goo.gl/k9hWDC4X7H5LUSQP8" },
             { linkTitle: "Mustard Gas Image 6 - Google Images", link: "https://images.app.goo.gl/b4D83zwL6LYr6HLa7" }
-        ]        
+        ]
     },
     luciferin: {
         moleculeName: "Luciferin",
@@ -486,7 +530,7 @@ export const molecules = {
             slide5: "../assests/MOTW/DFNS/5.webp",
             slide6: "../assests/MOTW/DFNS/6.webp"
         },
-        pdfLink: "https://drive.google.com/uc?export=download&id=1h5q0k56SN2OY0Sjzz23aHf4zibE8Qcum",        
+        pdfLink: "https://drive.google.com/uc?export=download&id=1h5q0k56SN2OY0Sjzz23aHf4zibE8Qcum",
         references: [
             { linkTitle: "DFNS as a Versatile Catalyst for Sustainable Chemistry", link: "https://doi.org/10.1002/cssc.201701076" },
             { linkTitle: "Dendritic Fibrous Nanosilica: Design, Synthesis, and Applications", link: "https://doi.org/10.1021/acs.accounts.2c00031" },
