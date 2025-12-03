@@ -22,5 +22,15 @@ export const quotes = [
     {
         "quote": "Life is chemistry; dilute your sorrow evaporate your worries filter your mistake boil your ego 'You will get the crystal of happiness'",
         "credit": ""
+    },
+    {
+        "quote": "Science and everyday life cannot and should not be separated.",
+        "credit": "Rosalind Franklin"
+    },
+    {
+        "quote": "The chymists are a strange class of mortals, impelled by an almost insane impulse to seek their pleasure among smoke and vapor.",
+        "credit": "Robert Boyle"
     }
+
+
 ]
