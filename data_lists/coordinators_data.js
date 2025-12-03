@@ -7,7 +7,7 @@ export const coordinators = [
     {
         name: "Subodh J Toshikhane",
         position: "Co-convener",
-        image: "assests/Coordinaters_images/Subodh_ProfPic.webp"
+        image: "assests/Coordinaters_images/Subodh1_ProfPic.webp"
     },
     {
        name: "Garima Saini",
@@ -15,3 +15,4 @@ export const coordinators = [
        image: "assests/Coordinaters_images/Garima_ProfPic.webp"
     }
 ];
+
