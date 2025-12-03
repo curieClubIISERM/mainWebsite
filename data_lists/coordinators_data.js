@@ -15,4 +15,3 @@ export const coordinators = [
        image: "assests/Coordinaters_images/Garima_ProfPic.webp"
     }
 ];
-
