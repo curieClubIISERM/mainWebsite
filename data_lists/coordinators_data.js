@@ -1,17 +1,18 @@
 export const coordinators = [
     {
-        name: "Preet Vidhuri",
+        name: "Khushi Malhotra",
         position: "Convener",
-        image: "assests/Coordinaters_images/preet_profile_pic.webp"
+        image: "assests/Coordinaters_images/Khushi_ProfPic.webp"
     },
     {
-        name: "Prabhleen Kaur",
+        name: "Subodh J Toshikhane",
         position: "Co-convener",
-        image: "assests/Coordinaters_images/prabhleen_profile_pic.webp"
+        image: "assests/Coordinaters_images/Subodh_ProfPic.webp"
     },
     {
-       name: "Anisha Choudhary",
+       name: "Garima Saini",
        position: "Co-convener",
-       image: "assests/Coordinaters_images/anisha_profile_pic.webp"
+       image: "assests/Coordinaters_images/Garima_ProfPic.webp"
     }
 ];
+
