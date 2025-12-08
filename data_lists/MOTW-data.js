@@ -1,5 +1,38 @@
 import { drive } from "../js/utility.js";
 export const molecules = {
+    serotonin:{
+        moleculeName: "Serotonin",
+        publishDate: "2025-12-08",
+        publishTime: "09:30",
+        credits: {
+            Writer: "Mitul (MS24)",
+            Designer: "Shreya S (MS25)",
+            Editor: "Garima Saini (MS24)"},
+        slides: {
+             slide1: "../assests/MOTW/Serotonin/1.webp",
+             slide2: "../assests/MOTW/Serotonin/2.webp",
+             slide3: "../assests/MOTW/Serotonin/3.webp",
+             slide4: "../assests/MOTW/Serotonin/4.webp",
+             slide5: "../assests/MOTW/Serotonin/5.webp",
+             slide6: "../assests/MOTW/Serotonin/6.webp",
+             slide7: "../assests/MOTW/Serotonin/7.webp",
+             slide8: "../assests/MOTW/Serotonin/8.webp",},
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1Rt4dGVOC4MRzwEwu_wSYPK6qirTgi0dm/view?usp=sharing "),
+        "references" :[
+            {
+                "linkTitle":"National Library of Medicine", 
+                "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4728667/"
+            },
+            {
+                "linkTitle":"YouTube", 
+                "link": "https://www.youtube.com/watch?v=4D3IlIcqny4"
+            },
+            {
+                "linkTitle":"Harvard Health", 
+                "link": "https://www.health.harvard.edu/mind-and-mood/serotonin-the-natural-mood-booster"
+            }
+        ]
+    },              
     carbyne: {
         moleculeName: "Carbyne",
         publishDate: "2024-02-09",
@@ -575,3 +608,4 @@ export const molecules = {
 };
 
 //Instructions to add new molecules "../Instructions/MOTW"
+
