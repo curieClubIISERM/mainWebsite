@@ -1,5 +1,11 @@
 import { drive } from "../js/utility.js";
 export const molecules = {
+    prussian_blue:{
+        "references":[
+            { "linkTitle":"Britannica", "link":"https://www.britannica.com/technology/Prussian-blue"},
+            {"linkTitle":"ACS-Chemistry of Life", "link":"https://www.acs.org/molecule-of-the-week/archive/p/prussian-blue.html"},
+            {"linkTitle":"LibreTexts-Chemistry", "link":"https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/09%3A_Coordination_Chemistry_I_-_Structure_and_Isomers/9.02%3A_History "},]
+    },
     serotonin:{
         moleculeName: "Serotonin",
         publishDate: "2025-12-08",
@@ -608,4 +614,5 @@ export const molecules = {
 };
 
 //Instructions to add new molecules "../Instructions/MOTW"
+
 
