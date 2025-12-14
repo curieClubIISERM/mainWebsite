@@ -1,6 +1,27 @@
 import { drive } from "../js/utility.js";
 export const molecules = {
     prussian_blue:{
+        moleculeName: "Prussian Blue",
+        publishDate: "2025-12-14",
+        publishTime: "12:00",
+        credits: {
+            Writer: "Aviral Singh (MS25)",
+            Designer: "Prince Nimiwal (MS24)",
+            Editor: "Garima Saini (MS24)"},
+        slides: {
+             slide1: "../assests/MOTW/Prussian_Blue/1 (1).webp",
+             slide2: "../assests/MOTW/Prussian_Blue/2 (1).webp",
+             slide3: "../assests/MOTW/Prussian_Blue/3 (1).webp",
+             slide4: "../assests/MOTW/Prussian_Blue/4 (1).webp",
+             slide5: "../assests/MOTW/Prussian_Blue/5 (1).webp",
+             slide6: "../assests/MOTW/Prussian_Blue/6 (1).webp",
+             slide7: "../assests/MOTW/Prussian_Blue/7 (1).webp",
+             slide8: "../assests/MOTW/Prussian_Blue/8 (1).webp",
+             slide9: "../assests/MOTW/Prussian_Blue/9.webp",
+             slide10: "../assests/MOTW/Prussian_Blue/10.webp",
+             slide11: "../assests/MOTW/Prussian_Blue/11.webp",},
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1SCUMQ6Tt9PwtviFL8dO5wlSB3rCuwVsq/view?usp=sharing"),
+    
         "references":[
             { "linkTitle":"Britannica", "link":"https://www.britannica.com/technology/Prussian-blue"},
             {"linkTitle":"ACS-Chemistry of Life", "link":"https://www.acs.org/molecule-of-the-week/archive/p/prussian-blue.html"},
@@ -614,5 +635,6 @@ export const molecules = {
 };
 
 //Instructions to add new molecules "../Instructions/MOTW"
+
 
 
