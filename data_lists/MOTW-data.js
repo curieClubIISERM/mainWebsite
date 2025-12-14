@@ -3,7 +3,7 @@ export const molecules = {
     prussian_blue:{
         moleculeName: "Prussian Blue",
         publishDate: "2025-12-14",
-        publishTime: "12:00",
+        publishTime: "11:00",
         credits: {
             Writer: "Aviral Singh (MS25)",
             Designer: "Prince Nimiwal (MS24)",
@@ -635,6 +635,7 @@ export const molecules = {
 };
 
 //Instructions to add new molecules "../Instructions/MOTW"
+
 
 
 
