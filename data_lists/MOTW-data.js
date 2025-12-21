@@ -17,7 +17,9 @@ export const molecules = {
             slide5: "../assests/MOTW/Geraniol/5.webp",
             slide6: "../assests/MOTW/Geraniol/6.webp",
             slide7: "../assests/MOTW/Geraniol/7.webp",
-            slide8: "../assests/MOTW/Geraniol/8.webp"
+            slide8: "../assests/MOTW/Geraniol/8.webp",
+            slide8: "../assests/MOTW/Geraniol/9.webp",
+            slide8: "../assests/MOTW/Geraniol/10.webp"
         },
         pdfLink: drive.toDownload("https://drive.google.com/file/d/1o4HPrLlvrw-4zMB0HN4ILFTDVcremv2o/view?usp=sharing"),
 
