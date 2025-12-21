@@ -1,5 +1,32 @@
 import { drive } from "../js/utility.js";
 export const molecules = {
+    geraniol:{
+        moleculeName: "Geraniol",
+        publishDate: "2025-12-21",
+        publishTime: "11:00",
+        credits: {
+            Writer: "Samrath Singh Anand (MS25)",
+            Designer: "G C Dharshini (MS24)",
+            Editor: "Garima Saini (MS24)"},
+        slides: {
+             slide1: "../assests/MOTW/Geraniol/1 (1).webp",
+             slide2: "../assests/MOTW/Geraniol/2 (1).webp",
+             slide3: "../assests/MOTW/Geraniol/3 (1).webp",
+             slide4: "../assests/MOTW/Geraniol/4 (1).webp",
+             slide5: "../assests/MOTW/Geraniol/5 (1).webp",
+             slide6: "../assests/MOTW/Geraniol/6 (1).webp",
+             slide7: "../assests/MOTW/Geraniol/7 (1).webp",
+             slide8: "../assests/MOTW/Geraniol/8 (1).webp",
+             slide9: "../assests/MOTW/Geraniol/9.webp",
+             slide10: "../assests/MOTW/Geraniol/10.webp",
+             slide11: "../assests/MOTW/Geraniol/11.webp",},
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1SCUMQ6Tt9PwtviFL8dO5wlSB3rCuwVsq/view?usp=sharing"),
+    
+        "references":[
+            { "linkTitle":"Britannica", "link":"https://www.britannica.com/technology/Prussian-blue"},
+            {"linkTitle":"ACS-Chemistry of Life", "link":"https://www.acs.org/molecule-of-the-week/archive/p/prussian-blue.html"},
+            {"linkTitle":"LibreTexts-Chemistry", "link":"https://chem.libretexts.org/Bookshelves/Inorganic_Chemistry/Inorganic_Chemistry_(LibreTexts)/09%3A_Coordination_Chemistry_I_-_Structure_and_Isomers/9.02%3A_History "},]
+    },
     prussian_blue:{
         moleculeName: "Prussian Blue",
         publishDate: "2025-12-14",
@@ -9,18 +36,18 @@ export const molecules = {
             Designer: "Prince Nimiwal (MS24)",
             Editor: "Garima Saini (MS24)"},
         slides: {
-             slide1: "../assests/MOTW/Prussian_Blue/1 (1).webp",
-             slide2: "../assests/MOTW/Prussian_Blue/2 (1).webp",
-             slide3: "../assests/MOTW/Prussian_Blue/3 (1).webp",
-             slide4: "../assests/MOTW/Prussian_Blue/4 (1).webp",
-             slide5: "../assests/MOTW/Prussian_Blue/5 (1).webp",
-             slide6: "../assests/MOTW/Prussian_Blue/6 (1).webp",
-             slide7: "../assests/MOTW/Prussian_Blue/7 (1).webp",
-             slide8: "../assests/MOTW/Prussian_Blue/8 (1).webp",
+             slide1: "../assests/MOTW/Prussian_Blue/1.webp",
+             slide2: "../assests/MOTW/Prussian_Blue/2.webp",
+             slide3: "../assests/MOTW/Prussian_Blue/3.webp",
+             slide4: "../assests/MOTW/Prussian_Blue/4.webp",
+             slide5: "../assests/MOTW/Prussian_Blue/5.webp",
+             slide6: "../assests/MOTW/Prussian_Blue/6.webp",
+             slide7: "../assests/MOTW/Prussian_Blue/7.webp",
+             slide8: "../assests/MOTW/Prussian_Blue/8.webp",
              slide9: "../assests/MOTW/Prussian_Blue/9.webp",
              slide10: "../assests/MOTW/Prussian_Blue/10.webp",
              slide11: "../assests/MOTW/Prussian_Blue/11.webp",},
-        pdfLink: drive.toDownload("https://drive.google.com/file/d/1SCUMQ6Tt9PwtviFL8dO5wlSB3rCuwVsq/view?usp=sharing"),
+        pdfLink: drive.toDownload("https://drive.google.com/file/d/1o4HPrLlvrw-4zMB0HN4ILFTDVcremv2o/view?usp=sharing"),
     
         "references":[
             { "linkTitle":"Britannica", "link":"https://www.britannica.com/technology/Prussian-blue"},
@@ -47,17 +74,17 @@ export const molecules = {
         pdfLink: drive.toDownload("https://drive.google.com/file/d/1Rt4dGVOC4MRzwEwu_wSYPK6qirTgi0dm/view?usp=sharing "),
         "references" :[
             {
-                "linkTitle":"National Library of Medicine", 
-                "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4728667/"
+                "linkTitle":"Wikipedia", 
+                "link": "https://en.wikipedia.org/wiki/Geraniol"
             },
-            {
-                "linkTitle":"YouTube", 
-                "link": "https://www.youtube.com/watch?v=4D3IlIcqny4"
-            },
-            {
-                "linkTitle":"Harvard Health", 
-                "link": "https://www.health.harvard.edu/mind-and-mood/serotonin-the-natural-mood-booster"
-            }
+            // {
+            //     "linkTitle":"YouTube", 
+            //     "link": "https://www.youtube.com/watch?v=4D3IlIcqny4"
+            // },
+            // {
+            //     "linkTitle":"Harvard Health", 
+            //     "link": "https://www.health.harvard.edu/mind-and-mood/serotonin-the-natural-mood-booster"
+            // }
         ]
     },              
     carbyne: {
