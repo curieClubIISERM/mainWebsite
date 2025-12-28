@@ -22,7 +22,7 @@ export const molecules = {
         },
          pdfLink: drive.toDownload("https://drive.google.com/file/d/1svN0_LI2gRpMA4pSBas71R24tr6S8660/view?usp=sharing"),
          "references": [
-            { "linkTitle": "PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Isoamyl-Acetate" },
+            { "linkTitle": "PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Isoamyl-Acetate" },]
              },
 
     geraniol: {
@@ -706,6 +706,7 @@ export const molecules = {
 };
 
 //Instructions to add new molecules "../Instructions/MOTW"
+
 
 
 
