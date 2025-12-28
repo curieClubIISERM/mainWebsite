@@ -1,5 +1,30 @@
 import { drive } from "../js/utility.js";
 export const molecules = {
+    isoamyl_acetate:{
+        moleculeName: "Isoamyl Acetate",
+        publishDate: "2025-12-28",
+        publishTime: "13:15",
+        credits: {
+            Writer: "Aviral Singh (MS25)",
+            Designer: "Soumyadeep Barik (MS24)",
+            Editor: "Garima Saini (MS24)"},
+        slides: {
+            slide1: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -1.webp",
+            slide2: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -2.webp",
+            slide3: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -3.webp",
+            slide4: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -4.webp",
+            slide5: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -5.webp",
+            slide6: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -6.webp",
+            slide7: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -7.webp",
+            slide8: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -8.webp",
+            slide9: "assests/MOTW/isoamyl_acetate/Isoamyl acetate -9.webp",
+            
+        },
+         pdfLink: drive.toDownload("https://drive.google.com/file/d/1svN0_LI2gRpMA4pSBas71R24tr6S8660/view?usp=sharing"),
+         "references": [
+            { "linkTitle": "PubChem", "link": "https://pubchem.ncbi.nlm.nih.gov/compound/Isoamyl-Acetate" },
+             },
+
     geraniol: {
         moleculeName: "Geraniol",
         publishDate: "2025-12-21",
@@ -681,6 +706,7 @@ export const molecules = {
 };
 
 //Instructions to add new molecules "../Instructions/MOTW"
+
 
 
 
