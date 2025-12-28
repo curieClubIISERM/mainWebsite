@@ -33,7 +33,7 @@ function updateReferences(moleculeKey) {
     const molecule = molecules[moleculeKey];
 
     const linkContainer = document.querySelector('.link-container');
-    if (!molecule) {
+    if (!molecule || !molecules[moleculeKey]) {
         gsap.to("#loader-text", {text: `Molecule data not found`, duration: 0.5});
     }
     linkContainer.innerHTML = ''; // Clear existing links

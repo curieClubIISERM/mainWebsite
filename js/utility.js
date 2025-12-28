@@ -40,17 +40,9 @@ export function formatStudentInfo(jsonObj) {
 export function normalizeMoleculeKey(rawKey) {
     if (!rawKey) return null;
 
-    // If it already exists as-is, return it
-    if (molecules[rawKey]) return rawKey;
-
-    // Convert snake_case or kebab-case to camelCase
-    const camelKey = rawKey
-        .toLowerCase()
-        .replace(/[-_]+(.)?/g, (_, char) => char ? char.toUpperCase() : '');
-
-    // If converted key exists, return it
-    if (molecules[camelKey]) return camelKey;
-
-    // Fallback (still return camelKey for debugging)
-    return camelKey;
+    return rawKey
+        .trim()
+        .replace(/[-_]+(.)?/g, (_, char) =>
+            char ? char.toUpperCase() : ''
+        );
 }
