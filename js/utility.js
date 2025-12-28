@@ -20,22 +20,27 @@ export function formatStudentInfo(jsonObj) {
     // Extract name and registration number
     const fullName = jsonObj.Name.trim(); // Remove any extra spaces
     const regNum = jsonObj["Registration Number"].trim(); // Remove extra spaces
-  
+
     // Check if name exceeds 20 characters
     const name =
-      fullName.length > 20 ? fullName.split(" ")[0] : fullName;
-  
+        fullName.length > 20 ? fullName.split(" ")[0] : fullName;
+
     // Extract the first 4 characters of the registration number
     const regPrefix = regNum.substring(0, 4);
-  
+
     // Construct the formatted string
     return `${name} (${regPrefix})`;
-  }
+}
 
-  export function extractDateFromISO(isoDate) {
+export function extractDateFromISO(isoDate) {
     const date = new Date(isoDate);
     return date.toDateString();
-  }
+}
+
+export function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
 
 export function normalizeMoleculeKey(rawKey) {
     if (!rawKey) return null;

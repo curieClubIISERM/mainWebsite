@@ -66,7 +66,7 @@ function initLoaderAnimation() {
 // Initialize loader animation
 initLoaderAnimation();
 
-import { drive } from "./utility.js";
+import { drive, getQueryParam, normalizeMoleculeKey } from "./utility.js";
 import { molecules } from "../data_lists/MOTW-data.js";
 import { googleFormLinks } from "../data_lists/google_forms.js";
 
@@ -192,7 +192,7 @@ function updateContent(moleculeKey) {
             opacity: 0,
             ease: "expo.inOut"
         });
-    }
+    } 
     tl.to("#writer, #designer, #editor", {
         opacity: 0,
         xPercent: 100,
@@ -239,6 +239,31 @@ function updateContent(moleculeKey) {
         referenceButton.href = `${basePath}?molecule=${moleculeKey}`;
     });
 }
+
+function loadMoleculeFromURL() {
+    const rawKey = getQueryParam("molecule");
+    if (!rawKey) return;
+
+    // normalize if needed (optional but recommended)
+    const moleculeKey = rawKey;
+
+    if (!molecules[moleculeKey]) {
+        console.warn(`Molecule not found: ${moleculeKey}`);
+        return;
+    }
+
+    // Open molecule panel UI
+    moleculeLogoContainerImg.click();
+    setTimeout(()=> {
+        moleculeLogoContainerImg.click();
+    }, 1500)   
+
+    // Load molecule content
+    updateContent(moleculeKey);
+
+    oldDataset = moleculeKey;    
+}
+
 
 function buttonAction() {
 
@@ -720,10 +745,17 @@ moleculeList.addEventListener("click", (event) => {
     const target = event.target;
 
     if (target.tagName === "LI" && !isThrottled) {
-        if (oldDataset !== target.dataset.key) {
+        const moleculeKey = target.dataset.key;
+
+        if (oldDataset !== moleculeKey) {
             minSwiper.slideTo(0, 1, true);
-            updateContent(target.dataset.key);
-            oldDataset = target.dataset.key;
+            updateContent(moleculeKey);
+            oldDataset = moleculeKey;
+
+            // Update URL (no reload)
+            const url = new URL(window.location);
+            url.searchParams.set("molecule", moleculeKey);
+            window.history.pushState({}, "", url);
 
             isThrottled = true;
             setTimeout(() => {
@@ -759,3 +791,9 @@ contentContainer.addEventListener("click", () => {
 
 
 buttonAction()
+loadMoleculeFromURL();
+
+// Listen for URL changes to load different molecules
+window.addEventListener("popstate", loadMoleculeFromURL);
+
+
