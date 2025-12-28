@@ -1,4 +1,5 @@
 import { molecules } from "../data_lists/MOTW-data.js"
+import { normalizeMoleculeKey } from "../js/utility.js"
 
 const lenis = new Lenis()
 
@@ -114,5 +115,6 @@ gsap.to(".scroll-header", {
 
 
 // Get molecule key from URL parameter and update references
-const moleculeKey = getQueryParam('molecule');
+const rawKey = getQueryParam('molecule');
+const moleculeKey = normalizeMoleculeKey(rawKey);
 updateReferences(moleculeKey);
